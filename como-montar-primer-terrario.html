@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Aprende a montar tu primer terrario cerrado paso a paso. Guía para aficionados con fotos reales, trucos de sustrato y consejos de mantenimiento."/>
+  <title>Cómo montar tu primer terrario cerrado paso a paso | EcoCristal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root {
+      --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59;
+      --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4;
+      --bc: #f7f5f0; --cr: #ede9e0;
+      --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --r: 6px; --rl: 12px;
+      --s1: 0 2px 12px rgba(30,58,47,.08);
+      --s2: 0 6px 32px rgba(30,58,47,.13);
+      --s3: 0 16px 56px rgba(30,58,47,.18);
+      --t: .35s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER (Idéntico a la portada) ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA DEL ARTÍCULO ── */
+    .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); transition: color var(--t); }
+    .bread a:hover { color: var(--vd); }
+    .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 6rem; max-width: 1200px; margin: 0 auto; }
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; color: var(--vd); margin: 2rem 0 .75rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post ul { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
+    .post li { margin-bottom: 0.5rem; }
+    .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; max-height: 600px; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+    
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
+    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: .9rem; color: var(--ts); transition: color var(--t); display: flex; align-items: flex-start; gap: .5rem; line-height: 1.4; }
+    .sb-block li a::before { content: '→'; font-size: .8rem; color: var(--vc); margin-top: .1rem; flex-shrink: 0; }
+    .sb-block li a:hover { color: var(--vd); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .ft-in { max-width: 1200px; margin: 0 auto; }
+    .ft-bot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; font-size: .75rem; color: rgba(255,255,255,.3); }
+
+    @media (max-width: 1024px) {
+      .post-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .sidebar { position: static; }
+    }
+    @media (max-width: 768px) { 
+      nav ul { display: none; } 
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html#articulos">Artículos</a></li>
+        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><span>Sustratos y Base</span><span>/</span><strong>Primer terrario</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Cómo montar tu primer terrario cerrado paso a paso <em>(y que no se te muera a la semana)</em></h1>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+    
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <article class="post">
+      <p>Lo principal antes de ensuciarnos las manos es tener bien claro el tamaño del tarro de cristal que vas a usar. Una vez tienes la urna elegida, toca reunir a los protagonistas y preparar el terreno.</p>
+
+      <h3>1. Las plantas ideales para empezar</h3>
+      <p>Desde mi experiencia, unas de las plantas más bonitas, fáciles de trasplantar y que menos mantenimiento requieren son las <strong>Fittonias</strong> (cualquiera de sus variedades). Son plantas con un porte muy bajito cuando son jóvenes, pero van tomando altura a medida que crecen. Además, son súper accesibles por su bajo precio y las encuentras en cualquier vivero o bazar.</p>
+      
+      <img src="Terrario3.jpeg" alt="Fittonia rojiza en una urna cilíndrica de cristal" />
+      <p class="img-caption">Fittonia de tonos rojizos en uno de mis proyectos. Fíjate en cómo destacan sus nervaduras.</p>
+
+      <p>También es muy recomendable añadir <strong>musgo</strong> a tu terrario. No solo queda precioso visualmente, sino que ayuda muchísimo a mantener y regular la humedad del suelo gracias a sus características naturales.</p>
+
+      <h3>2. Los materiales y el sustrato</h3>
+      <p>Para montar el ecosistema completo, esto es lo que vas a necesitar comprar o buscar por casa:</p>
+      <ul>
+        <li><strong>Para el drenaje:</strong> Piedrecillas pequeñas (grava) y, si puedes darte el lujo, un poco de carbón activo.</li>
+        <li><strong>La malla separadora:</strong> Yo uso trozos de camisetas viejas 100% sintéticas. Si no tienes, sirve la típica red de supermercado en la que vienen las patatas o cebollas, o un trozo de mosquitera. Solo necesitas algo que deje pasar el agua, pero no la tierra.</li>
+        <li><strong>La tierra (El "mejunje"):</strong> Huye del sustrato universal a secas. La mezcla ideal es 50% de sustrato universal, 30% de fibra de coco y 20% de arena de río.</li>
+      </ul>
+
+      <h3>3. El montaje: Capa a capa</h3>
+      <p><strong>La zona de drenaje:</strong> Lo primero es crear una zona donde se filtre el exceso de agua para que las raíces no se pudran. Echa entre 2 y 4 cm de las piedras pequeñitas en el fondo del cristal. Asegúrate de que la superficie de las piedras quede lo más homogénea y plana posible para embellecer el terrario desde fuera.</p>
+      <p><strong>La barrera:</strong> Coloca tu malla separadora (el trozo de camiseta o la red de patatas) justo encima de las piedras. Esto impedirá que el sustrato que pongamos encima se cuele entre la grava y arruine el drenaje.</p>
+      
+      <img src="Terrario2.jpeg" alt="Vista lateral de un terrario mostrando las capas de grava, barrera y sustrato" />
+      <p class="img-caption">Aquí puedes ver perfectamente la separación: abajo la grava para el agua, y encima la tierra oscura.</p>
+
+      <p><strong>Preparando la tierra:</strong> Ahora viene la parte más "plasta", porque mancha mucho y tardas lo tuyo. En un bol grande, echa los tres tipos de sustrato en los porcentajes que vimos antes. Añade un poco de agua (sin pasarse para no hacer un barrizal) y mézclalo todo hasta que quede un buen mejunje húmedo.</p>
+      <p>Ve echando esta mezcla poco a poco en el terrario hasta tener unos 5 o 7 cm de tierra. <strong>No la aplastes</strong>. No queremos que se compacte, solo que quede uniforme por la parte de arriba.</p>
+
+      <h3>4. El trasplante y el toque final</h3>
+      <p>Saca con mucho cuidado tu Fittonia de la maceta en la que venga. Tienes que quitarle la tierra de las raíces muy suavemente mientras la lavas con agua, por ejemplo, en el fregadero.</p>
+      <p>Cuando tengas las raíces bien limpias, haz un agujero en la tierra del terrario con el dedo, lo suficientemente profundo para que la planta quepa bien. Introdúcela, asegúrate de que se asienta correctamente y listo.</p>
+
+      <img src="Terrario2.1.jpeg" alt="Vista superior del terrario con Fittonia y decoración" />
+      <p class="img-caption">Vista desde arriba. Asegúrate de dejar espacio para que la planta respire y crezca.</p>
+
+      <p>Ahora toca darle con el "flus flus" (un pulverizador de agua) a todo el interior durante 1 o 2 minutos. Esto ayuda a que todo coja humedad y hace que el trasplante sea menos estresante para la planta. Tras esto, ya puedes decorar el interior a tu gusto y colocar el musgo (al que le vendrá bien otra pasada rápida de flus flus).</p>
+
+      <div class="highlight">
+        <strong>Bonus: ¿Y si quiero meter bichos bola?</strong><br><br>
+        Si estás pensando en meter pequeños invertebrados (isópodos), mi mayor consejo es que esperes aproximadamente un mes. Necesitas asegurarte de que tanto el musgo como las plantas principales estén bien enraizadas. <br><br>
+        Una vez pase el mes, puedes introducirlos. Eso sí, si tu terrario es pequeño, no eches más de 2 o 3. Comen a una velocidad bestial. Tendrás que ir metiéndoles trocitos de hojas secas de la calle o piel de manzana para evitar que acaben comiéndose tus plantas vivas.
+      </div>
+      
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-block">
+        <h4>Sobre el autor</h4>
+        <p style="font-size: 0.9rem; color: var(--ts); line-height: 1.6; margin-bottom: 1rem;">Soy un aficionado que comparte su experiencia real creando pequeños ecosistemas eternos en el salón de casa, sin complicaciones técnicas y con mucho ensayo y error.</p>
+        <a href="index.html" style="font-size: 0.85rem; font-weight: 500; color: var(--vd); text-decoration: underline;">Volver al inicio</a>
+      </div>
+      
+      <div class="sb-block">
+        <h4>Otros artículos útiles</h4>
+        <ul>
+          <li><a href="#">Cómo hacer un sustrato que dure años</a></li>
+          <li><a href="#">Mis 5 plantas favoritas para interior</a></li>
+          <li><a href="#">Cultivando lechugas junto a la ventana</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-bot">
+      <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
