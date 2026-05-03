@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Descubre mis 5 plantas favoritas para terrarios y macetas de interior. Especies resistentes, vistosas y probadas por mí mismo."/>
+  <title>Mis 5 plantas favoritas para interior | EcoCristal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); transition: color var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA DEL ARTÍCULO ── */
+    .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 6rem; max-width: 1200px; margin: 0 auto; }
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
+    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: .9rem; color: var(--ts); display: flex; gap: .5rem; line-height: 1.4; }
+    .sb-block li a::before { content: '→'; color: var(--vc); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+
+    @media (max-width: 1024px) { .post-wrap { grid-template-columns: 1fr; gap: 3rem; } .sidebar { position: static; } }
+    @media (max-width: 768px) { nav ul { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html#articulos">Artículos</a></li>
+        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><span>Plantas</span><span>/</span><strong>Mis favoritas</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Mis 5 plantas favoritas para interior <em>(y por qué funcionan)</em></h1>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+    
+    <article class="post">
+      <p>Como cualquier persona con esta afición, tengo mi top 5 de plantas de interior que pueden usarse tanto en terrarios como en macetas normales para dar belleza a nuestras casas. Así que voy a explicar por qué me gusta cada una y sus ventajas y desventajas.</p>
+
+      <h3>1. Fittonia</h3>
+      <p>En el top 1, para sorpresa de nadie que lea esta web, pongo a la Fittonia. Es una planta preciosa con una variedad enorme de colores y formas según va creciendo. La hay desde hojas verdes con venas blancas, hasta hojas moradas-rosáceas con venas verdes, cada una más bonita que la anterior.</p>
+      
+      <p>Como ya he dicho en los otros artículos, requiere de muy pocos cuidados, ya que resiste genial el calor, pero hay que intentar que esté en un ambiente que supere los 15ºC, ya que con el frío empieza a sufrir y puede ponerse mala o tirar las hojas. Aguanta bien en zonas poco iluminadas aunque prefiere las zonas con mucha luz pero nunca con sol directo.</p>
+      
+      <p>Respecto al riego, le gusta mucha humedad constante en sus hojas y también en sus raíces. Gracias a que yo la uso en terrarios, en invierno puedo olvidarme perfectamente de regarla ya que el ecosistema mantiene la humedad, y en verano están perfectamente si pulverizo 1 o 2 veces por semana. Además resiste mucho a plagas aunque puede verse afectada por los pulgones. Por eso mismo siempre que vayamos a comprarla en un vivero o en un bazar debemos de ver bien sus hojas y tallo y fijarnos que no hay ningún puntito negro.</p>
+      
+      <!-- Si tienes una foto de una Fittonia distinta a las otras, pon aquí su nombre -->
+      <img src="fittonia.jpeg" alt="Fittonia de interior con colores vivos" style="display: none;" onerror="this.style.display='none'" />
+
+      <h3>2. Musgo (Sphagnum o de Java)</h3>
+      <p>Mi segunda planta favorita es el musgo. Su función en el ecosistema y en los terrarios es vital: mantener la humedad del suelo, evitar que se degrade y además hace de refugio para invertebrados pequeños. Es decir, que va a ser la casa perfecta para nuestros colémbolos o bichos bola, algo que nos viene de lujo.</p>
+      <p><strong>Ventajas:</strong> Estéticamente crea un "efecto césped" precioso, retiene agua como una esponja (literalmente) y previene la aparición de moho en el sustrato.</p>
+      <p><strong>Desventajas:</strong> Si lo usas en una maceta abierta en el salón, se te secará rapidísimo. Además, es muy exquisito con el agua: si lo riegas con agua del grifo normal, el cloro y los minerales acabarán quemándolo y se pondrá marrón. ¡Usa siempre agua destilada o de lluvia!</p>
+
+      <h3>3. Ficus Pumila (La trepadora)</h3>
+      <p>Esta es la planta que tienes que elegir si quieres que tu terrario deje de parecer un tarro de cristal y empiece a parecer un trozo de selva salvaje. Es una enredadera de hojas muy pequeñitas que se agarra a cualquier superficie.</p>
+      <p><strong>Ventajas:</strong> Crece increíblemente rápido si tiene la humedad adecuada. En pocos meses es capaz de tapizar por completo el fondo o las paredes de cristal de tu terrario, dándole un aspecto espectacular y muy frondoso.</p>
+      <p><strong>Desventajas:</strong> Precisamente su velocidad. Si no la vigilas y le vas pegando tijeretazos de vez en cuando, acabará asfixiando a la Fittonia y al resto de plantas. Además, las raicillas que usa para pegarse al cristal pueden dejar marcas si algún día decides arrancarla.</p>
+
+      <h3>4. Helechos (Especialmente el Culantrillo)</h3>
+      <p>No podía faltar un buen helecho. Son plantas antiquísimas y aportan una textura súper fina y elegante que contrasta genial con las hojas más grandes de las otras plantas.</p>
+      <p><strong>Ventajas:</strong> Son los reyes de los terrarios cerrados. Aman la humedad ambiental por encima del 80% y no necesitan demasiada luz para estar verdes y espectaculares.</p>
+      <p><strong>Desventajas:</strong> Fuera de un terrario, en una maceta normal de salón, son unas auténticas "reinas del drama". Si te olvidas de regar un par de días y la tierra se seca, sus hojas se volverán de papel crujiente y no habrá marcha atrás.</p>
+
+      <h3>5. Pothos (Epipremnum aureum)</h3>
+      <p>Para cerrar la lista, la clásica entre las clásicas. Puede que sea una planta muy vista, pero si todo el mundo tiene una en su casa, es por un buen motivo.</p>
+      <p><strong>Ventajas:</strong> Es literalmente indestructible. Aguanta en rincones oscuros, sobrevive si te olvidas de regarla, y si cortas un trozo y lo metes en un vaso de agua, echará raíces en cuestión de días. Es la planta perfecta para empezar y dar vida a estanterías altas dejándola colgar.</p>
+      <p><strong>Desventajas:</strong> Crece demasiado y sus hojas se hacen muy grandes para usarse en un terrario cerrado (a menos que el terrario sea del tamaño de un acuario enorme). Por eso, esta la dejo estrictamente para macetas normales en el salón.</p>
+
+    </article> 
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-block">
+        <h4>Sobre el autor</h4>
+        <p style="font-size: 0.9rem; color: var(--ts); line-height: 1.6; margin-bottom: 1rem;">Soy un aficionado que comparte su experiencia real creando pequeños ecosistemas y cultivando en el salón de casa, con mucho ensayo y error.</p>
+        <a href="index.html" style="font-size: 0.85rem; font-weight: 500; color: var(--vd); text-decoration: underline;">Volver al inicio</a>
+      </div>
+      
+      <div class="sb-block">
+        <h4>Otros artículos útiles</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="como-hacer-sustrato.html">Cómo hacer un sustrato que dure años</a></li>
+          <li><a href="cultivando-lechugas.html">Mi primer huerto en el salón: cultivando lechugas</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
+  <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
+    <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa.</span>
+  </div>
+</footer>
+
+</body>
+</html>
