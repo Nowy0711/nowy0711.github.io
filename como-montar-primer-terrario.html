@@ -77,8 +77,7 @@
 
     /* ── FOOTER ── */
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
-    .ft-in { max-width: 1200px; margin: 0 auto; }
-    .ft-bot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; font-size: .75rem; color: rgba(255,255,255,.3); }
+    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
 
     @media (max-width: 1024px) {
       .post-wrap { grid-template-columns: 1fr; gap: 3rem; }
@@ -169,26 +168,37 @@
     <aside class="sidebar">
       <div class="sb-block">
         <h4>Sobre el autor</h4>
-        <p style="font-size: 0.9rem; color: var(--ts); line-height: 1.6; margin-bottom: 1rem;">Soy un aficionado que comparte su experiencia real creando pequeños ecosistemas eternos en el salón de casa, sin complicaciones técnicas y con mucho ensayo y error.</p>
+        <p style="font-size: 0.9rem; color: var(--ts); line-height: 1.6; margin-bottom: 1rem;">Soy un aficionado que comparte su experiencia real creando pequeños ecosistemas y cultivando en el salón de casa, con mucho ensayo y error.</p>
         <a href="index.html" style="font-size: 0.85rem; font-weight: 500; color: var(--vd); text-decoration: underline;">Volver al inicio</a>
       </div>
       
+      <!-- CUADRITO 1: GUÍAS PRÁCTICAS -->
       <div class="sb-block">
-        <h4>Otros artículos útiles</h4>
+        <h4 style="color: var(--vs);">Guías Prácticas</h4>
         <ul>
-          <li><a href="como-hacer-sustrato.html">Cómo hacer un sustrato que dure años</a></li>
-          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li> 
-          <li><a href="cultivando-lechugas.html">Mi primer huerto en el salón: cultivando lechugas</a></li>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
+          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+        </ul>
+      </div>
+
+      <!-- CUADRITO 2: ÁREAS DEL ECOSISTEMA -->
+      <div class="sb-block">
+        <h4 style="color: var(--vs);">El Ecosistema</h4>
+        <ul>
+          <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla que dure años</a></li>
+          <li><a href="#" style="opacity: 0.5; pointer-events: none;">Terrarios & Urnas (Próximamente)</a></li>
+          <li><a href="#" style="opacity: 0.5; pointer-events: none;">Iluminación LED (Próximamente)</a></li>
         </ul>
       </div>
     </aside>
   </div>
 </main>
 
-<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
-  <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
-    <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
-    <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa.</span>
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa.</span>
   </div>
 </footer>
 
