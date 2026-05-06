@@ -76,28 +76,22 @@
     .card-foot a { color: var(--vs); font-weight: 500; transition: color var(--t); }
     .card-foot a:hover { color: var(--vd); }
 
-    /* ── FOOTER & NEWSLETTER ── */
-    .nl { padding: 5rem 2rem; background: var(--vd); text-align: center; }
-    .nl-in { max-width: 540px; margin: 0 auto; }
-    .nl h2 { font-family: var(--fd); font-size: clamp(1.8rem, 3vw, 2.3rem); font-weight: 300; color: var(--bc); margin-bottom: .65rem; }
-    .nl p { font-size: .9rem; color: var(--vmu); margin-bottom: 1.75rem; line-height: 1.7; }
-    .nl-form { display: flex; gap: .65rem; flex-wrap: wrap; justify-content: center; }
-    .nl-form input[type=email] { flex: 1; min-width: 220px; padding: .85rem 1.1rem; border-radius: var(--r); border: 1.5px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08); color: var(--bc); font-family: var(--fb); font-size: .9rem; outline: none; transition: border-color var(--t); }
-    .nl-form input:focus { border-color: var(--vc); }
-    .nl-form input::placeholder { color: var(--vc); opacity: .7; }
-    .nl-form button { background: var(--vc); color: var(--vd); border: none; cursor: pointer; padding: .85rem 1.6rem; border-radius: var(--r); font-family: var(--fb); font-size: .85rem; font-weight: 500; transition: background var(--t), transform var(--t); }
-    .nl-form button:hover { background: var(--vmu); transform: translateY(-2px); }
-    .nl-legal { margin-top: .85rem; font-size: .7rem; color: var(--vs); opacity: .8; }
-
     footer { background: var(--to); padding: 3rem 2rem 2rem; }
     .ft-in { max-width: 1200px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
     
     /* ── ANIMACIONES Y RESPONSIVE ── */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) { nav ul { display: none; } .trust { gap: 1rem; font-size: .7rem; } .ft-top { flex-direction: column; } }
+    @media (max-width: 768px) { nav ul { display: none; } .trust { gap: 1rem; font-size: .7rem; } }
     @media (max-width: 480px) { .page-hero { padding: 5.5rem 1.5rem 2.5rem; } }
   </style>
+
+  <!-- Etiquetas Open Graph añadidas -->
+  <meta property="og:title" content="EcoCristal — Terrarios cerrados y plantas de interior" />
+  <meta property="og:description" content="Análisis reales de terrarios cerrados, iluminación LED y sustratos. Experiencia propia, fotos propias." />
+  <meta property="og:image" content="https://nowy0711.github.io/img/FotoPaginaPrincipal.jpeg" />
+  <meta property="og:url" content="https://nowy0711.github.io/" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
 
@@ -105,14 +99,12 @@
 
 <header>
   <div class="nav-inner">
-    <a href="/" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
     <nav aria-label="Navegación principal">
       <ul>
-        <li><a href="/terrarios/">Terrarios</a></li>
-        <li><a href="/iluminacion/">Iluminación</a></li>
-        <li><a href="/sustratos/">Sustratos</a></li>
-        <li><a href="/automatizacion/">Automatización</a></li>
-        <li><a href="/sobre-mi/" class="nav-cta">Sobre mí</a></li>
+        <li><a href="#analisis">Artículos</a></li>
+        <!-- RECUERDA CAMBIAR EL EMAIL POR EL TUYO REAL AQUÍ -->
+        <li><a href="mailto:noel.rsdp0711@gmail.com" class="nav-cta">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -136,8 +128,7 @@
         Análisis en profundidad del equipamiento que uso en mis propios terrarios. Sin listas de productos que no he probado. Sin contenido generado. Solo lo que funciona en la práctica.
       </p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="#analisis" class="btn-p">Ver mis análisis</a>
-        <a href="/mis-terrarios/" class="btn-s">Mi setup real</a>
+        <a href="#analisis" class="btn-p">Ver mis artículos</a>
       </div>
     </div>
 
@@ -165,54 +156,6 @@
     <span>Sin listas genéricas de Amazon</span>
     <span>Actualizado 2026</span>
   </div>
-
-  <section style="padding:7rem 2rem;background:var(--bc);">
-    <div class="wrap">
-      <div class="reveal" style="margin-bottom:4rem;">
-        <p class="eyebrow">Explora el contenido</p>
-        <h2 class="section-title">Cuatro áreas.<br><em>Un ecosistema</em> completo.</h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
-
-        <article class="reveal" style="background:#fff;border:1px solid var(--cr);border-radius:var(--rl);padding:2rem 1.75rem 2.5rem;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t),border-color var(--t);" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--s3)';this.style.borderColor='var(--vmu)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--cr)';">
-          <div style="width:52px;height:52px;background:var(--vn);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
-            <svg viewBox="0 0 24 24" width="26" height="26" stroke="var(--vd)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 9v11M9 13c0-2 3-3 3-5M12 13c1-1.5 3-1 3 1"/></svg>
-          </div>
-          <h3 style="font-family:var(--fd);font-size:1.4rem;font-weight:400;color:var(--vd);margin-bottom:.5rem;">Terrarios &amp; Urnas</h3>
-          <p style="font-size:.875rem;color:var(--ts);line-height:1.7;flex:1;margin-bottom:1.75rem;">Comparativas directas y análisis de la urna que uso. Qué cristal merece tu dinero según el uso real que le vas a dar.</p>
-          <a href="/terrarios/" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--vd);">Explorar →</a>
-        </article>
-
-        <article class="reveal" style="background:#fff;border:1px solid var(--cr);border-radius:var(--rl);padding:2rem 1.75rem 2.5rem;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t),border-color var(--t);" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--s3)';this.style.borderColor='var(--vmu)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--cr)';">
-          <div style="width:52px;height:52px;background:var(--vn);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
-            <svg viewBox="0 0 24 24" width="26" height="26" stroke="var(--vd)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          </div>
-          <h3 style="font-family:var(--fd);font-size:1.4rem;font-weight:400;color:var(--vd);margin-bottom:.5rem;">Iluminación LED</h3>
-          <p style="font-size:.875rem;color:var(--ts);line-height:1.7;flex:1;margin-bottom:1.75rem;">Chihiros vs Twinstar y el análisis técnico de la luz que uso. Espectro, PAR y horas de luz explicados.</p>
-          <a href="/iluminacion/" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--vd);">Explorar →</a>
-        </article>
-
-       <article class="reveal" style="background:#fff;border:1px solid var(--cr);border-radius:var(--rl);padding:2rem 1.75rem 2.5rem;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t),border-color var(--t);" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--s3)';this.style.borderColor='var(--vmu)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--cr)';">
-          <div style="width:52px;height:52px;background:var(--vn);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
-            <svg viewBox="0 0 24 24" width="26" height="26" stroke="var(--vd)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12C12 7 8 4 4 6c4 0 8 3 8 6zM12 12c0-5 4-8 8-6-4 0-8 3-8 6zM5 22h14"/></svg>
-          </div>
-          <h3 style="font-family:var(--fd);font-size:1.4rem;font-weight:400;color:var(--vd);margin-bottom:.5rem;">Sustratos & Nutrición</h3>
-          <p style="font-size:.875rem;color:var(--ts);line-height:1.7;flex:1;margin-bottom:1.75rem;">Aprende a preparar la mezcla casera 50-30-20. Capas, drenaje, colémbolos y el secreto para que la tierra dure años sin pudrirse.</p>
-          <a href="como-hacer-sustrato.html" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--vd);">Leer artículo →</a>
-        </article>
-
-        <article class="reveal" style="background:#fff;border:1px solid var(--cr);border-radius:var(--rl);padding:2rem 1.75rem 2.5rem;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t),border-color var(--t);" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--s3)';this.style.borderColor='var(--vmu)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--cr)';">
-          <div style="width:52px;height:52px;background:var(--vn);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
-            <svg viewBox="0 0 24 24" width="26" height="26" stroke="var(--vd)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
-          </div>
-          <h3 style="font-family:var(--fd);font-size:1.4rem;font-weight:400;color:var(--vd);margin-bottom:.5rem;">Automatización</h3>
-          <p style="font-size:.875rem;color:var(--ts);line-height:1.7;flex:1;margin-bottom:1.75rem;">Inkbird vs Govee, análisis del nebulizador instalado. Controla humedad y temperatura sin estar pendiente.</p>
-          <a href="#" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--vd);">Explorar →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
   <section id="analisis" style="padding:7rem 2rem;background:var(--cr);position:relative;">
     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--vmu),transparent);"></div>
@@ -258,6 +201,18 @@
             <div class="card-foot"><a href="mis-5-plantas.html">Leer artículo →</a></div>
           </div>
         </article>
+        
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/capas-sustrato.jpeg" alt="Vista lateral del sustrato de un terrario mostrando la mezcla de tierra">
+            <span class="card-tag">Sustratos</span>
+          </div>
+          <div class="card-body">
+            <h3>Cómo hacer un sustrato que dure años sin pudrirse</h3>
+            <p>Aprende a preparar la mezcla casera 50-30-20. Capas, drenaje, colémbolos y el secreto para que la tierra se mantenga perfecta.</p>
+            <div class="card-foot"><a href="como-hacer-sustrato.html">Leer artículo →</a></div>
+          </div>
+        </article>
 
       </div>
     </div>
@@ -267,7 +222,7 @@
     <div class="wrap">
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:6rem;align-items:center;">
         <div class="reveal" style="position:relative;">
-          <img src="img/terrario2.jpeg" alt="Mi terrario cerrado con Fittonia" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--rl); box-shadow:var(--s3);" />
+          <img src="img/Terrario3.jpeg" alt="Mi terrario cerrado con Fittonia" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--rl); box-shadow:var(--s3);" />
           <div style="position:absolute;bottom:-1.5rem;right:-1.5rem;width:120px;height:120px;background:var(--cr);border-radius:var(--rl);border:1px solid var(--vmu);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--s1);">
             <strong style="font-family:var(--fd);font-size:2rem;font-weight:300;color:var(--vd);line-height:1;">3</strong>
             <span style="font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ts);text-align:center;margin-top:.25rem;">terrarios<br>activos</span>
@@ -284,7 +239,6 @@
           <p style="font-size:.95rem;color:var(--tm);line-height:1.85;margin-bottom:2rem;">
             También me he enganchado a montar mi propio minihuerto, así que aquí comparto mis aventuras plantando lechugas, tagetes y capuchinas sin salir del salón. Todo 100% real, basado en mi propia experiencia, con mucho ensayo y error.
           </p>
-          <a href="#articulos" class="btn-p">Leer mis artículos</a>
           <p style="font-size:.78rem;color:var(--ts);padding:1rem 1.25rem;background:var(--cr);border-left:3px solid var(--vc);border-radius:0 var(--r) var(--r) 0;margin-top:1.5rem;line-height:1.6;">
             Este sitio participa en el Programa de Afiliados de Amazon EU. Si compras a través de mis enlaces, recibo una pequeña comisión sin coste adicional para ti.
           </p>
@@ -293,22 +247,24 @@
     </div>
   </section>
 
+  <!-- SECCIÓN NEWSLETTER COMENTADA (OCULTA) TEMPORALMENTE
   <div class="nl reveal"><div class="nl-in">
     <h2>Aviso cuando publico un análisis nuevo</h2>
     <p>Sin frecuencia forzada. Solo cuando hay algo que merece la pena leer sobre equipamiento real.</p>
     <form class="nl-form" onsubmit="return false;">
-      <input type="email" placeholder="tu@email.com" required autocomplete="email"/>
+      <input type="email" placeholder="noel.rsdp0711@gmail.com" required autocomplete="email"/>
       <button type="submit">Suscribirme</button>
     </form>
     <p class="nl-legal">Sin spam. Puedes darte de baja en cualquier momento.</p>
   </div></div>
+  -->
 
 </main>
 
 <footer>
   <div class="ft-in">
     <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
-    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a></span>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
 
