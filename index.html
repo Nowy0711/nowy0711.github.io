@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
   <style>
     /* ── TOKENS Y RESET ── */
     :root {
@@ -82,8 +84,19 @@
     /* ── ANIMACIONES Y RESPONSIVE ── */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) { nav ul { display: none; } .trust { gap: 1rem; font-size: .7rem; } }
+    
+    @media (max-width: 768px) { .trust { gap: 1rem; font-size: .7rem; } }
     @media (max-width: 480px) { .page-hero { padding: 5.5rem 1.5rem 2.5rem; } }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
   </style>
 
   <meta property="og:title" content="EcoCristal — Terrarios cerrados y plantas de interior" />
@@ -99,7 +112,12 @@
 <header>
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
-    <nav aria-label="Navegación principal">
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
       <ul>
         <li><a href="#analisis">Artículos</a></li>
         <li><a href="mailto:noel.rsdp0711@gmail.com" class="nav-cta">Contacto</a></li>
@@ -158,7 +176,6 @@
   <section id="analisis" style="padding:7rem 2rem;background:var(--cr);position:relative;">
     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--vmu),transparent);"></div>
     
-    <!-- BLOQUE 1: Guías Prácticas -->
     <div class="wrap">
       <div class="reveal" style="margin-bottom:3.5rem;">
         <p class="eyebrow">Aprende haciendo</p>
@@ -205,7 +222,6 @@
       </div>
     </div>
 
-    <!-- BLOQUE 2: Gustos y recomendaciones -->
     <div class="wrap" style="margin-top: 6rem;">
       <div class="reveal" style="margin-bottom:3.5rem;">
         <p class="eyebrow">Mi selección</p>
@@ -269,7 +285,17 @@
 </footer>
 
 <script>
-  (function () {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Menú móvil
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+
+    // Scroll reveal
     var els = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) {
       els.forEach(function (el) { el.classList.add('visible'); });
@@ -281,7 +307,7 @@
       });
     }, { threshold: 0.12 });
     els.forEach(function (el) { io.observe(el); });
-  })();
+  });
 </script>
 
 </body>
