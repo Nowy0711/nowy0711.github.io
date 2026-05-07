@@ -51,6 +51,8 @@
     /* Componentes extra para links Amazon */
     .product-box { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.5rem; margin: 2rem 0; box-shadow: var(--s1); display: flex; flex-direction: column; align-items: center; }
     .product-box p { text-align: center; margin-bottom: 1rem; font-size: 1rem; }
+    /* AQUÍ ESTÁ LA MAGIA PARA LAS FOTOS DE PRODUCTO */
+    .product-box img { width: 100%; max-height: 400px; object-fit: contain; margin: 1rem 0; border-radius: var(--r); box-shadow: none; }
     .btn-amazon { background: var(--vd); color: #fff !important; padding: .75rem 1.5rem; border-radius: var(--r); font-size: .9rem; font-weight: 500; display: inline-block; transition: background var(--t); text-decoration: none; }
     .btn-amazon:hover { background: var(--vm); }
 
@@ -159,19 +161,19 @@
 
       <div class="product-box">
         <p><strong>La opción espaciosa y decorativa:</strong> Es un tarro amplio, tiene una apertura grande que te facilita muchísimo el plantado y, visualmente, creo que puede quedar muy bonito en cualquier salón.</p>
-        <img src="img/tarro-amplio.jpg" alt="Tarro de cristal amplio para terrarios" style="max-height: 400px; border-radius: var(--r); margin: 1rem 0;" />
+        <img src="img/tarro-amplio.jpg" alt="Tarro de cristal amplio para terrarios" />
         <a href="https://amzn.to/4uDwl1t" target="_blank" rel="nofollow sponsored" class="btn-amazon">Ver este tarro en Amazon</a>
       </div>
 
       <div class="product-box">
         <p><strong>Mi favorito personal (El que más uso):</strong> Este es el recipiente que yo he usado en 2 de los 3 terrarios que tengo. Apenas ocupa espacio y entra perfectamente una planta de Fitonnia bien bonita junto con sus decoraciones, musgo y demás cosas.</p>
-        <img src="img/tarro-cilindrico.jpg" alt="Tarro de cristal cilíndrico usado por el autor" style="max-height: 400px; border-radius: var(--r); margin: 1rem 0;" />
+        <img src="img/tarro-cilindrico.jpg" alt="Tarro de cristal cilíndrico usado por el autor" />
         <a href="https://amzn.to/4dt37fM" target="_blank" rel="nofollow sponsored" class="btn-amazon">Ver este tarro en Amazon</a>
       </div>
 
       <div class="product-box">
         <p><strong>Para los amantes de los terrarios abiertos:</strong> Si te interesa hacer un terrario abierto (como uno de los míos), en el que la planta pueda salir por arriba y no te importa pulverizar agua más a menudo, te recomiendo un contenedor de este tipo.</p>
-        <img src="img/tarro-abierto.jpg" alt="Contenedor de cristal abierto para terrarios" style="max-height: 400px; border-radius: var(--r); margin: 1rem 0;" />
+        <img src="img/tarro-abierto.jpg" alt="Contenedor de cristal abierto para terrarios" />
         <a href="https://amzn.to/4dcukC2" target="_blank" rel="nofollow sponsored" class="btn-amazon">Ver contenedor abierto en Amazon</a>
       </div>
 
@@ -201,7 +203,7 @@
         </ul>
       </div>
 
-<div class="sb-block">
+      <div class="sb-block">
         <h4 style="color: var(--vs);">Gustos y recomendaciones personales</h4>
         <ul>
           <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
