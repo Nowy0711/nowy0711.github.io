@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
   <style>
     /* ── TOKENS Y RESET ── */
     :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
@@ -61,7 +63,16 @@
     .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
 
     @media (max-width: 1024px) { .post-wrap { grid-template-columns: 1fr; gap: 3rem; } .sidebar { position: static; } }
-    @media (max-width: 768px) { nav ul { display: none; } }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
   </style>
 
   <meta property="og:title" content="Cómo hacer un sustrato que dure años | EcoCristal" />
@@ -87,7 +98,12 @@
 <header>
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
-    <nav>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu">
       <ul>
         <li><a href="index.html#articulos">Artículos</a></li>
         <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
@@ -186,7 +202,9 @@
       </div>
     </aside>
 
-  </div> <div class="wrap" style="padding: 0 2rem 4rem;">
+  </div> 
+
+  <div class="wrap" style="padding: 0 2rem 4rem;">
     <div style="
       padding: 1.5rem;
       background: var(--cr);
@@ -204,7 +222,8 @@
       ">Publicidad</span>
     </div>
   </div>
-  </main>
+
+</main>
 
 <footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
   <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
@@ -212,6 +231,18 @@
     <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
