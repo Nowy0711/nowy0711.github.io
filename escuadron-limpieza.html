@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Descubre por qué tu terrario necesita colémbolos y bichos bola. El equipo de limpieza perfecto para ecosistemas bioactivos."/>
+  <title>El Escuadrón de Limpieza: colémbolos y bichos bola | EcoCristal</title>
+  
+  <link rel="canonical" href="https://nowy0711.github.io/escuadron-limpieza.html" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); transition: color var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    
+    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 0; max-width: 1200px; margin: 0 auto; }
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
+    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: .9rem; color: var(--ts); display: flex; gap: .5rem; line-height: 1.4; }
+    .sb-block li a::before { content: '→'; color: var(--vc); }
+
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+
+    @media (max-width: 1024px) { .post-wrap { grid-template-columns: 1fr; gap: 3rem; } .sidebar { position: static; } }
+
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+  </style>
+
+  <meta property="og:title" content="El Escuadrón de Limpieza: colémbolos y bichos bola | EcoCristal" />
+  <meta property="og:description" content="Descubre por qué tu terrario necesita colémbolos y bichos bola. El equipo de limpieza perfecto para ecosistemas bioactivos." />
+  <meta property="og:image" content="https://nowy0711.github.io/img/bichobola.jpg" />
+  <meta property="og:url" content="https://nowy0711.github.io/escuadron-limpieza.html" />
+  <meta property="og:type" content="article" />
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html#articulos">Artículos</a></li>
+        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><span>Bioactivos</span><span>/</span><strong>Escuadrón de limpieza</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>El "Escuadrón de Limpieza": por qué tu terrario necesita colémbolos y bichos bola</h1>
+    </div>
+  </div>
+
+  <div class="post-wrap" style="padding-bottom: 2rem;">
+    
+    <article class="post">
+      <p>Los terrarios más longevos son aquellos que son bioactivos. Aunque es cierto que puedes hacer un ecosistema funcional simplemente echando hojas caídas o tierra del parque (porque ya contienen bacterias que descomponen la materia orgánica), desde mi experiencia recomiendo introducir a unos bichos que ayudan mucho con el reciclaje: los colémbolos y los bichos bola.</p>
+
+      <h3>1. ¿Qué son y cómo se reparten el trabajo?</h3>
+      <p>Tanto los bichos bola (isópodos) como los colémbolos (hexápodos) tienen un papel muy importante en la naturaleza y también lo van a tener dentro de nuestro terrario. Su trabajo es descomponer todo lo que cae al suelo, aunque cada uno se especializa en una cosa específica:</p>
+
+      <p><strong>Los colémbolos:</strong> Son muy pequeñitos (miden 1 o 2 milímetros) y de color blanquecino. Se encargan del "micro-reciclaje". Les gusta mucho el moho y los hongos, así que, si por algún motivo hay demasiada humedad en el terrario, los colémbolos van a ayudarnos a protegerlo y cuidarlo.</p>
+      
+      <img src="img/colembolos.png" alt="Detalle macro de un colémbolo blanquecino sobre la tierra" />
+
+      <p><strong>Los bichos bola:</strong> Son bastante más grandes. Se comen la materia orgánica grande: hojas secas, madera en descomposición o restos de vegetales.</p>
+      
+      <img src="img/bichobola.jpg" alt="Un bicho bola adulto en su entorno natural" />
+
+      <h3>2. El ciclo de los nutrientes: la prueba de la manzana</h3>
+      <p>Estos dos tipos de bichitos son los responsables del ciclo de la reutilización de los nutrientes, así que si no existiesen, las cosas simplemente se pudrirían y perderían todo su valor.</p>
+
+      <p>Si echásemos un trozo de manzana a nuestro terrario para aportar nutrientes naturales a tus plantas, a menos que tuviésemos a nuestro "escuadrón de limpieza", ese trozo de manzana acabaría poniéndose negro y se llenaría de moho peludo, atrayendo plagas, como mosquitas o nematodos, las cuales atacarían a todo nuestro terrario.</p>
+
+      <p>Sin embargo, si disponemos de ellos, los bichos bola se comerán la manzana y los colémbolos atacarán cualquier rastro de moho que intente salir. Después, ambos le cederán los nutrientes a la tierra a través de sus heces.</p>
+
+      <div class="highlight">
+        <strong>Cuidado con las superpoblaciones:</strong> Mantener este frágil ciclo vital es una maravilla, pero hay que tener ojo. Los bichos bola comen muchísimo. Si no les echas hojarasca seca de vez en cuando, podrían empezar a comerse las hojas vivas de tus plantas principales.
+      </div>
+
+      <h3>3. Cómo conseguirlos (y no meter plagas en casa)</h3>
+      <p>A la hora de introducirlos en tu ecosistema, tienes dos vías:</p>
+
+      <p>Para los bichos bola, yo suelo conseguirlos directamente en el parque. Suelen salir cuando hay humedad, así que mi recomendación es salir a buscar pronto por la mañana, justo al amanecer. Levanta piedras, mira debajo de macetas, en esquinas húmedas o debajo de troncos de madera medio podridos.</p>
+
+      <p>Los colémbolos es imposible encontrarlos en la calle porque son microscópicos y no se les ve. En este caso, lo más sencillo y seguro es comprar una pequeña tarrina de cultivo inicial, vuelcas un poco de la tarrina en el terrario y ya está.</p>
+
+      <img src="img/Bichos-bola.jpeg" alt="Terrario cerrado con plantas y un trozo de manzana para los isópodos" />
+
+    </article> 
+
+    <aside class="sidebar">
+      <div class="sb-block" style="text-align: center;">
+        <span style="display: block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ts); margin-bottom: 0.75rem; opacity: 0.6;">Publicidad</span>
+      </div>
+      
+      <div class="sb-block">
+        <h4 style="color: var(--vs);">Guías Prácticas</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
+          <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla que dure años</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block">
+        <h4 style="color: var(--vs);">Gustos y recomendaciones personales</h4>
+        <ul>
+          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
+          <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div> 
+
+  <div class="wrap" style="padding: 0 2rem 4rem;">
+    <div style="padding: 1.5rem; background: var(--cr); border-radius: var(--rl); border: 1px solid var(--vmu); text-align: center;">
+      <span style="display: block; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ts); opacity: 0.6;">Publicidad</span>
+    </div>
+  </div>
+
+</main>
+
+<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
+  <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
+    <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
