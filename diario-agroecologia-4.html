@@ -4,12 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="description" content="Días 7, 8 y 9 de agroecología: Taller escolar, plantación de fresas, riego y visitas inesperadas en el huerto."/>
-  <title>Agroecología #3: Talleres escolares, traiciones y plantación | EcoCristal</title>
-  <link rel="canonical" href="https://ecocristal.es/diario-agroecologia-3.html" />
+  <title>Agroecología #4: Talleres escolares, traiciones y plantación | EcoCristal</title>
+  <link rel="canonical" href="https://ecocristal.es/diario-agroecologia-4.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  
   <link rel="icon" type="image/png" href="img/favicon.png"/>
 
   <style>
@@ -19,7 +18,6 @@
     body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; cursor: pointer; }
-
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
     .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
@@ -29,14 +27,11 @@
     nav a:hover { color: var(--vd); }
     .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
-
     .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
     .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
-    
     .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
     .wrap { max-width: 1200px; margin: 0 auto; }
     .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
-    
     .post-wrap { display: grid; grid-template-columns: 1fr 350px; gap: 5rem; padding: 4rem 2rem 0; max-width: 1200px; margin: 0 auto; }
     .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
     .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
@@ -44,25 +39,18 @@
     .post ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
     .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 600px; height: auto; object-fit: cover; }
     .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
-
     .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
-
     .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 2rem; }
     .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); overflow: hidden; box-shadow: var(--s1); display: flex; flex-direction: column; }
-    
     .sb-content { padding: 2rem; }
     .sb-block-img { width: 100%; height: auto; border-bottom: 1px solid var(--vmu); }
-
     .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vd); margin-bottom: 1.5rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
     .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--vd), var(--vs), transparent 70%); }
-
     .sb-block ul { display: flex; flex-direction: column; gap: 1.2rem; padding: 0; list-style: none; margin: 0; }
     .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.4; transition: color var(--t); }
     .sb-block li a:hover { color: var(--vd); }
     .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
-
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem; }
-
     @media (max-width: 1024px) { .post-wrap { grid-template-columns: 1fr; gap: 3rem; } .sidebar { position: static; } }
     .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
     @media (max-width: 768px) {
@@ -92,17 +80,21 @@
 
 <main>
   <nav class="bread">
-    <a href="index.html">Inicio</a><span>/</span><span>Diario</span><span>/</span><strong>Agroecología #3</strong>
+    <a href="index.html">Inicio</a><span>/</span><span>Diario</span><span>/</span><strong>Agroecología #4</strong>
   </nav>
 
   <div class="page-hero">
     <div class="wrap">
-      <h1>Agroecología #3: Talleres escolares, traiciones y plantación</h1>
+      <h1>Agroecología #4: Talleres escolares, traiciones y plantación</h1>
     </div>
   </div>
 
   <div class="post-wrap" style="padding-bottom: 2rem;">
     <article class="post">
+      <p style="font-style: italic; color: var(--vs); font-weight: 500; margin-bottom: 2rem;">
+        Nota: Esta entrada del diario ha sido redactada originalmente por mi compañero de bancal, Juan Carlos.
+      </p>
+
       <p>Tras las lluvias de la semana pasada, retomamos el control del bancal en las sesiones 7, 8 y 9. Esta vez toca hablar de educación ambiental con chavales, de lidiar con las ausencias en el equipo y de las crudas realidades de la supervivencia en el huerto (donde los compañeros te pueden dejar sin lechugas en un abrir y cerrar de ojos).</p>
 
       <h3>Día 7: Ausencias y semillas rebeldes</h3>
@@ -117,7 +109,7 @@
       <h3>Día 8: El taller escolar y la traición de la lechuga</h3>
       <p>El octavo día se nos hizo muy largo, no solo por la sesión de agroecología, sino porque también teníamos APS (Aprendizaje y Servicio). Tuvimos que madrugar bastante para estar en el colegio Hemingway a las 8:40. Entramos a 5 clases distintas (de segundo y tercero de primaria) para dar una presentación sobre alimentación sostenible, un Kahoot y un mini-taller donde los chavales se preparaban un semillero para llevarse a casa.</p>
 
-      <img src="img/manos-semilleros.jpeg" alt="Manos sosteniendo pequeños semilleros con tierra" />
+      <img src="img/manos-semilleros.jpg" alt="Manos sosteniendo pequeños semilleros con tierra" />
       <p class="img-caption">Imagen 1: Semilleros resultantes del mini-taller de huerto con los chavales.</p>
 
       <p>Lo pasamos muy bien. Los chavales estaban muy colaborativos, sobre todo en el taller. Mientras yo les explicaba lo que había que hacer, Noel e Iván preparaban los semilleros (por alguna razón los chavales llamaban a Noel "payico"). La experiencia estuvo muy bien y, además, nos dieron de almorzar, cosa que el muerto de hambre de Noel aprovechó para zamparse todo lo que había.</p>
@@ -135,15 +127,15 @@
       <h3>Día 9: Un pato, caléndulas y colonización</h3>
       <p>En el noveno día fuimos a regar el huerto y a plantar algunas cosas que habíamos comprado, entre ellas una caléndula. Además, nos encontramos con que Adolfo había comprado tagetes, así que plantamos dos. Aprovechamos también para regar los semilleros de las lechugas y las acelgas.</p>
 
-      <img src="img/plantando-calendula.jpeg" alt="Mano plantando una caléndula naranja en la tierra" />
+      <img src="img/plantando-calendula.jpg" alt="Mano plantando una caléndula naranja en la tierra" />
       <p class="img-caption">Imagen 2: Yo plantando la caléndula en nuestro bancal.</p>
 
       <p>Ese día decidimos expandirnos y colonizamos el macetero de al lado de nuestro bancal para poner la menta. Fue un día rápido y el encuentro más interesante fue con un pato salvaje que paseaba por allí. Para variar, Noel no vino e Iván tampoco (se quedó en casa jugando a la play).</p>
 
-      <img src="img/pato-huerto.jpeg" alt="Pato paseando junto a los bancales del huerto" />
+      <img src="img/pato-huerto.jpg" alt="Pato paseando junto a los bancales del huerto" />
       <p class="img-caption">Imagen 3: Nuevo compañero del bancal patrullando la zona.</p>
 
-      <img src="img/bancal-regado.jpeg" alt="Vista general del bancal plantado y con el sistema de riego" />
+      <img src="img/bancal-regado.jpg" alt="Vista general del bancal plantado y con el sistema de riego" />
       <p class="img-caption">Imagen 4: El huerto resultante tras la jornada de plantación y riego.</p>
 
       <p><strong>Lo que me llevo a mis cristales:</strong> Estos días me han enseñado lo rápido que se seca la tierra cuando suben las temperaturas y lo crucial que es poner mantillo para retener la humedad. En mis terrarios cerrados, la condensación hace este trabajo por mí, pero observar cómo el mantillo protege el suelo en el exterior me ha dado ideas para usar más hojarasca y musgo esfagno en mis próximos diseños de interior para estabilizar la humedad en los tarros más grandes.</p>
@@ -180,7 +172,8 @@
           <ul>
             <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
             <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
-            <li><a href="diario-agroecologia-3.html" style="color: var(--vd); font-weight: 500;">Agroecología #3: Talleres y plantación</a></li>
+            <li><a href="diario-agroecologia-3.html">Agroecología #3: Próximamente</a></li>
+            <li><a href="diario-agroecologia-4.html" style="color: var(--vd); font-weight: 500;">Agroecología #4: Talleres y plantación</a></li>
           </ul>
         </div>
       </div>
