@@ -41,20 +41,24 @@
     .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
     .page-hero h1 em { font-style: italic; color: var(--vs); }
     
-    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 0; max-width: 1200px; margin: 0 auto; }
+    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 6rem; max-width: 1200px; margin: 0 auto; }
     .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
     .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
     .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
     .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; object-fit: cover; }
     .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
 
-    /* ── SIDEBAR ── */
-    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
-    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
-    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
-    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
-    .sb-block li a { font-size: .9rem; color: var(--ts); display: flex; gap: .5rem; line-height: 1.4; }
-    .sb-block li a::before { content: '→'; color: var(--vc); }
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a:hover { color: var(--vd); }
+    .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
     /* ── FOOTER ── */
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
@@ -111,7 +115,7 @@
     </div>
   </div>
 
-  <div class="post-wrap" style="padding-bottom: 2rem;">
+  <div class="post-wrap">
     
     <article class="post">
       <p>Como cualquier persona con esta afición, tengo mi top 5 de plantas de interior que pueden usarse tanto en terrarios como en macetas normales para dar belleza a nuestras casas. Así que voy a explicar por qué me gusta cada una y sus ventajas y desventajas.</p>
@@ -121,19 +125,6 @@
       
       <p>Como ya he dicho en los otros artículos, requiere de muy pocos cuidados, ya que resiste genial el calor, pero hay que intentar que esté en un ambiente que supere los 15ºC, ya que con el frío empieza a sufrir y puede ponerse mala o tirar las hojas. Aguanta bien en zonas poco iluminadas aunque prefiere las zonas con mucha luz pero nunca con sol directo.</p>
 
-      <div style="
-        margin: 2rem 0;
-        padding: 1rem;
-        background: var(--cr);
-        border-radius: var(--rl);
-        border: 1px solid var(--vmu);
-        text-align: center;
-        font-size: 0.75rem;
-        color: var(--ts);
-        letter-spacing: 0.04em;
-      ">
-        <span style="display:block; margin-bottom:0.5rem; opacity:0.6;">Publicidad</span>
-      </div>
       <p>Respecto al riego, le gusta mucha humedad constante en sus hojas y también en sus raíces. Gracias a que yo la uso en terrarios, en invierno puedo olvidarme perfectamente de regarla ya que el ecosistema mantiene la humedad, y en verano están perfectamente si pulverizo 1 o 2 veces por semana. Además resiste mucho a plagas aunque puede verse afectada por los pulgones. Por eso mismo siempre que vayamos a comprarla en un vivero o en un bazar debemos de ver bien sus hojas y tallo y fijarnos que no hay ningún puntito negro.</p>
       
       <img src="img/Fittonias.webp" alt="Fittonia de interior con colores vivos" />
@@ -175,19 +166,8 @@
 
     <aside class="sidebar">
 
-      <div class="sb-block" style="text-align: center;">
-        <span style="
-          display: block;
-          font-size: 0.7rem;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          color: var(--ts);
-          margin-bottom: 0.75rem;
-          opacity: 0.6;
-        ">Publicidad</span>
-      </div>
       <div class="sb-block">
-        <h4 style="color: var(--vs);">Guías Prácticas</h4>
+        <h4>Guías Prácticas</h4>
         <ul>
           <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
           <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
@@ -196,33 +176,29 @@
       </div>
 
       <div class="sb-block">
-        <h4 style="color: var(--vs);">Gustos y recomendaciones personales</h4>
+        <h4>Diario de Agroecología</h4>
         <ul>
-          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+          <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
+          <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
+          <li><a href="diario-agroecologia-3.html">Agroecología #3: Riego y Tagetes</a></li>
+          <li><a href="diario-agroecologia-4.html">Agroecología #4: Talleres y plantación</a></li>
+          <li><a href="diario-agroecologia-5.html">Agroecología #5: Compostaje y Viñedos</a></li>
+          <li><a href="diario-agroecologia-6.html">Agroecología #6: El final de la asignatura</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block">
+        <h4>Gustos y recomendaciones personales</h4>
+        <ul>
+          <li><a href="mis-5-plantas.html" style="color: var(--vd); font-weight: 500;">Mis 5 plantas favoritas para interior</a></li>
           <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
           <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
         </ul>
       </div>
     </aside>
 
-  </div> <div class="wrap" style="padding: 0 2rem 4rem;">
-    <div style="
-      padding: 1.5rem;
-      background: var(--cr);
-      border-radius: var(--rl);
-      border: 1px solid var(--vmu);
-      text-align: center;
-    ">
-      <span style="
-        display: block;
-        font-size: 0.75rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--ts);
-        opacity: 0.6;
-      ">Publicidad</span>
-    </div>
-  </div>
+  </div> 
+
 </main>
 
 <footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
