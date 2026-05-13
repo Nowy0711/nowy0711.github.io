@@ -49,13 +49,15 @@
     
     .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
 
-    /* ── SIDEBAR ── */
-    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
-    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
-    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
-    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
-    .sb-block li a { font-size: .9rem; color: var(--ts); display: flex; gap: .5rem; line-height: 1.4; }
-    .sb-block li a::before { content: '→'; color: var(--vc); }
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a:hover { color: var(--vd); }
+    .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
     /* ── FOOTER ── */
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
@@ -129,19 +131,6 @@
 
       <p>Yo empecé este año como un experimento y por ahora todo me ha ido bastante bien. Para empezar compré <a href="https://amzn.to/4ekJ4kH" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">macetas pequeñitas</a> para que no me ocupasen mucho espacio, pero ten en cuenta que cuanto más grandes sean, más va a crecer tu planta y más bonita se va a ver.</p>
 
-      <div style="
-        margin: 2rem 0;
-        padding: 1rem;
-        background: var(--cr);
-        border-radius: var(--rl);
-        border: 1px solid var(--vmu);
-        text-align: center;
-        font-size: 0.75rem;
-        color: var(--ts);
-        letter-spacing: 0.04em;
-      ">
-        <span style="display:block; margin-bottom:0.5rem; opacity:0.6;">Publicidad</span>
-      </div>
       <h3>1. La elección: Lechuga 4 estaciones</h3>
       <p>El primer cultivo que planté fueron las lechugas. Para conseguirlas necesité <a href="https://amzn.to/4t7Ydtr" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">sustrato universal</a> y semillas. En mi caso elegí la variedad <a href="https://amzn.to/4ekWzkk" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;"><strong>"Lechuga 4 estaciones"</strong></a>, porque me había estado informando y son bastante fáciles de cuidar y crecen rápido en interior.</p>
       
@@ -206,28 +195,29 @@
 
     <aside class="sidebar">
 
-      <div class="sb-block" style="text-align: center;">
-        <span style="
-          display: block;
-          font-size: 0.7rem;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          color: var(--ts);
-          margin-bottom: 0.75rem;
-          opacity: 0.6;
-        ">Publicidad</span>
-      </div>
       <div class="sb-block">
-        <h4 style="color: var(--vs);">Guías Prácticas</h4>
+        <h4>Guías Prácticas</h4>
         <ul>
           <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
-          <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
+          <li><a href="cultivando-lechugas.html" style="color: var(--vd); font-weight: 500;">Mi primer huerto: cultivando lechugas</a></li>
           <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla que dure años</a></li>
         </ul>
       </div>
 
+      <div class="sb-block">
+        <h4>Diario de Agroecología</h4>
+        <ul>
+          <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
+          <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
+          <li><a href="diario-agroecologia-3.html">Agroecología #3: Riego y Tagetes</a></li>
+          <li><a href="diario-agroecologia-4.html">Agroecología #4: Talleres y plantación</a></li>
+          <li><a href="diario-agroecologia-5.html">Agroecología #5: Compostaje y Viñedos</a></li>
+          <li><a href="diario-agroecologia-6.html">Agroecología #6: El final de la asignatura</a></li>
+        </ul>
+      </div>
+
      <div class="sb-block">
-        <h4 style="color: var(--vs);">Gustos y recomendaciones personales</h4>
+        <h4>Gustos y recomendaciones personales</h4>
         <ul>
           <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
           <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
@@ -236,25 +226,9 @@
       </div>
     </aside>
 
-  </div> <div class="wrap" style="padding: 0 2rem 4rem;">
-    <div style="
-      padding: 1.5rem;
-      background: var(--cr);
-      border-radius: var(--rl);
-      border: 1px solid var(--vmu);
-      text-align: center;
-    ">
-      <span style="
-        display: block;
-        font-size: 0.75rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--ts);
-        opacity: 0.6;
-      ">Publicidad</span>
-    </div>
-  </div>
-  </main>
+  </div> 
+
+</main>
 
 <footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
   <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
