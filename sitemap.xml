@@ -1,43 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nowy0711.github.io/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nowy0711.github.io/como-montar-primer-terrario.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/como-montar-primer-terrario.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nowy0711.github.io/como-hacer-sustrato.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/cultivando-lechugas.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nowy0711.github.io/cultivando-lechugas.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/como-hacer-sustrato.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nowy0711.github.io/mis-5-plantas.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/mis-5-plantas.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nowy0711.github.io/politica-privacidad.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://ecocristal.es/urnas-de-cristal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/escuadron-limpieza.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-3.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-4.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-5.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/diario-agroecologia-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ecocristal.es/politica-privacidad.html</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nowy0711.github.io/urnas-de-cristal.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nowy0711.github.io/escuadron-limpieza.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <priority>0.8</priority>
   </url>
 </urlset>
