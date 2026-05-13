@@ -47,14 +47,13 @@
 
     .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
 
-    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 2rem; }
-    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); overflow: hidden; box-shadow: var(--s1); display: flex; flex-direction: column; }
-    .sb-content { padding: 2rem; }
-    .sb-block-img { width: 100%; height: auto; border-bottom: 1px solid var(--vmu); }
-    .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vd); margin-bottom: 1.5rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
-    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--vd), var(--vs), transparent 70%); }
-    .sb-block ul { display: flex; flex-direction: column; gap: 1.2rem; padding: 0; list-style: none; margin: 0; }
-    .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.4; transition: color var(--t); }
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
     .sb-block li a:hover { color: var(--vd); }
     .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
@@ -137,7 +136,7 @@
       <p><strong>• Parte 2: Los viñedos y el museo de variedades:</strong><br>
       Después fuimos a una zona de viñedos, la cual era la mayor colección ampelológica de España y la segunda del mundo. Es curioso que las vides en España son en realidad dos plantas, ya que la raíz es un organismo separado. Esto se hizo intencionalmente cuando llegó de América una plaga llamada filoxera que, y cito directamente de la trabajadora del iMiDRA, "se cepilló [interpreto que se refiere a que mató, en lugar de a la otra acepción más soez] a la mitad de las vides de Europa desde la raíz". Como la filoxera no llegó a Canarias, sus variedades siguen siendo solo un individuo.</p>
 
-      <p>La colección de viñedos tiene dos grandes propósitos: El primero es el de la conservación. Se recogen germoplasmas de todas las variedades nacionales, y distribuyen variedades locales a quien les hagan falta. Esto es relevante ya que el siglo pasado se empezó a priorizar en España las variedades más competitivas, ignorando otras variedades y causando un declive en la diversidad genética en España, lo que se ve reflejado en el hecho de que España tenga unas 40 variedades en comparación de las 140 de Portugal. El segundo propósito de la colección es el de la realización de experimentos científicos. Presenciamos, por ejemplo, cómo se estaba investigando cómo afectaba el cambio climático a unas vides a las que habían rodeado de plástico para aumentar la temperatura unos grados, y también como varias filas de vides tenían distintas cantidades de hierba junto a ellas para evaluar el impacto de la cobertura vegetal. Para acabar la salida, fuimos a ver brevemente el museo ampelográfico, donde nos hablaron un poco más de las distintas variedades y prácticas de los viñedos.</p>
+      <p>La colección de viñedos tiene dos grandes propósitos: El primero es el de la conservación. Se recogen germoplasmas de todas las variedades nacionales, y distribuyen variedades locales a quien les hagan falta. Esto es relevante ya que el siglo pasado se empezó a priorizar en España las variedades más competitivas, ignorando otras variedades y causando un declive en la diversidad genética en España, lo que se ve reflejado en el hecho de que España tenga unas 40 variedades en comparación de las 140 de Portugal. El segundo propósito de la colección es el de la realización de experimentos científicos. Presenciamos, por ejemplo, cómo se estaba investigando cómo afectaba el cambio climático a unas vides a las que habían rodeado de plástico para aumentar la temperatura unos grados, y también como varias filas de vides tenían distintas cantidades de hierba junto a ellas para evaluar el impacto de la cobertura vegetal. Para acabar la salida, fuimos a ver brevemente el museo ampelográfico, donde nos hablaron un poco más de las distintas variedades y practices de los viñedos.</p>
 
       <img src="img/vinedos-imidra.jpeg" alt="Campo de viñedos a plena luz del día" />
       <p class="img-caption">Imagen 4: Los viñedos. No es muy buena foto.</p>
@@ -163,39 +162,33 @@
 
     <aside class="sidebar">
       <div class="sb-block">
-        <div class="sb-content">
-          <h4>Guías Prácticas</h4>
-          <ul>
-            <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
-            <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
-            <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla duradera</a></li>
-          </ul>
-        </div>
+        <h4>Guías Prácticas</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
+          <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla duradera</a></li>
+        </ul>
       </div>
 
       <div class="sb-block">
-        <img src="img/sidebar-gustos.jpg" alt="Mis recomendaciones EcoCristal" class="sb-block-img">
-        <div class="sb-content">
-          <h4>Gustos y recomendaciones personales</h4>
-          <ul>
-            <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
-            <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
-            <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
-          </ul>
-        </div>
+        <h4>Diario de Agroecología</h4>
+        <ul>
+          <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
+          <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
+          <li><a href="diario-agroecologia-3.html">Agroecología #3: Riego y Tagetes</a></li>
+          <li><a href="diario-agroecologia-4.html">Agroecología #4: Talleres y plantación</a></li>
+          <li><a href="diario-agroecologia-5.html" style="color: var(--vd); font-weight: 500;">Agroecología #5: Compostaje y Viñedos</a></li>
+          <li><a href="diario-agroecologia-6.html">Agroecología #6: El final de la asignatura</a></li>
+        </ul>
       </div>
 
       <div class="sb-block">
-        <div class="sb-content">
-          <h4>Diario de Agroecología</h4>
-          <ul>
-            <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
-            <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
-            <li><a href="diario-agroecologia-3.html">Agroecología #3: Riego y Tagetes</a></li>
-            <li><a href="diario-agroecologia-4.html">Agroecología #4: Talleres y plantación</a></li>
-            <li><a href="diario-agroecologia-5.html" style="color: var(--vd); font-weight: 500;">Agroecología #5: Compostaje y Viñedos</a></li>
-          </ul>
-        </div>
+        <h4>Gustos y recomendaciones personales</h4>
+        <ul>
+          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
+          <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
+        </ul>
       </div>
     </aside>
   </div>
