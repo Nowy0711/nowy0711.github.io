@@ -35,7 +35,7 @@
 
     /* ── HEADER ── */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
-    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
     .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
     nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
@@ -47,44 +47,59 @@
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
 
     /* ── ESTRUCTURA DEL ARTÍCULO ── */
-    .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
     .bread a { color: var(--vs); transition: color var(--t); }
     .bread a:hover { color: var(--vd); }
     .bread span { opacity: .4; }
     
     .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
-    .wrap { max-width: 1200px; margin: 0 auto; }
+    .wrap { max-width: 1440px; margin: 0 auto; }
     .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
     .page-hero h1 em { font-style: italic; color: var(--vs); }
     
-    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 6rem; max-width: 1200px; margin: 0 auto; }
+    /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
+    .post-wrap { 
+      display: grid; 
+      grid-template-columns: 250px 1fr 280px; 
+      gap: 4rem; 
+      padding: 4rem 2rem 6rem; 
+      max-width: 1440px; 
+      margin: 0 auto; 
+      align-items: start; 
+    }
+    
+    .post { grid-column: 2; grid-row: 1; min-width: 0; }
+    .sidebar-left { grid-column: 1; grid-row: 1; }
+    .sidebar-right { grid-column: 3; grid-row: 1; }
+
     .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
     .post h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; color: var(--vd); margin: 2rem 0 .75rem; }
     .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
     .post ul { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
     .post li { margin-bottom: 0.5rem; }
-    .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; max-height: 600px; object-fit: cover; }
+    .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 700px; height: auto; object-fit: cover; }
     .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
     
     .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
 
     /* ── SIDEBAR DEFINITIVA ── */
-    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.75rem; }
-    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); }
-    .sb-block h4 { font-family: var(--fd); font-size: 1.4rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
     .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
     .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
-    .sb-block li a { font-size: 0.95rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a { font-size: 0.9rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
     .sb-block li a:hover { color: var(--vd); }
     .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
     /* ── FOOTER ── */
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
-    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
 
-    @media (max-width: 1024px) {
-      .post-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .sidebar { position: static; }
+    /* ── RESPONSIVE PARA TABLET/MÓVIL ── */
+    @media (max-width: 1024px) { 
+      .post-wrap { display: flex; flex-direction: column; gap: 3rem; } 
+      .sidebar { position: static; width: 100%; } 
     }
 
     /* ── MENÚ MÓVIL ── */
@@ -148,6 +163,17 @@
 
   <div class="post-wrap">
     
+    <aside class="sidebar sidebar-left">
+      <div class="sb-block">
+        <h4>Gustos y recomendaciones</h4>
+        <ul>
+          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
+          <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
+        </ul>
+      </div>
+    </aside>
+
     <article class="post">
       <p>Lo principal antes de ensuciarnos las manos es tener bien claro el tamaño del <a href="https://amzn.to/3QYC2s4" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">tarro de cristal</a> que vas a usar. Una vez tienes la urna elegida, toca reunir a los protagonistas y preparar el terreno.</p>
 
@@ -197,7 +223,7 @@
       
     </article> 
 
-    <aside class="sidebar">
+    <aside class="sidebar sidebar-right">
       <div class="sb-block">
         <h4>Guías Prácticas</h4>
         <ul>
@@ -218,22 +244,13 @@
           <li><a href="diario-agroecologia-6.html">Agroecología #6: El final de la asignatura</a></li>
         </ul>
       </div>
-
-      <div class="sb-block">
-        <h4>Gustos y recomendaciones personales</h4>
-        <ul>
-          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
-          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir cristal</a></li>
-          <li><a href="escuadron-limpieza.html">El Escuadrón de Limpieza (Bichos bola)</a></li>
-        </ul>
-      </div>
     </aside>
 
   </div> 
 </main>
 
 <footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
-  <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
+  <div style="max-width: 1440px; margin: 0 auto; opacity: 0.8;">
     <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
     <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
