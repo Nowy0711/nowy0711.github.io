@@ -38,9 +38,9 @@
     .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
     .skip:focus { top: 1rem; }
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
-    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
-    .logo img { height: 28px; width: 28px; object-fit: cover; border-radius: 50%; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
     nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
     nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
     nav a:hover { color: var(--vd); }
@@ -56,7 +56,7 @@
     .trust span { display: inline-flex; align-items: center; gap: .5rem; }
     .trust span::before { content: '·'; opacity: .5; }
     .trust span:first-child::before { display: none; }
-    .wrap { max-width: 1440px; margin: 0 auto; }
+    .wrap { max-width: 1200px; margin: 0 auto; }
     .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--vs); margin-bottom: .75rem; }
     .section-title { font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--vd); line-height: 1.15; }
     .section-title em { font-style: italic; color: var(--vs); }
@@ -67,6 +67,7 @@
     .card-thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--vmu), var(--vc)); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .card-tag { position: absolute; top: 1rem; left: 1rem; background: var(--vd); color: #fff; font-size: .65rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 100px; z-index: 2; }
+    .card-tag::after { display: none !important; }
     .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .card-body h3 { font-family: var(--fd); font-size: 1.2rem; font-weight: 400; color: var(--vd); line-height: 1.3; margin-bottom: .65rem; }
     .card-body p { font-size: .85rem; color: var(--ts); line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
@@ -75,7 +76,7 @@
     .card-foot a:hover { color: var(--vd); }
 
     footer { background: var(--to); padding: 3rem 2rem 2rem; }
-    .ft-in { max-width: 1440px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
+    .ft-in { max-width: 1200px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
     
     /* ── ANIMACIONES Y RESPONSIVE ── */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
@@ -107,7 +108,7 @@
 
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="img/imagen.png" alt="Logo de EcoCristal"> EcoCristal</a>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
     
     <button class="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
@@ -269,7 +270,7 @@
           </div>
           <div class="card-body">
             <h3>Agroecología #4: Talleres escolares y plantación</h3>
-            <p>Educación ambiental con niños de primaria, lidiar con las ausencias en el equipo y la cruda realidad de que te roben las lechugas.</p>
+            <p>Educación ambiental con niños de primaria, lidiar con las ausencias en el equipo y la cruda reality de que te roben las lechugas.</p>
             <div class="card-foot"><a href="diario-agroecologia-4.html">Leer entrada →</a></div>
           </div>
         </article>
