@@ -38,14 +38,13 @@
     .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
     .skip:focus { top: 1rem; }
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
-    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
-    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
-    nav ul { display: flex; gap: 2rem; align-items: center; }
+    .logo img { height: 28px; width: 28px; object-fit: cover; border-radius: 50%; }
     nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
     nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
     nav a:hover { color: var(--vd); }
-    nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+    nav a:hover::after { transform: scaleX(1); }
     .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
     .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
@@ -53,13 +52,11 @@
     /* ── COMPONENTES GLOBALES ── */
     .btn-p { background: var(--vd); color: #fff; padding: .875rem 2rem; border-radius: var(--r); font-size: .875rem; font-weight: 500; letter-spacing: .04em; transition: background var(--t), transform var(--t), box-shadow var(--t); display: inline-flex; align-items: center; gap: .5rem; }
     .btn-p:hover { background: var(--vm); transform: translateY(-2px); box-shadow: var(--s2); }
-    .btn-s { background: transparent; color: var(--vd); padding: .875rem 2rem; border-radius: var(--r); border: 1.5px solid var(--vc); font-size: .875rem; font-weight: 500; transition: border-color var(--t), background var(--t), transform var(--t); display: inline-flex; align-items: center; gap: .5rem; }
-    .btn-s:hover { border-color: var(--vd); background: var(--vn); transform: translateY(-2px); }
     .trust { background: var(--vd); padding: 1.2rem 2rem; text-align: center; font-size: .78rem; letter-spacing: .07em; text-transform: uppercase; color: var(--vmu); display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
     .trust span { display: inline-flex; align-items: center; gap: .5rem; }
     .trust span::before { content: '·'; opacity: .5; }
     .trust span:first-child::before { display: none; }
-    .wrap { max-width: 1200px; margin: 0 auto; }
+    .wrap { max-width: 1440px; margin: 0 auto; }
     .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--vs); margin-bottom: .75rem; }
     .section-title { font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--vd); line-height: 1.15; }
     .section-title em { font-style: italic; color: var(--vs); }
@@ -69,7 +66,6 @@
     .card:hover { transform: translateY(-5px); box-shadow: var(--s2); }
     .card-thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--vmu), var(--vc)); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .card-thumb svg { width: 40px; height: 40px; opacity: .25; stroke: var(--vd); fill: none; stroke-width: 1.2; stroke-linecap: round; }
     .card-tag { position: absolute; top: 1rem; left: 1rem; background: var(--vd); color: #fff; font-size: .65rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 100px; z-index: 2; }
     .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .card-body h3 { font-family: var(--fd); font-size: 1.2rem; font-weight: 400; color: var(--vd); line-height: 1.3; margin-bottom: .65rem; }
@@ -79,7 +75,7 @@
     .card-foot a:hover { color: var(--vd); }
 
     footer { background: var(--to); padding: 3rem 2rem 2rem; }
-    .ft-in { max-width: 1200px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
+    .ft-in { max-width: 1440px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
     
     /* ── ANIMACIONES Y RESPONSIVE ── */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
@@ -111,7 +107,7 @@
 
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <a href="index.html" class="logo"><img src="img/imagen.png" alt="Logo de EcoCristal"> EcoCristal</a>
     
     <button class="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
@@ -120,7 +116,7 @@
     <nav class="nav-menu" aria-label="Navegación principal">
       <ul>
         <li><a href="#analisis">Artículos</a></li>
-        <li><a href="mailto:noel.rsdp0711@gmail.com" class="nav-cta">Contacto</a></li>
+        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noel.rsdp0711@gmail.com" target="_blank" class="nav-cta">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -195,7 +191,7 @@
           </div>
         </article>
 
-       <article class="card reveal">
+        <article class="card reveal">
           <div class="card-thumb">
             <img src="img/lechugasemillero2.jpeg" alt="Lechugas frescas creciendo en un semillero al sol">
             <span class="card-tag">Huerto en casa</span>
@@ -304,6 +300,7 @@
 
       </div>
     </div>
+
     <div class="wrap" style="margin-top: 6rem;">
       <div class="reveal" style="margin-bottom:3.5rem;">
         <p class="eyebrow">Mi selección</p>
@@ -386,7 +383,7 @@
 <footer>
   <div class="ft-in">
     <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
-    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noel.rsdp0711@gmail.com" target="_blank" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
 
