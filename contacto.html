@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916295033681359" crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Contacta con Noel de EcoCristal para dudas sobre terrarios, sustratos y plantas de interior."/>
+  <title>Contacto - EcoCristal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root {
+      --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59;
+      --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4;
+      --bc: #f7f5f0; --cr: #ede9e0;
+      --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --r: 6px; --rl: 12px;
+      --s1: 0 2px 12px rgba(30,58,47,.08);
+      --s2: 0 6px 32px rgba(30,58,47,.13);
+      --t: .35s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; border-radius: var(--rl); }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    nav a:hover::after { transform: scaleX(1); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── BANNER Y CONTENIDO ── */
+    .page-hero { padding: 9rem 2rem 4rem; text-align: center; background: var(--cr); border-bottom: 1px solid var(--vmu); }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); margin-top: 0.5rem; }
+    .bread { font-size: .85rem; color: var(--ts); margin-bottom: 1rem; display: flex; justify-content: center; gap: .5rem; }
+    .bread a { color: var(--vs); font-weight: 500; }
+    .bread a:hover { color: var(--vd); text-decoration: underline; }
+    
+    .post-wrap { max-width: 650px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .post p { margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.8; }
+    
+    /* ── ESTILOS DEL FORMULARIO ── */
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem; background: #fff; padding: 2.5rem; border-radius: var(--rl); box-shadow: var(--s1); border: 1px solid var(--cr); }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-form label { font-size: 0.9rem; font-weight: 500; color: var(--vd); }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.85rem; border: 1px solid var(--vmu); border-radius: var(--r); font-family: inherit; font-size: 1rem; color: var(--to); background: var(--bc); transition: border-color var(--t); }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--vs); background: #fff; }
+    .contact-form button { background: var(--vd); color: #fff; padding: 1rem; border: none; border-radius: var(--r); font-size: 1rem; font-weight: 500; cursor: pointer; transition: background var(--t), transform var(--t); margin-top: 0.5rem; }
+    .contact-form button:hover { background: var(--vm); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; clear: both; }
+    .ft-in { max-width: 1200px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
+    
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start !important; }
+      .nav-cta { display: inline-block; text-align: center; }
+      .contact-form { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav-cta" style="background: var(--vm) !important;">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <nav class="bread">
+      <a href="index.html">Inicio</a><span>/</span><strong>Contacto</strong>
+    </nav>
+    <h1>Hablemos</h1>
+  </div>
+
+  <div class="post-wrap">
+    <article class="post">
+      <p>¿Tienes algún problema de moho en tu terrario, dudas sobre qué plantas de interior elegir, o simplemente quieres enseñarme cómo te ha quedado tu último proyecto? Rellena el formulario de abajo y te responderé lo antes posible.</p>
+      
+      <p>También puedes escribirme directamente a: <strong>noel.rsdp0711@gmail.com</strong></p>
+
+      <!-- FORMULARIO FORMSPREE -->
+      <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="email">Tu correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="mensaje">Tu mensaje</label>
+          <textarea id="mensaje" name="message" rows="6" placeholder="Escribe tu consulta aquí..." required></textarea>
+        </div>
+        
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </article>
+  </div> 
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
