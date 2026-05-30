@@ -54,9 +54,9 @@
     .bread a:hover { color: var(--vd); }
     .bread span { opacity: .4; }
     
-    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .page-hero { padding: 9rem 2rem 4rem; text-align: center; background: var(--cr); border-bottom: 1px solid var(--vmu); }
     .wrap { max-width: 1440px; margin: 0 auto; }
-    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
     .page-hero h1 em { font-style: italic; color: var(--vs); }
     
     /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
@@ -137,15 +137,14 @@
 <header>
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
-    
     <button class="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
     </button>
-
     <nav class="nav-menu" aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html#articulos">Artículos</a></li>
-        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -160,6 +159,11 @@
   <div class="page-hero">
     <div class="wrap">
       <h1>Cómo montar tu primer terrario cerrado paso a paso <em>(y que no se te muera a la semana)</em></h1>
+      <div style="font-size: 0.9rem; color: var(--ts); margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <span>Por <strong style="color: var(--vd);">Noel Rodero</strong></span>
+        <span>• Mayo 2026</span>
+        <span>• 5 min de lectura</span>
+      </div>
     </div>
   </div>
 
@@ -251,10 +255,10 @@
   </div> 
 </main>
 
-<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
-  <div style="max-width: 1440px; margin: 0 auto; opacity: 0.8;">
-    <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
-    <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="mailto:noel.rsdp0711@gmail.com" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
 
