@@ -28,7 +28,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
-    img { display: block; max-width: 100%; border-radius: var(--rl); margin: 2rem 0 1rem; }
+    img { display: block; max-width: 100%; border-radius: var(--rl); }
     a { color: inherit; text-decoration: none; cursor: pointer; }
     ul { list-style: none; }
 
@@ -45,21 +45,39 @@
     .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
 
-    /* ── ESTILOS DEL ARTÍCULO (SOBRE MÍ) ── */
-    .page-hero { padding: 9rem 2rem 4rem; text-align: center; background: var(--cr); border-bottom: 1px solid var(--vmu); }
-    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); }
-    .page-hero em { font-style: italic; color: var(--vs); }
-    .bread { font-size: .85rem; color: var(--ts); margin-bottom: 1rem; display: flex; justify-content: center; gap: .5rem; }
-    .bread a { color: var(--vs); font-weight: 500; }
-    .bread a:hover { color: var(--vd); text-decoration: underline; }
+    /* ── BANNER (PAGE-HERO MODIFICADO) ── */
+    .page-hero { 
+        padding: 10rem 2rem 5rem; 
+        text-align: center; 
+        /* Aquí está el degradado oscuro y tu foto del embalse */
+        background: linear-gradient(rgba(30, 58, 47, 0.7), rgba(30, 58, 47, 0.7)), url('img/embalse-excursion.jpeg');
+        background-size: cover;
+        background-position: center;
+        border-bottom: none; 
+        color: #fff;
+    }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; color: #fff; margin-top: 0.5rem; }
+    .page-hero em { font-style: italic; color: var(--vmu); } /* Color verde clarito para que resalte en el fondo oscuro */
+    .bread { font-size: .85rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; display: flex; justify-content: center; gap: .5rem; }
+    .bread a { color: #fff; font-weight: 500; }
+    .bread a:hover { color: var(--vmu); text-decoration: underline; }
     
+    /* ── ESTILOS DEL ARTÍCULO Y FOTO DE PERFIL ── */
     .post-wrap { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
     .post p { margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.8; }
-    .post h3 { font-family: var(--fd); font-size: 1.8rem; color: var(--vd); margin: 3rem 0 1rem; font-weight: 400; }
-    .img-caption { font-size: .85rem !important; text-align: center; color: var(--ts) !important; font-style: italic; margin-top: -0.5rem !important; margin-bottom: 2rem !important; }
+    .post h3 { font-family: var(--fd); font-size: 1.8rem; color: var(--vd); margin: 3rem 0 1rem; font-weight: 400; clear: both; }
+    
+    /* Clase nueva para tu foto fija a la derecha */
+    .foto-perfil {
+        float: right;
+        width: 280px;
+        max-width: 45%;
+        margin: 0.5rem 0 1.5rem 2.5rem;
+        box-shadow: var(--s2);
+    }
 
     /* ── FOOTER ── */
-    footer { background: var(--to); padding: 3rem 2rem 2rem; }
+    footer { background: var(--to); padding: 3rem 2rem 2rem; clear: both; }
     .ft-in { max-width: 1200px; margin: 0 auto; text-align: center; color: #e8f0e4; font-size: 0.85rem;}
     
     /* ── MENÚ MÓVIL ── */
@@ -70,6 +88,15 @@
       .nav-menu.is-open { display: flex; }
       .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start !important; }
       .nav-cta { display: inline-block; text-align: center; }
+      
+      /* Para móviles, que tu foto no se quede a la derecha porque no cabe el texto */
+      .foto-perfil {
+          float: none;
+          display: block;
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto 2rem;
+      }
     }
   </style>
 </head>
@@ -98,20 +125,20 @@
     <nav class="bread">
       <a href="index.html">Inicio</a><span>/</span><strong>Sobre mí</strong>
     </nav>
-    <h1>Sobre mí</h1>
+    <h1>Sobre mí <em>(El humano detrás del cristal)</em></h1>
   </div>
 
   <div class="post-wrap">
     <article class="post">
+      
+      <img src="img/noel.jpeg" alt="Noel Rodero" class="foto-perfil">
+
       <p>Soy Noel Rodero, y todo el trabajo que está redactado en esta web ha sido hecho por mí, salvo el apartado de agroecología, donde he tenido ayuda de mis compañeros de bancal. Estudio Ciencias Ambientales en la UAH, así que no tengo conocimientos súper profesionales de nada en concreto, simplemente me gusta hacer terrarios y las cosas relacionadas con las plantas y esas cosas.</p>
 
       <h3>El descubrimiento en YouTube</h3>
       <p>Mi gusto por los terrarios surgió cuando hace unos 4 o 5 años me apareció en YouTube un vídeo del canal de SerpaDesign. Ver cómo usaba cosas del día a día y plantas sencillas para crear ecosistemas en miniatura los cuales estaban vivos y eran autosuficientes me gustó mucho y decidí hacerlo por mi cuenta.</p>
       
       <p>Su canal tiene un enfoque muy bueno ya que muestra el proceso paso a paso y te explica por qué toma cada decisión. Esa forma de enseñar fue la que me hizo dar el paso de hacer mi propio terrario y desde entonces he hecho otros 2 y he cultivado mi propio huerto.</p>
-
-      <!-- RECUERDA CAMBIAR LA RUTA DE ESTA IMAGEN POR UNA TUYA -->
-      
 
       <h3>La realidad: mi primer gran error</h3>
       <p>De todas formas, por muy ideal que parezcan mis trabajos en la web he de decir que no es así, mi primer terrario tuve que rehacerlo 3 veces hasta que conseguí que funcionase por cuenta propia sin tener que añadir nada de nada, y desde entonces los otros 2 posteriores ya me han salido bien. El principal error que cometí fue equivocarme con las plantas e introducir bichos bola antes de tiempo, cosa que destruyó el terrario.</p>
@@ -145,6 +172,6 @@
     }
   });
 </script>
- 
+
 </body>
 </html>
