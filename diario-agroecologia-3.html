@@ -5,9 +5,9 @@
      crossorigin="anonymous"></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Días 5 y 6 de agroecología: Taller de riego, croquis del bancal y la leyenda de azada-man."/>
-  <title>Agroecología #3: Riego y Tagetes | EcoCristal</title>
-  <link rel="canonical" href="https://ecocristal.es/diario-agroecologia-3.html" />
+  <meta name="description" content="Días 3 y 4 de agroecología: Taller de semillado, planificación de cultivos y el descubrimiento de la biodiversidad en nuestro huerto."/>
+  <title>Agroecología #2: Semilleros y lluvia | EcoCristal</title>
+  <link rel="canonical" href="https://ecocristal.es/diario-agroecologia-2.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" href="img/favicon.png"/>
 
   <style>
+    /* ── TOKENS Y RESET ── */
     :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -22,22 +23,29 @@
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; cursor: pointer; }
 
+    /* ── HEADER NUEVO ── */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
     .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
     .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
     nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
-    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); transition: color var(--t); }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
     nav a:hover { color: var(--vd); }
-    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
 
-    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
-    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    /* ── ESTRUCTURA ORIGINAL (CENTRADITA Y BLANCA) ── */
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); transition: color var(--t); }
+    .bread a:hover { color: var(--vd); }
+    .bread span { opacity: .4; }
     
-    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .page-hero { padding: 1rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--vmu); }
     .wrap { max-width: 1440px; margin: 0 auto; }
-    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
     
     /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
     .post-wrap { 
@@ -58,6 +66,7 @@
     .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
     .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
     .post ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
+    .post li { margin-bottom: 0.5rem; }
     .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 700px; height: auto; object-fit: cover; }
     .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
 
@@ -73,7 +82,8 @@
     .sb-block li a:hover { color: var(--vd); }
     .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
-    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem; }
+    /* ── FOOTER NUEVO (LEGAL) ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
     .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
     .ft-in a { color: inherit; text-decoration: underline; }
 
@@ -82,6 +92,8 @@
       .post-wrap { display: flex; flex-direction: column; gap: 3rem; } 
       .sidebar { position: static; width: 100%; } 
     }
+
+    /* ── MENÚ MÓVIL ── */
     .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
     @media (max-width: 768px) {
       .mobile-toggle { display: block; }
@@ -100,10 +112,11 @@
     <button class="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
     </button>
-    <nav class="nav-menu">
-      <ul>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
         <li><a href="index.html#analisis">Artículos</a></li>
-        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -111,17 +124,64 @@
 
 <main>
   <nav class="bread">
-    <a href="index.html">Inicio</a><span>/</span><span>Diario</span><span>/</span><strong>Agroecología #3</strong>
+    <a href="index.html">Inicio</a><span>/</span><span>Diario</span><span>/</span><strong>Agroecología #2</strong>
   </nav>
 
   <div class="page-hero">
     <div class="wrap">
-      <h1>Agroecología #3: Riego y Tagetes</h1>
+      <h1>Agroecología #2: Semilleros y lluvia</h1>
     </div>
   </div>
 
   <div class="post-wrap">
     
+    <article class="post">
+      <p style="font-style: italic; color: var(--vs); font-weight: 500; margin-bottom: 2rem;">
+        Nota: Esta entrada del diario ha sido redactada originalmente por mi otro compañero de bancal, Alberto.
+      </p>
+
+      <p>Tras la paliza física que supuso la doble cava de la sesión anterior, afrontamos los días 3 y 4 de nuestro proyecto de agroecología lidiando con la lluvia, la planificación estratégica y nuestro primer contacto real con las semillas.</p>
+
+      <h3>Día 3: Lluvia y guerra psicológica en la biblioteca</h3>
+      <p>En el tercer día de trabajo había estado lloviendo con intensidad la noche anterior. Cuando llegamos al bancal, Iván clavó el rastrillo en la tierra para comprobar su textura, la cual era más próxima al barro que a la tierra seca. Un jardinero que pasaba por ahí nos confirmó que sería contraproducente intentar trabajar en esas condiciones, ya que solo compactaríamos el suelo.</p>
+      
+      <p>Decidimos aprovechar el tiempo planeando nuestros futuros cultivos informándonos en la biblioteca del jardín botánico. De camino, nos encontramos con Adolfo. Él parecía más que dispuesto a darnos una de sus características charlas, larga y detallada. Nos acompañó a la biblioteca, nos dio varios de sus propios libros y nos abrió la caseta de madera.</p>
+
+      <p>Iván, Juan Carlos y Alberto estuvimos leyendo varios libros tanto sobre la ecología de los huertos como sobre las plagas. Noel nos bendecía con su presencia. Gracias a todo esto, ya tenemos una idea muy aproximada a lo que vamos a hacer, pero qué inocentes tendríamos que ser para ponerlo en un blog donde cualquier rival pueda leerlo.</p>
+
+      <div class="highlight">
+        Dejamos los libros en la caseta en una disposición que dejaba los menos útiles abiertos y junto a las sillas, mientras que los que más nos habían gustado los dejábamos escondidos en las esquinas. Tras este juego maquiavélico, terminamos el día 3.
+      </div>
+
+      <img src="img/gramaman.png" alt="Meme de Grama-Man con Batman, Robin y Superman" />
+      <p class="img-caption">Imagen 1: A falta de imágenes de aquel día, véase una representación artística de "Grama-Man", por quien nuestra veneración aumentaba cada vez que había que agacharse a por una raíz seca, llegando a niveles de religión. Hecho por Juan Carlos con alguna inteligencia artificial.</p>
+
+      <h3>Día 4: Semillado y la dictadura Juancrática</h3>
+      <p>Este día fue el taller de semillado. Empezamos entrando al banco de semillas del parque botánico. A pesar de lo lúgubre que era el lugar, fue verdaderamente interesante.</p>
+
+      <p>Después, fuimos al huerto a aprender a hacer el sembrado: tierra hasta arriba, regar bien, usar diatomeas para evitar infecciones fúngicas, echar semillas como si fueran sal, cubrirlas de más tierra y dejar a la sombra. Luego nos explicaron cómo trasplantar los brotes sacándolos con cuidado por la raíz.</p>
+
+      <p>Como aún quedaba tiempo, decidimos ayudar al grupo de Ana Bejarano, Silvia Cuevas, Irene Parra y Raquel Tapia. Iván, Noel, Alberto y Juan Carlos cogimos buen ritmo, encontramos muchas lombrices y un escarabajo muy molón.</p>
+
+      <img src="img/escarabajo-huerto.jpeg" alt="Escarabajo molón encontrado en el huerto" />
+      <p class="img-caption">Imagen 2: El escarabajo molón. ChatGPT me dice que pertenece al género Meloe, pero es claramente de la familia Scarabaeidae.</p>
+
+      <p>Las chicas nos agradecieron nuestra ayuda, pero al parecer nos han acreditado como "el grupo de Juan Carlos", derribando la democracia de nuestro Bancal 4, que se desliza hacia una dictadura Juancrática.</p>
+
+      <img src="img/rastrillo-huerto.jpeg" alt="Iván rastrillando el huerto" />
+      <p class="img-caption">Imagen 3: Iván arreglando una pisada accidental al bancal de Alex.</p>
+
+      <h3>Reflexiones y apuntes para mis terrarios</h3>
+      <ul>
+        <li>Manipular el suelo mojado lo compacta.</li>
+        <li>Usar tierra de diatomeas evita infecciones por hongos.</li>
+        <li>Ayudar a los demás puede resultar en un colapso del sistema democrático.</li>
+      </ul>
+
+      <p><strong>Lo que me llevo a mis cristales:</strong> El taller de semillado me recordó la importancia de la prevención de hongos. En mis terrarios, la clave son los colémbolos y no encharcar el sustrato.</p>
+
+    </article> 
+
     <aside class="sidebar sidebar-left">
       <div class="sb-block">
         <h4>Gustos y recomendaciones</h4>
@@ -132,70 +192,6 @@
         </ul>
       </div>
     </aside>
-
-    <article class="post">
-      <p style="font-style: italic; color: var(--vs); font-weight: 500; margin-bottom: 2rem;">
-        Nota: Esta entrada del diario ha sido redactada por Noel (Día 5) e Iván (Día 6).
-      </p>
-
-      <h3>Quinto día (escrito por Noel)</h3>
-      <p>Ya en la tercera semana desde que empezamos a cavar, el quinto día de trabajo fuimos a ver cómo andaba nuestro huerto, después de hacer un difícil examen de Auditoria ambiental. Aunque, antes de entrar al examen, vino Silvia y nos dio a cada uno las galletas que nos había dicho que nos daría por ayudarles el día anterior, que por cierto estaban bien de buenas, así que de nuevo muchas gracias. Como sabemos que Alberto, de alguna manera u otra, siempre consigue ser el último en acabar cualquier examen, Iván, el dictador de Juan Carlos y yo, Noel, decidimos ir yendo y esperar a Alberto en el huerto. Cuando llegamos nos encontramos con que la tierra estaba más dura que un día sin pan, así que nos pusimos a darle ligeramente con la azada y posteriormente con el rastrillo para quitar la grama superficial que nos habíamos dejado el día anterior.</p>
-      
-      <p>Posteriormente vino Silvia, la profe, y estuvo conversando con nosotros sobre la asignatura en general y lo avanzados que íbamos en nuestro bancal. Después de eso volvimos a ayudar a Silvia, pero ahora la alumna, con su bancal, ya que estaba sola ese día y aún le quedaba un buen cacho por terminar. Iván volvió a demostrar por qué se hace llamar grama-man, y yo poco a poco voy forjando la leyenda de azada-man, demostrando una habilidad innata para usar esta maravillosa herramienta. Cabe recalcar que Alberto por algún motivo terminó el examen, y en lugar de mirar el móvil como cualquier persona normal haría para ver si sus maravillosos amigos le habían escrito algún mensaje, pensó que sería buena idea irse directamente a la renfe y mirar el móvil una vez subido al tren, así que no acudió al huerto ese día.</p>
-
-      <p>Al rato de estar ayudando a Silvia vino Adolfo y nos mandó a todos para la caseta de madera, donde realizamos un taller en el cual nos explicó lo que sería ideal plantar en esta época del año, y las cosas a tener en cuenta. Iván, Juan Carlos y yo le enseñamos la distribución de huerto que habíamos pensado, aunque para ser sinceros la hizo Juancar enterita. Después de estar un rato comentándola, Adolfo dijo que en principio le daba luz verde a las plantas que habíamos escogido y la distribución que habíamos pensado. Y afortunadamente para Juan Carlos, Adolfo le dijo que el Tagetes sería una muy buena opción por su rol contra las plagas de nemátodos.</p>
-
-      <img src="img/meme-tagetes.jpeg" alt="Meme de Glazing Tagetes" />
-      <p class="img-caption">Imagen 1: A Juan Carlos le gustan mucho los Tagetes así que me pidió que pusiese esta imagen en el blog</p>
-
-      <img src="img/croquis-bancal.jpeg" alt="Croquis de distribución del bancal" />
-      <p class="img-caption">Imagen 2: distribución del bancal acordada (en principio) con Adolfo</p>
-
-      <p>A partir de aquí, por mucho que me duela, el día 6 lo contará Iván, ya que no pude asistir a clase al día siguiente. También cabe recalcar que podría haber usado esta parte del blog para devolver todo el odio dirigido hacia mí de manera humorística, pero como soy un tío chill he decidido no hacerlo.</p>
-
-      <p><strong>Reflexiones:</strong></p>
-      <ul>
-        <li>Nos hemos dado cuenta de que somos unas maravillosas personas, ayudando a aquellos que lo necesitan sin pedir nada a cambio (aunque las galletas son bienvenidas)</li>
-        <li>Silvia hace unas galletas que están de rechupete</li>
-        <li>La tierra del huerto estaba más dura que el propio examen, pero la técnica lo es todo.</li>
-      </ul>
-
-      <h3>Día 6 (escrito por Iván)</h3>
-      <p>Bueno pues, debido a la ausencia de Noel, me toca a mi hablar un ratillo de lo que hicimos el jueves. El día consistió en el taller de riego, el cual como bien dice el nombre, consiste en instalar unas tuberías para regar nuestros cultivos de manera automática.</p>
-      
-      <p>Antes del taller, tuvimos que aplanar el bancal para evitar que el agua se desplace hacia las zonas más bajas y que se produzcan encharcamientos, ya que nuestro bancal parecía un tobogán. Una vez que lo dejamos medio arreglado, se produjo una explicación teórica bastante clara por parte de un jardinero, lógicamente, para que supiesemos qué y cómo hacerlo. A su vez nos enseñaron los materiales que íbamos a utilizar, que eran básicamente las mangueras de goteo y cómo funcionaba, que básicamente se programaba a la hora que se quería que saltase el riego gracias a un aparato y un acople que hizo el propio jardinero en una de las tuberías del Jardín Botánico.</p>
-
-      <p>Tras la explicación nos tocó ponernos manos a la obra a los 3, aunque Juancarlos no tardaría en dejarnos plantados (nunca mejor dicho) a Alberto y a mí para ir a plantar un par de lechuguitas. Éramos Alberto y yo contra el mundo, aunque bueno, Juan Carlos ayudó a poner un par de tuberías, todo sea dicho. Empezó Juancar cortando los tubos con la herramienta que nos dieron, que ahora mismo no me acuerdo de su nombre pero era una especie de tijera rara.</p>
-
-      <img src="img/tijera-tubos.jpeg" alt="Herramienta roja para cortar tubos" />
-      <p class="img-caption">Imagen 3. El arma para cortar los tubos</p>
-
-      <p>Bueno, nos llegó a nuestro poder este arma, y Juan Carlos, como buen delegado que es, se ofreció a cortar el primer tubo, pero debido a la letalidad de esta herramienta (o también influirá en algo que no nos pusimos guantes) se pilló la mano. Vale pues unos 30 segundos después le pido a juancarlos el cortatubos, por que mi yo del pasado pensaba que no era tan fácil pillarte la mano, pero bueno, dicen que el hombre no tropieza dos veces con la misma piedra, pero aquí estamos nosotros para cambiar los dichos. Lógicamente acabó pasando lo que tenía que pasar.</p>
-
-      <img src="img/heridas-riego.jpeg" alt="Palmas de las manos con pequeñas marcas" />
-      <p class="img-caption">Imagen 4. He aquí las heridas de guerra (casi ni se llegan a apreciar)</p>
-
-      <p>Así que bueno, a lo importante. La instalación de los tubos se nos hizo bastante amena, lo único que se nos complicó fueron las primeras medidas porque estábamos aprendiendo, pero una vez le pillamos el tranquillo, nos quedó muy bien. Resumidamente, alberto cogía el tubo, que estaba enrollado, y lo iba soltando poco a poco para que no se enrollase, mientras que yo estaba en el otro lado aguantándolo, y cuando ya teníamos la medida adecuada, lo cortábamos y lo metíamos bien en el acople para que no se escapase el agua.</p>
-
-      <img src="img/tubos-instalados.jpeg" alt="Bancal con tubos de goteo instalados" />
-      <p class="img-caption">Imagen 5. Nuestro bancal con los tubos de riego por goteo ya instalados</p>
-
-      <p>Por último, Juan Carlos fue a trasplantar lechugas y acelgas para poder ponerlas en nuestro bancal cuanto antes, aunque yo creo que lo utilizó como excusa para no agachar el lomo.</p>
-
-      <img src="img/lechugas-bandeja.jpeg" alt="Bandeja con lechugas y acelgas trasplantadas" />
-      <p class="img-caption">Imagen 6. Las lechugas y acelgas trasplantadas</p>
-
-      <p><strong>Reflexiones:</strong></p>
-      <ul>
-        <li>Darnos unas tijeras de esas a nosotros es como darle una pistola a un mono</li>
-        <li>Seguimos obsesionados con la grama</li>
-        <li>Gracias a Alberto va a funcionar el riego porque fue el único que se dio cuenta que había agujeros cerrados</li>
-        <li>Cada vez nos va gustando más esta asignatura</li>
-        <li>Noel sigue sin trabajar</li>
-        <li>Este taller era de los más importantes, porque si la lías, arruinas todo tu trabajo</li>
-      </ul>
-
-    </article> 
 
     <aside class="sidebar sidebar-right">
       <div class="sb-block">
@@ -211,8 +207,8 @@
         <h4>Diario de Agroecología</h4>
         <ul>
           <li><a href="diario-agroecologia-1.html">Agroecología #1: Preparación y doble cava</a></li>
-          <li><a href="diario-agroecologia-2.html">Agroecología #2: Semilleros y lluvia</a></li>
-          <li><a href="diario-agroecologia-3.html" style="color: var(--vd); font-weight: 500;">Agroecología #3: Riego y Tagetes</a></li>
+          <li><a href="diario-agroecologia-2.html" style="color: var(--vd); font-weight: 500;">Agroecología #2: Semilleros y lluvia</a></li>
+          <li><a href="diario-agroecologia-3.html">Agroecología #3: Riego y Tagetes</a></li>
           <li><a href="diario-agroecologia-4.html">Agroecología #4: Talleres y plantación</a></li>
           <li><a href="diario-agroecologia-5.html">Agroecología #5: Compostaje y Viñedos</a></li>
           <li><a href="diario-agroecologia-6.html">Agroecología #6: El final de la asignatura</a></li>
@@ -223,9 +219,10 @@
   </div>
 </main>
 
-<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
+<footer>
   <div class="ft-in">
-    <span style="opacity: 0.6;">© 2026 EcoCristal. Compartiendo afición por la naturaleza. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a></span>
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
 
