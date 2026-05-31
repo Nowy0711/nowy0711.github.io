@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="img/favicon.png"/>
 
   <style>
+    /* ── TOKENS Y RESET ── */
     :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -21,22 +22,28 @@
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; cursor: pointer; }
     
+    /* ── HEADER NUEVO ── */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
     .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
     .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
     nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
-    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); transition: color var(--t); }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
     nav a:hover { color: var(--vd); }
-    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
     
-    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
-    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    /* ── ESTRUCTURA ORIGINAL (CENTRADITA Y BLANCA) ── */
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); transition: color var(--t); }
+    .bread a:hover { color: var(--vd); }
+    .bread span { opacity: .4; }
     
-    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .page-hero { padding: 1rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--vmu); }
     .wrap { max-width: 1440px; margin: 0 auto; }
-    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
     
     /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
     .post-wrap { 
@@ -73,7 +80,8 @@
     .sb-block li a:hover { color: var(--vd); }
     .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
 
-    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem; }
+    /* ── FOOTER NUEVO (LEGAL) ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
     .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
     .ft-in a { color: inherit; text-decoration: underline; }
 
@@ -83,6 +91,7 @@
       .sidebar { position: static; width: 100%; } 
     }
     
+    /* ── MENÚ MÓVIL ── */
     .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
     @media (max-width: 768px) {
       .mobile-toggle { display: block; }
@@ -101,10 +110,11 @@
     <button class="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
     </button>
-    <nav class="nav-menu">
-      <ul>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
         <li><a href="index.html#analisis">Artículos</a></li>
-        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -212,9 +222,10 @@
   </div>
 </main>
 
-<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
+<footer>
   <div class="ft-in">
-    <span style="opacity: 0.6;">© 2026 EcoCristal. Compartiendo afición por la naturaleza. | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a></span>
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
   </div>
 </footer>
 
