@@ -77,6 +77,10 @@
     .card-foot a { color: var(--vs); font-weight: 500; transition: color var(--t); }
     .card-foot a:hover { color: var(--vd); }
 
+    /* ── GRID FIJO 2x2 PARA GUÍAS PRÁCTICAS (4 items simétricos) ── */
+    #guias-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+    @media (max-width: 640px) { #guias-grid { grid-template-columns: 1fr; } }
+
     /* ── FOOTER ACTUALIZADO ── */
     footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
     .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
@@ -183,7 +187,7 @@
         <p class="eyebrow">Aprende haciendo</p>
         <h2 class="section-title">Guías prácticas<br><em>paso a paso</em></h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.75rem;">
+      <div id="guias-grid">
 
         <article class="card reveal">
           <div class="card-thumb">
@@ -206,6 +210,18 @@
             <h3>Mi primer huerto en el salón: cultivando lechugas</h3>
             <p>Guía paso a paso para germinar semillas en casa. Mi experiencia, lo que ha funcionado genial y los errores de novato que no volveré a cometer.</p>
             <div class="card-foot"><a href="cultivando-lechugas.html">Leer artículo →</a></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/semilla-plantada.jpeg" alt="Semilla de melón germinada lista para plantar en tierra">
+            <span class="card-tag">Huerto en casa</span>
+          </div>
+          <div class="card-body">
+            <h3>Cómo cultivar una planta de melón en tu casa desde 0</h3>
+            <p>Mi experimento de verano: cómo germinar semillas de melón piel de sapo con el método de la servilleta húmeda, paso a paso y con fotos reales.</p>
+            <div class="card-foot"><a href="germinando-melon.html">Leer artículo →</a></div>
           </div>
         </article>
 
