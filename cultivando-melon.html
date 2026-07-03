@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Cómo germinar semillas de melón piel de sapo desde cero: limpieza, remojo, el método de la servilleta húmeda y el trasplante a tierra."/>
+  <title>Cómo germinar un melón desde la semilla | EcoCristal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); transition: color var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA DEL ARTÍCULO ── */
+    .bread { max-width: 1200px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    .post-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 4rem 2rem 6rem; max-width: 1200px; margin: 0 auto; }
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; color: var(--vd); margin: 2rem 0 .75rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post img { border-radius: var(--rl); margin: 2rem 0; box-shadow: var(--s2); width: 100%; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+    
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sb-block { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.5rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--vd); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--cr); }
+    .sb-block ul { display: flex; flex-direction: column; gap: .75rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: .9rem; color: var(--ts); display: flex; gap: .5rem; line-height: 1.4; }
+    .sb-block li a::before { content: '→'; color: var(--vc); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+
+    @media (max-width: 1024px) { .post-wrap { grid-template-columns: 1fr; gap: 3rem; } .sidebar { position: static; } }
+    @media (max-width: 768px) { nav ul { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html#articulos">Artículos</a></li>
+        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><span>Huerto en casa</span><span>/</span><strong>Germinando melón</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Cómo germinar un melón desde la semilla <em>(piel de sapo, paso a paso)</em></h1>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+    
+    <article class="post">
+      <p>Como es verano y por lo tanto época de melones, este año me he propuesto tratar de germinar y hacer crecer uno desde una simple semilla. Lo primero es conseguir un melón (o directamente semillas) de la variedad que quieras cultivar; en mi caso, un <strong>melón piel de sapo</strong>.</p>
+
+      <h3>1. Por qué conviene coger muchas semillas</h3>
+      <p>Si compras el melón en el supermercado, la cadena de frío y todo el proceso desde que se recolecta hasta que llega a tu cocina (o incluso el propio momento de la cosecha) hacen que muchas semillas no lleguen a desarrollarse del todo, y por tanto no sean viables.</p>
+      <p>Para minimizar esa posibilidad, lo mejor es coger todas las semillas que puedas. Abre el melón como si fueras a comértelo, pero en vez de tirar las pepitas a la basura, resérvalas en un plato.</p>
+
+      <h3>2. Limpieza y remojo</h3>
+      <p>La pulpa del melón inhibe el crecimiento de la semilla (básicamente para que no germine un melón dentro de otro melón). Así que lo primero es echar las semillas en un colador y darles bien con agua hasta que queden completamente limpias.</p>
+      <p>Después, sécalas con servilletas hasta notar que ha desaparecido esa sensación resbaladiza del agua y la pulpa. Una vez secas, llena un vaso de agua y déjalas en remojo <strong>un día entero</strong>. Esto ablanda la corteza exterior y facilita que la semilla se abra y germine.</p>
+
+      <div class="highlight">
+        <strong>Sobre la prueba de flotación:</strong> Se suele decir que si una semilla se hunde en el agua es viable, y si flota, no. En mi experiencia esta prueba no es del todo fiable: la única semilla que me ha germinado era de las que flotaban.
+      </div>
+
+      <h3>3. El método de la servilleta húmeda</h3>
+      <p>Pasado el día en remojo, escurre las semillas y coge una servilleta de cocina, ábrela en dos y humedécela bien con un pulverizador (flus flus). Ojo: <strong>tiene que quedar húmeda al tacto, sin que llegue a gotear agua en ningún momento</strong>.</p>
+      <p>Coloca las semillas sobre la servilleta y ve doblándola sobre sí misma hasta formar un cuadradito, dejando una semilla entre cada capa de dobleces. Con unas 8 semillas por servilleta es suficiente para que la humedad dure y no queden muy apretadas.</p>
+
+      <img src="img/semilla-servilleta.jpeg" alt="Semilla de melón germinada dentro de la servilleta húmeda" />
+      <p class="img-caption">La única semilla que consiguió germinar dentro de la servilleta humedecida.</p>
+
+      <p>Una vez dobladas todas las servilletas, necesitas un entorno sellado para que no se pierda la humedad. Un tupper funciona perfectamente; en mi caso uso un vasito pequeño tapado con papel film.</p>
+
+      <img src="img/vaso.jpeg" alt="Vaso sellado con papel film para mantener la humedad durante la germinación" />
+      <p class="img-caption">Vaso sellado para que se mantenga la humedad y la semilla pueda germinar.</p>
+
+      <h3>4. La espera a oscuras</h3>
+      <p>Deja el recipiente en un sitio sin luz directa (o totalmente a oscuras) durante <strong>2-3 días</strong>. Pasado ese tiempo, ábrelo con cuidado y revisa las servilletas: busca semillas que hayan echado raíz o que tengan la puntita blanca.</p>
+      <p>Si alguna huele mal, se ha podrido: tírala. Las que no muestren ningún signo de germinación tampoco lo van a hacer después, así que también fuera.</p>
+
+      <h3>5. El trasplante a tierra</h3>
+      <p>Con las semillas que sí han echado raíz, ve revisándolas cada día. En cuanto la raíz alcance un tamaño similar al de la propia semilla, es el momento de plantarla en una maceta o semillero, <strong>con la raíz mirando en horizontal</strong> hacia la tierra. Ahora solo queda esperar a que asomen los primeros cotiledones.</p>
+
+      <img src="img/semilla-plantada.jpeg" alt="Semilla de melón germinada lista para plantar en tierra" />
+      <p class="img-caption">La semilla germinada, lista para plantar en tierra.</p>
+
+      <hr style="border: none; border-top: 1px solid var(--cr); margin: 3rem 0;">
+
+      <div style="background: var(--cr); border: 2px dashed var(--vmu); border-radius: var(--rl); padding: 2.5rem; text-align: center; color: var(--tm); margin: 2rem 0;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🍈</span>
+        <strong style="font-family: var(--fd); font-size: 1.4rem; color: var(--vd); display: block; margin-bottom: 0.5rem;">¡Este experimento sigue creciendo!</strong>
+        <p style="margin: 0; font-size: 0.95rem;">El melón aún no ha terminado su recorrido. Iré actualizando este artículo con nuevas fotos a medida que la planta vaya cogiendo tamaño, para enseñarte si conseguimos llegar a la fruta final (¡o por si la lío en el proceso!). Vuelve en unas semanas para ver la evolución.</p>
+      </div>
+
+    </article> 
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-block">
+        <h4>Sobre el autor</h4>
+        <p style="font-size: 0.9rem; color: var(--ts); line-height: 1.6; margin-bottom: 1rem;">Soy un aficionado que comparte su experiencia real creando pequeños ecosistemas y cultivando en el salón de casa, con mucho ensayo y error.</p>
+        <a href="index.html" style="font-size: 0.85rem; font-weight: 500; color: var(--vd); text-decoration: underline;">Volver al inicio</a>
+      </div>
+      
+      <div class="sb-block">
+        <h4 style="color: var(--vs);">Guías Prácticas</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="cultivando-lechugas.html">Mi primer huerto: cultivando lechugas</a></li>
+          <li><a href="germinando-melon.html">Germinando un melón desde la semilla</a></li>
+          <li><a href="mis-5-plantas.html">Mis 5 plantas favoritas para interior</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block">
+        <h4 style="color: var(--vs);">El Ecosistema</h4>
+        <ul>
+          <li><a href="como-hacer-sustrato.html">Sustratos: Cómo hacer una mezcla que dure años</a></li>
+          <li><a href="#" style="opacity: 0.5; pointer-events: none;">Terrarios & Urnas (Próximamente)</a></li>
+          <li><a href="#" style="opacity: 0.5; pointer-events: none;">Iluminación LED (Próximamente)</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;">
+  <div style="max-width: 1200px; margin: 0 auto; opacity: 0.8;">
+    <p style="margin-bottom: 1rem;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span style="opacity: 0.6; font-size: 0.75rem;">© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa.</span>
+  </div>
+</footer>
+
+</body>
+</html>
