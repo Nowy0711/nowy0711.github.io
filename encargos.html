@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Terrarios cerrados hechos a mano por encargo. Sencillos, duraderos y de bajo mantenimiento. Cada uno preparado según la planta que elijas."/>
+  <title>Terrarios por encargo | EcoCristal</title>
+  <link rel="canonical" href="https://ecocristal.es/encargos.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root {
+      --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59;
+      --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4;
+      --bc: #f7f5f0; --cr: #ede9e0;
+      --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --r: 6px; --rl: 12px;
+      --s1: 0 2px 12px rgba(30,58,47,.08);
+      --s2: 0 6px 32px rgba(30,58,47,.13);
+      --s3: 0 16px 56px rgba(30,58,47,.18);
+      --t: .35s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA GENERAL ── */
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--vs); margin-bottom: .75rem; }
+    .section-title { font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--vd); line-height: 1.15; }
+    .section-title em { font-style: italic; color: var(--vs); }
+
+    /* ── HERO ── */
+    .hero { padding: 9rem 2rem 4rem; text-align: center; border-bottom: 1px solid var(--vmu); background: linear-gradient(180deg, var(--vn), var(--bc)); }
+    .hero p.lead { font-size: 1.1rem; color: var(--tm); max-width: 650px; margin: 1.5rem auto 0; line-height: 1.8; }
+
+    /* ── COMPONENTES ── */
+    .btn-p { background: var(--vd); color: #fff; padding: .875rem 2rem; border-radius: var(--r); font-size: .875rem; font-weight: 500; letter-spacing: .04em; transition: background var(--t), transform var(--t), box-shadow var(--t); display: inline-flex; align-items: center; gap: .5rem; border: none; cursor: pointer; font-family: var(--fb); }
+    .btn-p:hover { background: var(--vm); transform: translateY(-2px); box-shadow: var(--s2); }
+
+    section.block { padding: 4rem 0; }
+    section.block + section.block { border-top: 1px solid var(--cr); }
+
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
+    .step-card { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .step-card:nth-child(4) { grid-column: 2; }
+    @media (max-width: 760px) {
+      .step-grid { grid-template-columns: 1fr; }
+      .step-card:nth-child(4) { grid-column: 1; }
+    }
+    @media (min-width: 761px) and (max-width: 980px) {
+      .step-grid { grid-template-columns: repeat(2, 1fr); }
+      .step-card:nth-child(4) { grid-column: 1 / -1; max-width: calc(50% - 0.875rem); margin: 0 auto; }
+    }
+    .step-card .num { font-family: var(--fd); font-size: 2rem; color: var(--vc); line-height: 1; margin-bottom: .75rem; }
+    .step-card h3 { font-family: var(--fd); font-size: 1.15rem; font-weight: 400; color: var(--vd); margin-bottom: .5rem; }
+    .step-card p { font-size: .88rem; color: var(--ts); line-height: 1.65; }
+
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem 1.75rem; border-radius: 0 var(--r) var(--r) 0; margin-top: 2rem; font-size: 1rem; color: var(--tm); line-height: 1.75; }
+
+    .price-box { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); margin-top: 2rem; }
+    .price-box h3 { font-family: var(--fd); font-size: 1.3rem; color: var(--vd); margin-bottom: .75rem; font-weight: 400; }
+    .price-box p { color: var(--tm); font-size: .95rem; line-height: 1.75; margin-bottom: .75rem; }
+    .price-box p:last-child { margin-bottom: 0; }
+
+    .tiktok-box { display: flex; align-items: center; gap: 1.5rem; background: var(--vd); border-radius: var(--rl); padding: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .tiktok-box .tiktok-text { flex: 1; min-width: 240px; }
+    .tiktok-box h3 { font-family: var(--fd); font-size: 1.4rem; color: #fff; margin-bottom: .5rem; font-weight: 400; }
+    .tiktok-box p { color: var(--vmu); font-size: .9rem; line-height: 1.6; }
+    .btn-tiktok { background: var(--vc); color: var(--vd); padding: .75rem 1.5rem; border-radius: var(--r); font-size: .85rem; font-weight: 500; white-space: nowrap; transition: background var(--t), transform var(--t); }
+    .btn-tiktok:hover { background: var(--vmu); transform: translateY(-2px); }
+
+    /* ── FORMULARIO ── */
+    .form-box { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 2.5rem; box-shadow: var(--s2); margin-top: 2.5rem; }
+    .form-row { margin-bottom: 1.25rem; }
+    .form-row label { display: block; font-size: .8rem; font-weight: 500; color: var(--vd); margin-bottom: .4rem; letter-spacing: .02em; }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; padding: .75rem 1rem; border-radius: var(--r); border: 1.5px solid var(--vmu);
+      background: var(--bc); font-family: var(--fb); font-size: .9rem; color: var(--to); outline: none;
+      transition: border-color var(--t);
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--vs); }
+    .form-row textarea { resize: vertical; min-height: 110px; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 560px) { .form-grid-2 { grid-template-columns: 1fr; } }
+    .form-legal { font-size: .75rem; color: var(--ts); margin-top: 1rem; line-height: 1.6; }
+
+    /* ── ANUNCIO ── */
+    .ad-block { text-align: center; margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 2rem; }
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+  </style>
+
+  <meta property="og:title" content="Terrarios por encargo | EcoCristal" />
+  <meta property="og:description" content="Terrarios cerrados hechos a mano por encargo. Sencillos, duraderos y de bajo mantenimiento." />
+  <meta property="og:image" content="https://ecocristal.es/img/FotoPaginaPrincipal.jpeg" />
+  <meta property="og:url" content="https://ecocristal.es/encargos.html" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html" style="color: var(--vd); font-weight: 500;">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Hecho a mano · Por encargo</p>
+      <h1 class="section-title">Tu propio terrario, <em>hecho por mí</em></h1>
+      <p class="lead">
+        Terrarios cerrados sencillos, pensados para durar años con muy poco mantenimiento. Nada de montajes enormes ni complicados: el mismo tipo de terrario que llevo usando y perfeccionando en mi propia casa, adaptado a lo que tú quieras plantar.
+      </p>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Cómo lo preparo</p>
+      <h2 class="section-title">El mismo proceso <em>que uso yo</em></h2>
+      <p style="color: var(--tm); margin-top: 1rem; max-width: 700px; line-height: 1.8;">
+        Cada terrario lleva las mismas capas que explico en mis guías, ajustadas al tarro y a la planta que elijas:
+      </p>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="num">1</div>
+          <h3>Drenaje</h3>
+          <p>Capa de grava en el fondo para que el agua sobrante no llegue nunca a las raíces.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">2</div>
+          <h3>Barrera separadora</h3>
+          <p>Una malla entre la grava y la tierra, cuando el diseño del terrario lo necesita, para que el sustrato no se cuele y arruine el drenaje.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">3</div>
+          <h3>Sustrato</h3>
+          <p>Mi mezcla de tierra, arena de río y fibra de coco, en las proporciones que mejor le vengan a la planta elegida.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">4</div>
+          <h3>Tu planta</h3>
+          <p>La que tú prefieras. Si me dejas elegir a mí, siempre recomiendo una Fittonia: es la que mejor funciona en terrarios cerrados pequeños.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <strong>Importante:</strong> no todos los terrarios se preparan igual. Según la planta que elijas (una Fittonia no tiene las mismas necesidades que un helecho o una suculenta), cambio las proporciones del sustrato, si lleva o no malla separadora, y el tipo de recipiente que recomiendo. Cuando me escribas, te digo cuál es la mejor opción para lo que tengas en mente.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Precio</p>
+      <h2 class="section-title">¿Cuánto <em>cuesta?</em></h2>
+      <div class="price-box">
+        <h3>Presupuesto a medida, según cada encargo</h3>
+        <p>El precio final depende del tamaño del tarro, de la planta que elijas y de los materiales necesarios para ese terrario en concreto. Como referencia, el cálculo se basa en el coste real de los materiales (cristal, sustrato, planta, decoración) más un margen por el tiempo y trabajo de montaje.</p>
+        <p>Escríbeme contándome qué tienes en mente y te paso un presupuesto cerrado antes de empezar, sin compromiso.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-block wrap">
+    <div style="max-width:300px; margin:0 auto;">
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:300px;height:250px"
+           data-ad-client="ca-pub-8621886093597255"
+           data-ad-slot="3020275922"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Sígueme el proceso</p>
+      <h2 class="section-title">Todo el montaje, <em>paso a paso</em></h2>
+      <div class="tiktok-box">
+        <div class="tiktok-text">
+          <h3>@ecocristal en TikTok</h3>
+          <p>Vídeos cortos mostrando cómo preparo cada terrario de principio a fin, con explicaciones de cada capa y cada decisión. Llevado por mi pareja, que graba y edita todo el proceso.</p>
+        </div>
+        <a href="https://www.tiktok.com/@TU-USUARIO" target="_blank" rel="noopener" class="btn-tiktok">Ver en TikTok →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Hablemos</p>
+      <h2 class="section-title">Pide el <em>tuyo</em></h2>
+      <p style="color: var(--tm); margin-top: 1rem; max-width: 700px; line-height: 1.8;">
+        Cuéntame qué tienes en mente (tamaño aproximado, si tienes preferencia de planta, o si prefieres que elija yo) y te respondo con un presupuesto y los siguientes pasos.
+      </p>
+
+      <div class="form-box">
+        <form action="https://formspree.io/f/TU-FORM-ID" method="POST">
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="tamano">Tamaño aproximado que buscas</label>
+            <select id="tamano" name="tamano">
+              <option value="pequeno">Pequeño (hasta 3L)</option>
+              <option value="mediano">Mediano (3-6L)</option>
+              <option value="grande">Grande (más de 6L)</option>
+              <option value="no_se">No lo tengo claro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="planta">¿Alguna planta en mente?</label>
+            <input type="text" id="planta" name="planta" placeholder="Ej: Fittonia, helecho, o déjalo en blanco si prefieres que elija yo" />
+          </div>
+          <div class="form-row">
+            <label for="mensaje">Cuéntame más</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cualquier detalle que quieras compartir: estilo, dónde lo colocarías, presupuesto orientativo que manejas, etc."></textarea>
+          </div>
+          <button type="submit" class="btn-p">Enviar solicitud</button>
+          <p class="form-legal">Al enviar este formulario aceptas que use tu email únicamente para responder a tu solicitud. No se comparte con terceros.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
