@@ -3,43 +3,79 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Política de Cookies - EcoCristal</title>
+  <title>Política de Cookies | EcoCristal</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
   <style>
-    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', serif; --fb: 'DM Sans', sans-serif; --r: 6px; }
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--fb); background: var(--bc); color: var(--to); line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    header { background: rgba(247,245,240,.93); border-bottom: 1px solid #c8d9c0; padding: 1rem 2rem; text-align: center; }
-    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); }
-    .post-wrap { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
-    h1 { font-family: var(--fd); font-size: 2.5rem; color: var(--vd); margin-bottom: 2rem; text-align: center; }
-    h2 { font-family: var(--fd); font-size: 1.5rem; color: var(--vd); margin: 2rem 0 1rem; }
-    p { margin-bottom: 1rem; color: var(--tm); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    a { color: var(--vs); text-decoration: underline; cursor: pointer; }
+    a:hover { color: var(--vd); }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; text-decoration: none;}
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); text-decoration: none; transition: color var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; text-transform: uppercase; text-decoration: none;}
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── CONTENIDO LEGAL ── */
+    .legal-wrap { max-width: 800px; margin: 10rem auto 6rem; padding: 0 2rem; }
+    .legal-wrap h1 { font-family: var(--fd); font-size: 2.5rem; font-weight: 400; color: var(--vd); margin-bottom: 2rem; border-bottom: 1px solid var(--vmu); padding-bottom: 1rem; }
+    .legal-wrap h2 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2rem 0 1rem; }
+    .legal-wrap p { color: var(--tm); margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .legal-wrap ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; }
+    .legal-wrap li { margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+    .ft-in { max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header><a href="index.html" class="logo">EcoCristal</a></header>
-  <main class="post-wrap">
-    <h1>Política de Cookies</h1>
-    <p>Este sitio web, ecocristal.es, utiliza cookies propias y de terceros para mejorar la experiencia del usuario y ofrecer contenido personalizado.</p>
-    <h2>¿Qué son las cookies?</h2>
-    <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en tu ordenador o dispositivo móvil cuando lo visitas. Permiten que el sitio web recuerde tus acciones y preferencias durante un período de tiempo.</p>
-    <h2>¿Qué cookies utiliza esta web?</h2>
-    <ul>
-      <li style="margin-bottom: 0.5rem;"><strong>Cookies técnicas y de personalización:</strong> Necesarias para el funcionamiento básico de la web y para cargar recursos externos de forma rápida, como las tipografías de Google Fonts.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Cookies publicitarias (Terceros):</strong> EcoCristal utiliza Google AdSense para mostrar anuncios. Google y sus socios utilizan cookies para publicar anuncios basados en tus visitas anteriores a este u otros sitios web.</li>
-    </ul>
-    <h2>Cómo gestionar las cookies</h2>
-    <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador que utilices. Ten en cuenta que si bloqueas las cookies, es posible que ciertas funcionalidades de la web no operen correctamente.</p>
-    <div style="text-align: center; margin-top: 3rem;"><a href="index.html" style="color: var(--vs); font-weight: 500;">← Volver al inicio</a></div>
-  </main>
 
-  <footer style="background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem;">
-    <div style="max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;">
-      <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
-      <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
-    </div>
-  </footer>
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-cta">Volver al inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="legal-wrap">
+  <h1>Política de Cookies</h1>
+  <p>Este sitio web, ecocristal.es, utiliza cookies propias y de terceros para mejorar la experiencia del usuario y ofrecer contenido personalizado.</p>
+  
+  <h2>¿Qué son las cookies?</h2>
+  <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en tu ordenador o dispositivo móvil cuando lo visitas. Permiten que el sitio web recuerde tus acciones y preferencias durante un período de tiempo.</p>
+  
+  <h2>¿Qué cookies utiliza esta web?</h2>
+  <ul>
+    <li style="margin-bottom: 0.5rem;"><strong>Cookies técnicas y de personalización:</strong> Necesarias para el funcionamiento básico de la web y para cargar recursos externos de forma rápida, como las tipografías de Google Fonts.</li>
+    <li style="margin-bottom: 0.5rem;"><strong>Cookies publicitarias (Terceros):</strong> EcoCristal utiliza Google AdSense para mostrar anuncios. Google y sus socios utilizan cookies para publicar anuncios basados en tus visitas anteriores a este u otros sitios web.</li>
+  </ul>
+  
+  <h2>Cómo gestionar las cookies</h2>
+  <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador que utilices. Ten en cuenta que si bloqueas las cookies, es posible que ciertas funcionalidades de la web no operen correctamente.</p>
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
 </body>
 </html>
