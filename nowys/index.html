@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nowys — Entrenamiento, nutrición y cardio</title>
+<meta name="description" content="Nowys es una app de Android para llevar tus entrenamientos serie a serie, la comida del día y tu plan de cardio. Descarga directa.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="icon.png">
+<meta property="og:title" content="Nowys — Entrenamiento, nutrición y cardio">
+<meta property="og:description" content="Lleva tus entrenamientos serie a serie, la comida del día y tu plan de cardio. App de Android, descarga directa.">
+<meta property="og:image" content="https://ecocristal.es/nowys/icon.png">
+<meta property="og:url" content="https://ecocristal.es/nowys/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #12140e;
+    --superficie: #1a1d14;
+    --linea: #2c301e;
+    --tinta: #f1f3e6;
+    --apagado: #a2a68f;
+    --lima: #d4ff3d;
+    --display: 'Archivo', system-ui, sans-serif;
+    --cuerpo: 'DM Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--tinta);
+    font-family: var(--cuerpo);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .envoltorio { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- portada ---------- */
+  header { padding: 72px 0 56px; text-align: center; }
+  header img { width: 88px; height: 88px; display: block; margin: 0 auto 24px; border-radius: 20px; }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(44px, 12vw, 68px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .lema { font-size: clamp(18px, 4.4vw, 21px); color: var(--apagado); margin: 0 auto; max-width: 30ch; text-wrap: balance; }
+
+  /* ---------- descarga ---------- */
+  .descarga { margin: 40px 0 12px; }
+  .boton {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--lima); color: #12140e;
+    font-family: var(--display); font-weight: 800; font-size: 18px; letter-spacing: -0.01em;
+    padding: 17px 38px; border-radius: 999px; text-decoration: none;
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .boton:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .boton:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .version { font-size: 14px; color: var(--apagado); margin-top: 14px; min-height: 1.4em; }
+  .plataforma { font-size: 14px; color: var(--apagado); margin-top: 4px; }
+
+  /* ---------- secciones ---------- */
+  section { padding: 44px 0; border-top: 1px solid var(--linea); }
+  h2 {
+    font-family: var(--display); font-weight: 600; font-size: 13px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--lima);
+    margin: 0 0 24px;
+  }
+  dl { margin: 0; display: grid; gap: 22px; }
+  dt { font-family: var(--display); font-weight: 600; font-size: 18px; margin-bottom: 2px; }
+  dd { margin: 0; color: var(--apagado); }
+
+  ol { margin: 0; padding: 0; list-style: none; counter-reset: paso; display: grid; gap: 18px; }
+  ol li { counter-increment: paso; display: grid; grid-template-columns: 30px 1fr; gap: 14px; align-items: start; }
+  ol li::before {
+    content: counter(paso);
+    font-family: var(--display); font-weight: 800; font-size: 14px;
+    color: var(--lima); background: var(--superficie); border: 1px solid var(--linea);
+    width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center;
+  }
+  ol li span { color: var(--apagado); padding-top: 3px; }
+  ol li strong { color: var(--tinta); font-weight: 500; }
+
+  .aviso {
+    background: var(--superficie); border: 1px solid var(--linea);
+    border-radius: 14px; padding: 18px 20px; margin-top: 26px;
+    font-size: 15px; color: var(--apagado);
+  }
+  .aviso strong { color: var(--tinta); font-weight: 500; }
+
+  footer { padding: 40px 0 64px; border-top: 1px solid var(--linea); font-size: 14px; color: var(--apagado); }
+  footer a { color: var(--apagado); text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover { color: var(--tinta); }
+  .pies { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+
+<div class="envoltorio">
+
+  <header>
+    <img src="icon.png" alt="">
+    <h1>Nowys</h1>
+    <p class="lema">Tus entrenamientos, tu comida y tu cardio, en un solo sitio.</p>
+
+    <div class="descarga">
+      <a class="boton" id="descargar" href="https://expo.dev/artifacts/eas/2Gp--Ea0FkPenI2nnYnvSc7XhqY-m8yF61KhqtWtmF4.apk">Descargar para Android</a>
+      <p class="version" id="version"></p>
+      <p class="plataforma">Solo Android. Descarga directa, no está en Google Play.</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Qué hace</h2>
+    <dl>
+      <div>
+        <dt>Entrenamientos serie a serie</dt>
+        <dd>Apunta peso y repeticiones mientras entrenas, con el descanso contando solo. Te propone lo que hiciste la vez anterior, así que casi nunca tienes que escribir nada.</dd>
+      </div>
+      <div>
+        <dt>Comida y calorías</dt>
+        <dd>Registra lo que comes, con escáner de códigos de barras, y ve cómo van tus calorías y macros del día.</dd>
+      </div>
+      <div>
+        <dt>Cardio con progresión</dt>
+        <dd>Un plan que avanza contigo por bloques, en vez de repetir siempre lo mismo.</dd>
+      </div>
+      <div>
+        <dt>Planes hechos para ti</dt>
+        <dd>Genera rutinas y menús a partir de tus objetivos, tu material y lo que te gusta comer.</dd>
+      </div>
+      <div>
+        <dt>Resumen que se comparte</dt>
+        <dd>Al terminar ves qué músculos has trabajado y tus récords, en una imagen que puedes mandar a quien quieras.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Cómo instalarla</h2>
+    <ol>
+      <li><span>Pulsa <strong>Descargar para Android</strong> y espera a que baje el archivo.</span></li>
+      <li><span>Ábrelo. Android te dirá que <strong>no puede instalar apps de origen desconocido</strong>; es normal, porque no viene de Google Play.</span></li>
+      <li><span>Toca <strong>Ajustes</strong> en ese aviso y activa el permiso para tu navegador.</span></li>
+      <li><span>Vuelve atrás y pulsa <strong>Instalar</strong>.</span></li>
+    </ol>
+    <p class="aviso">
+      <strong>A partir de ahí se actualiza sola.</strong> Solo tendrás que volver aquí las pocas veces
+      que un cambio necesite reinstalar; la propia app te avisará cuando toque.
+    </p>
+  </section>
+
+  <footer>
+    <div class="pies">
+      <a href="politica-de-privacidad.html">Política de privacidad</a>
+      <a href="terminos-de-uso.html">Términos de uso</a>
+      <a href="https://ecocristal.es">ecocristal.es</a>
+    </div>
+    <p style="margin:0">Hecho por Noel Rodero Sánchez de Pablo. Nowys no sustituye el consejo de un médico ni de un entrenador.</p>
+  </footer>
+
+</div>
+
+<script>
+  // La versión vigente se lee de la misma tabla que consulta la app, así esta página no se queda
+  // atrás cuando se publica un APK nuevo. Si la consulta falla, el botón conserva el enlace fijo
+  // que ya lleva escrito en el HTML.
+  (async () => {
+    const API = 'https://vjuahaitwzjfrhuglbor.supabase.co';
+    const CLAVE = 'sb_publishable_D_tlGWkGndJFeT9X0FOVfg_emEGH-WI';
+    const etiqueta = document.getElementById('version');
+    try {
+      const r = await fetch(
+        API + '/rest/v1/app_releases?is_current=eq.true&select=version_name,apk_url&order=created_at.desc&limit=1',
+        { headers: { apikey: CLAVE, Authorization: 'Bearer ' + CLAVE } }
+      );
+      if (!r.ok) throw new Error(r.status);
+      const [fila] = await r.json();
+      if (fila && fila.apk_url) {
+        document.getElementById('descargar').href = fila.apk_url;
+        etiqueta.textContent = 'Versión ' + fila.version_name;
+      }
+    } catch {
+      // Sin conexión o con el servicio caído: se deja el enlace fijo y no se anuncia versión.
+      etiqueta.textContent = '';
+    }
+  })();
+</script>
+
+</body>
+</html>
