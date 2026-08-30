@@ -1,8 +1,8 @@
-# GymTrack — Política de Privacidad
+# Nowys — Política de Privacidad
 
 _Última actualización: 27 de agosto de 2026_
 
-Esta política explica qué datos recoge GymTrack, para qué se usan, con quién se comparten y qué puedes hacer al respecto. Está escrita para que se entienda, no para cubrirnos las espaldas.
+Esta política explica qué datos recoge Nowys, para qué se usan, con quién se comparten y qué puedes hacer al respecto. Está escrita para que se entienda, no para cubrirnos las espaldas.
 
 ## 1. Quién es el responsable
 
@@ -10,7 +10,7 @@ El responsable del tratamiento de tus datos es Noel Rodero Sánchez de Pablo, pe
 
 Puedes contactar para cualquier asunto relacionado con tus datos en: spirit.spirit07@gmail.com
 
-GymTrack es un proyecto personal, no una empresa. Detrás de la app hay una sola persona.
+Nowys es un proyecto personal, no una empresa. Detrás de la app hay una sola persona.
 
 ## 2. Qué datos recogemos
 
@@ -30,7 +30,7 @@ GymTrack es un proyecto personal, no una empresa. Detrás de la app hay una sola
 
 **Fotos de progreso (todavía no disponible).** Si en el futuro se activa esta función, las imágenes que subas se tratarán con el mismo cuidado que el resto y se te informará antes de activarla. A día de hoy la app no recoge ninguna fotografía.
 
-GymTrack **no** utiliza cookies publicitarias, no rastrea tu ubicación, no accede a tu agenda y no vende datos a nadie.
+Nowys **no** utiliza cookies publicitarias, no rastrea tu ubicación, no accede a tu agenda y no vende datos a nadie.
 
 ## 3. Para qué usamos tus datos y con qué base legal
 
@@ -76,7 +76,7 @@ Algunos de estos proveedores pueden tratar datos fuera del Espacio Económico Eu
 
 ## 6. Pagos
 
-Si contratas la suscripción premium, **el pago lo procesa íntegramente Google Play**. GymTrack no recibe, ni ve, ni almacena tu número de tarjeta ni ningún otro dato bancario.
+Si contratas la suscripción premium, **el pago lo procesa íntegramente Google Play**. Nowys no recibe, ni ve, ni almacena tu número de tarjeta ni ningún otro dato bancario.
 
 Lo único que la app conoce es si tu cuenta tiene o no una suscripción activa y hasta qué fecha.
 
@@ -86,9 +86,11 @@ La gestión técnica de la suscripción se apoya en RevenueCat, que actúa como 
 
 Mientras tu cuenta esté activa, tus datos se conservan para que puedas seguir consultando tu historial.
 
-Cuando solicitas el borrado de tu cuenta, los datos se conservan **30 días** desde la solicitud y después se eliminan de forma permanente e irreversible.
+Puedes eliminar tu cuenta tú mismo, en cualquier momento, desde **Perfil → Eliminar mi cuenta**. También puedes solicitarlo escribiendo a spirit.spirit07@gmail.com.
 
-Ese plazo existe por si te arrepientes o la solicitud no la hiciste tú: durante esos 30 días puedes recuperar la cuenta escribiendo a spirit.spirit07@gmail.com. Pasado el plazo, la recuperación ya no es posible.
+Al solicitar el borrado, los datos se conservan **30 días** y después se eliminan de forma permanente e irreversible: cuenta, entrenamientos, nutrición, rutinas y planes.
+
+Ese plazo existe por si te arrepientes o la solicitud no la hiciste tú: durante esos 30 días basta con volver a iniciar sesión y pulsar "Cancelar el borrado". Pasado el plazo, la recuperación ya no es posible para nadie, tampoco para el responsable.
 
 Las facturas y registros de pago se conservan durante el plazo que exige la normativa fiscal española, con independencia del borrado de la cuenta.
 
@@ -100,7 +102,7 @@ Tienes derecho a:
 
 - **Rectificarlos** si son incorrectos. La mayoría los puedes corregir tú mismo desde la pantalla de Perfil.
 
-- **Suprimirlos** ("derecho al olvido"), solicitando el borrado de tu cuenta.
+- **Suprimirlos** ("derecho al olvido"): puedes borrar tu cuenta desde **Perfil → Eliminar mi cuenta**, sin tener que pedírselo a nadie.
 
 - **Oponerte** a determinados tratamientos o solicitar su **limitación**.
 
@@ -114,7 +116,7 @@ Si consideras que tus datos no se están tratando correctamente, puedes presenta
 
 ## 9. Menores de edad
 
-GymTrack no está dirigida a menores de 16 años y no debe ser utilizada por ellos.
+Nowys no está dirigida a menores de 16 años y no debe ser utilizada por ellos.
 
 El motivo no es burocrático: la app calcula déficits calóricos y objetivos de peso, y ese tipo de contenido puede ser perjudicial durante la adolescencia, cuando el cuerpo todavía está en desarrollo y el riesgo de conductas alimentarias problemáticas es mayor.
 

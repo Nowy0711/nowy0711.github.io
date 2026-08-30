@@ -1,18 +1,18 @@
-# GymTrack — Términos de Uso
+# Nowys — Términos de Uso
 
 _Última actualización: 27 de agosto de 2026_
 
-Estas condiciones regulan el uso de GymTrack. Al crear una cuenta las estás aceptando, así que merece la pena leerlas.
+Estas condiciones regulan el uso de Nowys. Al crear una cuenta las estás aceptando, así que merece la pena leerlas.
 
 ## 1. Quién ofrece este servicio
 
-GymTrack es una aplicación desarrollada y mantenida por Noel Rodero Sánchez de Pablo, persona física residente en España.
+Nowys es una aplicación desarrollada y mantenida por Noel Rodero Sánchez de Pablo, persona física residente en España.
 
 Contacto: spirit.spirit07@gmail.com
 
 ## 2. AVISO IMPORTANTE SOBRE SALUD
 
-**GymTrack no es un servicio médico y no sustituye a ningún profesional sanitario.**
+**Nowys no es un servicio médico y no sustituye a ningún profesional sanitario.**
 
 Los planes de entrenamiento, nutrición y cardio que genera la aplicación están elaborados por un sistema de inteligencia artificial a partir de los datos que tú introduces. Son **orientativos**. La IA no te ha visto, no conoce tu historial clínico, no sabe si tienes una lesión que no has mencionado y puede equivocarse.
 
@@ -24,7 +24,7 @@ Para pautas nutricionales ajustadas a tu caso, acude a un dietista-nutricionista
 
 Utilizas los planes bajo tu propia responsabilidad. El responsable de la app no responde de las consecuencias derivadas de seguir las recomendaciones generadas.
 
-## 3. Quién puede usar GymTrack
+## 3. Quién puede usar Nowys
 
 Debes tener al menos **16 años** para crear una cuenta.
 
@@ -40,11 +40,13 @@ Los datos que introduzcas deben ser veraces: los cálculos de calorías y los pl
 
 Si sospechas que alguien ha accedido a tu cuenta, cambia la contraseña y avisa a spirit.spirit07@gmail.com.
 
-Puedes solicitar la eliminación de tu cuenta en cualquier momento escribiendo a spirit.spirit07@gmail.com. Los datos se conservarán 30 días y después se borrarán definitivamente.
+Puedes eliminar tu cuenta cuando quieras desde **Perfil → Eliminar mi cuenta**. Los datos se conservan 30 días, durante los cuales puedes cancelarlo volviendo a entrar, y después se borran definitivamente.
+
+Si tienes una suscripción premium activa, **cancélala también en Google Play**: borrar la cuenta en Nowys no cancela el cobro, porque esa suscripción la gestiona Google y no la app.
 
 ## 5. Plan gratuito y plan premium
 
-GymTrack se puede usar de forma gratuita. El plan gratuito incluye un número limitado de generaciones de planes con inteligencia artificial al mes; el número exacto se indica dentro de la aplicación.
+Nowys se puede usar de forma gratuita. El plan gratuito incluye un número limitado de generaciones de planes con inteligencia artificial al mes; el número exacto se indica dentro de la aplicación.
 
 El resto de funciones — registrar entrenamientos, llevar la nutrición, crear rutinas, consultar tu historial — **no tienen límite y son gratuitas**.
 
@@ -58,7 +60,7 @@ La suscripción premium se contrata a través de **Google Play** y se cobra a la
 
 **La suscripción se renueva automáticamente** al final de cada periodo (mensual o anual) salvo que la canceles al menos **24 horas antes** de que termine el periodo en curso. El importe se cargará en esas 24 horas previas a la renovación.
 
-**Cómo cancelar:** desde la aplicación Google Play → icono de perfil → Pagos y suscripciones → Suscripciones → GymTrack → Cancelar suscripción. La cancelación también se puede realizar desde play.google.com/store/account/subscriptions.
+**Cómo cancelar:** desde la aplicación Google Play → icono de perfil → Pagos y suscripciones → Suscripciones → Nowys → Cancelar suscripción. La cancelación también se puede realizar desde play.google.com/store/account/subscriptions.
 
 **Qué pasa al cancelar:** conservas el acceso premium **hasta el final del periodo que ya has pagado**. No se realizan reembolsos proporcionales por el tiempo no consumido. Cuando el periodo termina, la cuenta vuelve al plan gratuito y tus datos, rutinas y planes anteriores se conservan intactos.
 
@@ -78,7 +80,7 @@ El uso fraudulento o la distribución masiva de códigos no destinados a ti pued
 
 ## 8. Uso aceptable
 
-Al usar GymTrack te comprometes a no:
+Al usar Nowys te comprometes a no:
 
 - Intentar acceder a cuentas o datos de otras personas.
 
@@ -94,7 +96,7 @@ El incumplimiento puede suponer la suspensión o eliminación de la cuenta sin r
 
 ## 9. Disponibilidad del servicio
 
-GymTrack es un proyecto personal y se ofrece "tal cual", sin garantía de disponibilidad ininterrumpida.
+Nowys es un proyecto personal y se ofrece "tal cual", sin garantía de disponibilidad ininterrumpida.
 
 Puede haber interrupciones por mantenimiento, por fallos de los proveedores externos o por causas ajenas al responsable.
 
@@ -128,4 +130,4 @@ Antes de acudir a la vía judicial, te agradecería que escribieras a spirit.spi
 
 Estas condiciones pueden actualizarse. Si el cambio es relevante, se avisará dentro de la app antes de que sea efectivo.
 
-Seguir usando GymTrack después de la entrada en vigor supone aceptar la nueva versión. Si no estás de acuerdo, puedes dejar de usar la app y solicitar el borrado de tu cuenta.
+Seguir usando Nowys después de la entrada en vigor supone aceptar la nueva versión. Si no estás de acuerdo, puedes dejar de usar la app y solicitar el borrado de tu cuenta.
