@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Prueba de enlace · Nowys</title>
+<!--
+  Página de diagnóstico. No forma parte del flujo de recuperar contraseña.
+
+  Sirve para separar dos problemas que desde fuera se ven igual: que la app no responda al
+  esquema gymtrackapp:// (y entonces haría falta un APK nuevo), o que el navegador no llegue a
+  llamarla (y entonces se arregla desde la página). Cada botón prueba una vía distinta.
+
+  Se puede borrar cuando el enlace de recuperación quede confirmado.
+-->
+<style>
+  :root {
+    --bg: #12140e; --surface: #1a1d14; --text: #f1f3e6; --text-dim: #a2a68f;
+    --border: #2c301e; --accent: #d4ff3d; --accent-text: #12140e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 24px;
+    background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 420px; margin: 0 auto; }
+  h1 { font-size: 26px; line-height: 1.2; margin: 0 0 8px; }
+  p { color: var(--text-dim); }
+  .prueba {
+    margin-top: 20px; padding: 16px;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+  }
+  .prueba h2 { font-size: 15px; margin: 0 0 4px; }
+  .prueba p { font-size: 14px; margin: 0 0 12px; }
+  .boton {
+    display: block; padding: 14px; border-radius: 999px;
+    background: var(--accent); color: var(--accent-text);
+    font-weight: 700; text-align: center; text-decoration: none;
+  }
+  .nota {
+    margin-top: 24px; padding: 14px 16px; font-size: 14px;
+    border: 1px solid var(--border); border-radius: 12px; color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Prueba de enlace</h1>
+  <p>Ábrelo en el <strong>móvil que tiene Nowys instalada</strong> y toca los dos botones, uno
+  detrás de otro. Apunta cuál abre la app.</p>
+
+  <div class="prueba">
+    <h2>1 · Esquema directo</h2>
+    <p>La forma clásica. Funciona en la mayoría de navegadores y en las webviews.</p>
+    <a class="boton" href="gymtrackapp://reset-password">Probar el esquema directo</a>
+  </div>
+
+  <div class="prueba">
+    <h2>2 · Intent de Android</h2>
+    <p>La vía que Chrome admite de forma explícita en Android.</p>
+    <a class="boton" href="intent://reset-password#Intent;scheme=gymtrackapp;package=com.gymtrack.app;end">Probar el intent</a>
+  </div>
+
+  <div class="nota">
+    <strong>Qué cuenta como que ha funcionado:</strong> que se abra Nowys, aunque nada más entrar
+    diga que el enlace ha caducado. Estos botones no llevan ningún token, así que ese aviso es lo
+    normal y significa que la app se ha abierto, que es justo lo que se quiere comprobar.
+  </div>
+</main>
+</body>
+</html>
