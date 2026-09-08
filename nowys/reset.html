@@ -67,6 +67,8 @@
     color: var(--text-dim);
   }
   .error { color: var(--danger); }
+  .secundario { margin: 14px 0 0; font-size: 14px; text-align: center; }
+  .secundario a { color: var(--accent); }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -76,6 +78,9 @@
     <h1>Ya casi está</h1>
     <p>Toca el botón para volver a Nowys y escribir tu contraseña nueva.</p>
     <a class="boton" id="abrir" href="#">Abrir Nowys</a>
+    <p class="secundario">
+      ¿No se ha abierto? <a id="alternativo" href="#">Prueba por aquí</a>.
+    </p>
     <div class="aviso">
       Tiene que ser el móvil donde tienes Nowys instalada. Si has abierto esto en el ordenador,
       reenvíate el correo al móvil y ábrelo desde allí.
@@ -104,6 +109,8 @@
 <script>
   (function () {
     var ESQUEMA = 'gymtrackapp://reset-password';
+    /** El `package` de app.json. Sin él, Android no sabe a qué app mandar el intent. */
+    var PAQUETE = 'com.gymtrack.app';
 
     // El fragmento es donde Supabase deja los tokens; la query, donde deja el `code` del flujo
     // PKCE y algunos errores. Se miran los dos porque la app sabe leer ambos.
@@ -128,17 +135,27 @@
       return;
     }
 
-    // Se reenvía el fragmento entero sin tocarlo: lo que la app espera es exactamente lo que
-    // Supabase escribió, y reconstruirlo campo a campo solo añadiría formas de equivocarse.
-    var destino = ESQUEMA + (hash ? '#' + hash : '?' + query);
-    document.getElementById('abrir').setAttribute('href', destino);
+    // Los datos se reenvían tal cual llegan, sin reconstruirlos campo a campo.
+    var datos = hash || query;
+
+    // Dos formas de llamar a la app, porque no todas funcionan en todas partes:
+    //
+    // · intent:// es la vía que Chrome en Android admite explícitamente, y la que funciona
+    //   cuando un enlace gymtrackapp:// a secas se queda sin hacer nada. Su pega: el fragmento
+    //   lo usa el propio formato para sus parámetros, así que los tokens van en la query.
+    // · El esquema directo es lo que entiende cualquier otro navegador y las webviews.
+    var directo = ESQUEMA + '#' + datos;
+    var intent =
+      'intent://reset-password?' + datos + '#Intent;scheme=gymtrackapp;package=' + PAQUETE + ';end';
+
+    var esAndroid = /Android/i.test(navigator.userAgent);
+    document.getElementById('abrir').setAttribute('href', esAndroid ? intent : directo);
+    document.getElementById('alternativo').setAttribute('href', esAndroid ? directo : intent);
     mostrar('listo');
 
-    // Intento automático, por si el navegador lo permite. Si lo bloquea no pasa nada: el botón
-    // sigue ahí, y ese sí es un toque del usuario.
-    window.setTimeout(function () {
-      window.location.href = destino;
-    }, 250);
+    // A propósito NO se intenta abrir la app sola al cargar: un salto a otra aplicación que no
+    // sale de un toque lo bloquea el navegador, y además puede dejar la página marcada para que
+    // tampoco funcione el toque de después. El botón es la única vía.
   })();
 </script>
 </body>
