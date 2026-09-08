@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nueva contraseña · Nowys</title>
+<!--
+  Puente entre el correo de recuperación y la app.
+
+  POR QUÉ EXISTE ESTA PÁGINA: el enlace del correo lleva a Supabase, que responde con un 303 hacia
+  gymtrackapp://reset-password. Los navegadores no siguen una redirección del servidor hacia un
+  esquema que no sea http(s): solo abren una app externa cuando el salto lo inicia un toque del
+  usuario. Por eso el enlace se quedaba en blanco, tanto al pulsarlo como al pegarlo a mano.
+
+  Aquí el salto lo da un botón, que sí es un toque del usuario, y entonces Android sí abre la app.
+  Los tokens viajan en el fragmento (#...), que el navegador conserva entre redirecciones y nunca
+  se manda al servidor: esta página los lee en local y los reenvía tal cual a la app.
+-->
+<style>
+  :root {
+    --bg: #12140e;
+    --surface: #1a1d14;
+    --text: #f1f3e6;
+    --text-dim: #a2a68f;
+    --border: #2c301e;
+    --accent: #d4ff3d;
+    --accent-text: #12140e;
+    --danger: #ff6b5e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { width: 100%; max-width: 420px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+  p { color: var(--text-dim); margin: 0 0 16px; }
+  .boton {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .aviso {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+  .error { color: var(--danger); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div id="listo" hidden>
+    <h1>Ya casi está</h1>
+    <p>Toca el botón para volver a Nowys y escribir tu contraseña nueva.</p>
+    <a class="boton" id="abrir" href="#">Abrir Nowys</a>
+    <div class="aviso">
+      Tiene que ser el móvil donde tienes Nowys instalada. Si has abierto esto en el ordenador,
+      reenvíate el correo al móvil y ábrelo desde allí.
+    </div>
+  </div>
+
+  <div id="fallo" hidden>
+    <h1>Este enlace ya no sirve</h1>
+    <p id="motivo" class="error"></p>
+    <div class="aviso">
+      Los enlaces de recuperación caducan y solo se pueden usar una vez. Pide uno nuevo desde
+      Nowys, en «He olvidado mi usuario o contraseña».
+    </div>
+  </div>
+
+  <div id="vacio" hidden>
+    <h1>Nada que abrir</h1>
+    <p>Has llegado aquí sin un enlace de recuperación.</p>
+    <div class="aviso">
+      Si querías cambiar tu contraseña, pídelo desde Nowys en «He olvidado mi usuario o
+      contraseña» y abre el enlace que te llegue por correo.
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var ESQUEMA = 'gymtrackapp://reset-password';
+
+    // El fragmento es donde Supabase deja los tokens; la query, donde deja el `code` del flujo
+    // PKCE y algunos errores. Se miran los dos porque la app sabe leer ambos.
+    var hash = window.location.hash.replace(/^#/, '');
+    var query = window.location.search.replace(/^\?/, '');
+    var params = new URLSearchParams(hash || query);
+
+    function mostrar(id) {
+      var el = document.getElementById(id);
+      if (el) el.hidden = false;
+    }
+
+    var errorDescripcion = params.get('error_description');
+    if (errorDescripcion) {
+      document.getElementById('motivo').textContent = errorDescripcion.replace(/\+/g, ' ');
+      mostrar('fallo');
+      return;
+    }
+
+    if (!hash && !query) {
+      mostrar('vacio');
+      return;
+    }
+
+    // Se reenvía el fragmento entero sin tocarlo: lo que la app espera es exactamente lo que
+    // Supabase escribió, y reconstruirlo campo a campo solo añadiría formas de equivocarse.
+    var destino = ESQUEMA + (hash ? '#' + hash : '?' + query);
+    document.getElementById('abrir').setAttribute('href', destino);
+    mostrar('listo');
+
+    // Intento automático, por si el navegador lo permite. Si lo bloquea no pasa nada: el botón
+    // sigue ahí, y ese sí es un toque del usuario.
+    window.setTimeout(function () {
+      window.location.href = destino;
+    }, 250);
+  })();
+</script>
+</body>
+</html>
