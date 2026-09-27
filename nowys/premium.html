@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ya tienes Premium · Nowys</title>
+<!--
+  Puente entre el correo de "Enhorabuena, ya tienes Nowys Premium" y la app (migración 0084,
+  Edge Function aviso-premium).
+
+  Mismo motivo que reset.html: Gmail y compañía no dejan un enlace gymtrackapp:// en un correo, y
+  los navegadores solo abren otra app cuando el salto sale de un toque del usuario. Así que el
+  correo trae aquí y el botón de esta página es el que abre Nowys.
+
+  Aquí no viaja ningún dato: la app ya sabe por su cuenta que hay un regalo sin ver y enseña la
+  pantalla de enhorabuena al abrirse, se entre por aquí o no.
+-->
+<style>
+  :root {
+    --bg: #12140e;
+    --surface: #1a1d14;
+    --text: #f1f3e6;
+    --text-dim: #a2a68f;
+    --border: #2c301e;
+    --accent: #d4ff3d;
+    --accent-text: #12140e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { width: 100%; max-width: 420px; }
+  .icono { font-size: 48px; line-height: 1; margin: 0 0 12px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+  p { color: var(--text-dim); margin: 0 0 16px; }
+  .boton {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+  .aviso {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+  .secundario { margin: 14px 0 0; font-size: 14px; text-align: center; }
+  .secundario a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <p class="icono">🎉</p>
+  <h1>Ya tienes Nowys Premium</h1>
+  <p>Toca el botón para abrir Nowys y ver todo lo que incluye.</p>
+  <a class="boton" id="abrir" href="gymtrackapp://premium">Abrir Nowys</a>
+  <p class="secundario">
+    ¿No se ha abierto? <a id="alternativo" href="gymtrackapp://premium">Prueba por aquí</a>.
+  </p>
+  <div class="aviso">
+    Tiene que ser el móvil donde tienes Nowys instalada. Si no la tienes, puedes descargarla en
+    <a href="https://ecocristal.es/nowys" style="color: var(--accent)">ecocristal.es/nowys</a>.
+    Y si prefieres, abre la app directamente: te lo enseñará al entrar.
+  </div>
+</main>
+
+<script>
+  (function () {
+    /** El `package` de app.json. Sin él, Android no sabe a qué app mandar el intent. */
+    var PAQUETE = 'com.gymtrack.app';
+    var directo = 'gymtrackapp://premium';
+    // intent:// es lo que Chrome en Android admite explícitamente (ver reset.html). Si la app no
+    // está instalada, Chrome abre la página de descarga en vez de no hacer nada.
+    var intent =
+      'intent://premium#Intent;scheme=gymtrackapp;package=' + PAQUETE +
+      ';S.browser_fallback_url=' + encodeURIComponent('https://ecocristal.es/nowys') + ';end';
+
+    var esAndroid = /Android/i.test(navigator.userAgent);
+    document.getElementById('abrir').setAttribute('href', esAndroid ? intent : directo);
+    document.getElementById('alternativo').setAttribute('href', esAndroid ? directo : intent);
+    // A propósito NO se intenta abrir la app sola al cargar: ver reset.html.
+  })();
+</script>
+</body>
+</html>
