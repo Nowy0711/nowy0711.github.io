@@ -1,110 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   <url>
     <loc>https://ecocristal.es/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-28</lastmod>
   </url>
-  <!-- Páginas de autor y contacto -->
-  <url>
-    <loc>https://ecocristal.es/sobre-mi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ecocristal.es/contacto.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <!-- Encargos -->
-  <url>
-    <loc>https://ecocristal.es/encargos.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Artículos y guías -->
   <url>
     <loc>https://ecocristal.es/como-montar-primer-terrario.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ecocristal.es/cultivando-lechugas.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/como-hacer-sustrato.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/cultivando-lechugas.html</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/cultivando-melon.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-28</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/mis-5-plantas.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/urnas-de-cristal.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-28</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/escuadron-limpieza.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Diario de Agroecología -->
-  <url>
-    <loc>https://ecocristal.es/diario-agroecologia-1.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://ecocristal.es/diario-agroecologia-2.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ecocristal.es/encargos.html</loc>
+    <lastmod>2026-07-28</lastmod>
   </url>
   <url>
-    <loc>https://ecocristal.es/diario-agroecologia-3.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ecocristal.es/sobre-mi.html</loc>
+    <lastmod>2026-07-23</lastmod>
   </url>
   <url>
-    <loc>https://ecocristal.es/diario-agroecologia-4.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ecocristal.es/contacto.html</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
-    <loc>https://ecocristal.es/diario-agroecologia-5.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ecocristal.es/diario-agroecologia-6.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Páginas Legales -->
-  <url>
-    <loc>https://ecocristal.es/politica-privacidad.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://ecocristal.es/nowys/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/aviso-legal.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ecocristal.es/politica-privacidad.html</loc>
+    <lastmod>2026-06-06</lastmod>
   </url>
   <url>
     <loc>https://ecocristal.es/politica-cookies.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
 </urlset>
