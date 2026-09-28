@@ -32,7 +32,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
-    img { display: block; max-width: 100%; }
+    img { display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration: none; cursor: pointer; }
     ul { list-style: none; }
 
@@ -160,7 +160,7 @@
         <div style="position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:2px solid var(--vmu);border-radius:var(--rl);z-index:0;pointer-events:none;"></div>
         
         <div class="hero-photo" style="padding: 0; background: none; position:relative; z-index:1; border-radius:var(--rl); box-shadow:var(--s3); overflow:hidden; aspect-ratio:4/5;">
-          <img src="img/FotoPaginaPrincipal.jpeg" alt="Mi terrario cerrado real" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="img/FotoPaginaPrincipal.webp" width="1000" height="1040" alt="Mi terrario cerrado real" style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
         </div>
 
         <div class="reveal" style="position:absolute;top:1.5rem;right:-2rem;z-index:3;background:var(--bc);border:1px solid var(--cr);box-shadow:var(--s1);border-radius:var(--r);padding:.75rem 1.1rem;font-size:.8rem;color:var(--ts);">
@@ -205,7 +205,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/Terrario2.1.jpeg" alt="Vista del terrario desde arriba">
+            <img src="img/thumbs/Terrario2.1.webp" width="480" height="640" alt="Vista del terrario desde arriba" loading="lazy" decoding="async">
             <span class="card-tag">Paso a paso</span>
           </div>
           <div class="card-body">
@@ -217,7 +217,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/lechugasemillero2.jpeg" alt="Lechugas frescas creciendo en un semillero al sol">
+            <img src="img/thumbs/lechugasemillero2.webp" width="557" height="567" alt="Lechugas frescas creciendo en un semillero al sol" loading="lazy" decoding="async">
             <span class="card-tag">Huerto en casa</span>
           </div>
           <div class="card-body">
@@ -229,7 +229,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/semilla-plantada.jpeg" alt="Semilla de melón germinada lista para plantar en tierra">
+            <img src="img/thumbs/semilla-plantada.webp" width="480" height="640" alt="Semilla de melón germinada lista para plantar en tierra" loading="lazy" decoding="async">
             <span class="card-tag">Huerto en casa</span>
           </div>
           <div class="card-body">
@@ -241,7 +241,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/capas-sustrato.jpeg" alt="Vista lateral del sustrato de un terrario mostrando la mezcla de tierra">
+            <img src="img/thumbs/capas-sustrato.webp" width="480" height="640" alt="Vista lateral del sustrato de un terrario mostrando la mezcla de tierra" loading="lazy" decoding="async">
             <span class="card-tag">Sustratos</span>
           </div>
           <div class="card-body">
@@ -264,7 +264,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/bancal-terminado.jpg" alt="Bancal de tierra alisado y preparado en el huerto">
+            <img src="img/thumbs/bancal-terminado.webp" width="480" height="640" alt="Bancal de tierra alisado y preparado en el huerto" loading="lazy" decoding="async">
             <span class="card-tag">Diario #1</span>
           </div>
           <div class="card-body">
@@ -276,7 +276,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/escarabajo-huerto.jpeg" alt="Escarabajo encontrado en el huerto">
+            <img src="img/thumbs/escarabajo-huerto.webp" width="480" height="640" alt="Escarabajo encontrado en el huerto" loading="lazy" decoding="async">
             <span class="card-tag">Diario #2</span>
           </div>
           <div class="card-body">
@@ -288,7 +288,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/tubos-instalados.jpeg" alt="Tubos de riego instalados en el bancal">
+            <img src="img/thumbs/tubos-instalados.webp" width="480" height="640" alt="Tubos de riego instalados en el bancal" loading="lazy" decoding="async">
             <span class="card-tag">Diario #3</span>
           </div>
           <div class="card-body">
@@ -300,7 +300,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/manos-semilleros.jpeg" alt="Chavales sujetando semilleros">
+            <img src="img/thumbs/manos-semilleros.webp" width="640" height="360" alt="Chavales sujetando semilleros" loading="lazy" decoding="async">
             <span class="card-tag">Diario #4</span>
           </div>
           <div class="card-body">
@@ -312,7 +312,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/tractor-compost.jpeg" alt="Tractor procesando la pila de compost">
+            <img src="img/thumbs/tractor-compost.webp" width="480" height="640" alt="Tractor procesando la pila de compost" loading="lazy" decoding="async">
             <span class="card-tag">Diario #5</span>
           </div>
           <div class="card-body">
@@ -324,7 +324,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/bancal-completo.jpeg" alt="Vista del bancal completo con plantas">
+            <img src="img/thumbs/bancal-completo.webp" width="480" height="640" alt="Vista del bancal completo con plantas" loading="lazy" decoding="async">
             <span class="card-tag">Diario #6</span>
           </div>
           <div class="card-body">
@@ -346,7 +346,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/Fittonias.webp" alt="Colección de Fittonias de diferentes colores en macetas">
+            <img src="img/thumbs/Fittonias.webp" width="640" height="512" alt="Colección de Fittonias de diferentes colores en macetas" loading="lazy" decoding="async">
             <span class="card-tag">Top 5</span>
           </div>
           <div class="card-body">
@@ -358,7 +358,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/Terrario-indice.jpeg" alt="Diferentes tipos de urnas de cristal">
+            <img src="img/thumbs/Terrario-indice.webp" width="480" height="640" alt="Diferentes tipos de urnas de cristal" loading="lazy" decoding="async">
             <span class="card-tag">Materiales</span>
           </div>
           <div class="card-body">
@@ -370,7 +370,7 @@
 
         <article class="card reveal">
           <div class="card-thumb">
-            <img src="img/bichobola.jpg" alt="Detalle de un bicho bola">
+            <img src="img/thumbs/bichobola.webp" width="640" height="480" alt="Detalle de un bicho bola" loading="lazy" decoding="async">
             <span class="card-tag">Bioactivos</span>
           </div>
           <div class="card-body">
@@ -389,7 +389,7 @@
     <div class="wrap">
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:6rem;align-items:center;">
         <div class="reveal" style="position:relative;">
-          <img src="img/Terrario3.jpeg" alt="Mi terrario cerrado con Fittonia" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--rl); box-shadow:var(--s3);" />
+          <img src="img/Terrario3.webp" width="900" height="1200" alt="Mi terrario cerrado con Fittonia" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--rl); box-shadow:var(--s3);" loading="lazy" decoding="async" />
           <div style="position:absolute;bottom:-1.5rem;right:-1.5rem;width:120px;height:120px;background:var(--cr);border-radius:var(--rl);border:1px solid var(--vmu);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--s1);">
             <strong style="font-family:var(--fd);font-size:2rem;font-weight:300;color:var(--vd);line-height:1;">3</strong>
             <span style="font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ts);text-align:center;margin-top:.25rem;">terrarios<br>activos</span>
