@@ -76,14 +76,17 @@
 <main>
   <div id="listo" hidden>
     <h1>Ya casi está</h1>
-    <p>Toca el botón para volver a Nowys y escribir tu contraseña nueva.</p>
+    <p id="explica">Toca el botón para volver a Nowys y escribir tu contraseña nueva.</p>
     <a class="boton" id="abrir" href="#">Abrir Nowys</a>
-    <p class="secundario">
+    <p class="secundario" id="filaAlternativo">
       ¿No se ha abierto? <a id="alternativo" href="#">Prueba por aquí</a>.
     </p>
-    <div class="aviso">
-      Tiene que ser el móvil donde tienes Nowys instalada. Si has abierto esto en el ordenador,
-      reenvíate el correo al móvil y ábrelo desde allí.
+    <p class="secundario">
+      <span id="textoOtraVia">¿No tienes la app en este móvil?</span>
+      <a id="otraVia" href="#">Cámbiala desde el navegador</a>.
+    </p>
+    <div class="aviso" id="avisoFinal">
+      Da igual dónde la cambies: la contraseña nueva vale para la app y para la web.
     </div>
   </div>
 
@@ -109,8 +112,9 @@
 <script>
   (function () {
     var ESQUEMA = 'gymtrackapp://reset-password';
-    /** El `package` de app.json. Sin él, Android no sabe a qué app mandar el intent. */
-    var PAQUETE = 'com.gymtrack.app';
+    // Versión web de Nowys (la misma app en el navegador). Es la vía en iPhone, donde no hay app,
+    // y en el ordenador. Lee los tokens igual que la app.
+    var WEB = 'https://preview.ecocristal.es/reset-password';
 
     // El fragmento es donde Supabase deja los tokens; la query, donde deja el `code` del flujo
     // PKCE y algunos errores. Se miran los dos porque la app sabe leer ambos.
@@ -145,12 +149,30 @@
     //   lo usa el propio formato para sus parámetros, así que los tokens van en la query.
     // · El esquema directo es lo que entiende cualquier otro navegador y las webviews.
     var directo = ESQUEMA + '#' + datos;
-    var intent =
-      'intent://reset-password?' + datos + '#Intent;scheme=gymtrackapp;package=' + PAQUETE + ';end';
+    // Sin `package`: el APK antiguo (com.gymtrack.app) y la app de Play (com.nowys.app) tienen
+    // paquetes distintos pero el mismo esquema, y así Android se lo da a la que esté instalada.
+    var intent = 'intent://reset-password?' + datos + '#Intent;scheme=gymtrackapp;end';
+    var web = WEB + (hash ? '#' : '?') + datos;
 
     var esAndroid = /Android/i.test(navigator.userAgent);
-    document.getElementById('abrir').setAttribute('href', esAndroid ? intent : directo);
-    document.getElementById('alternativo').setAttribute('href', esAndroid ? directo : intent);
+    if (esAndroid) {
+      document.getElementById('abrir').setAttribute('href', intent);
+      document.getElementById('alternativo').setAttribute('href', directo);
+      document.getElementById('otraVia').setAttribute('href', web);
+    } else {
+      // iPhone y ordenador: no hay app que abrir (Nowys solo existe para Android), así que lo
+      // principal es la web. Antes el botón intentaba abrir la app y Safari decía "la dirección
+      // no es válida".
+      document.getElementById('explica').textContent =
+        'Toca el botón para escribir tu contraseña nueva.';
+      var abrir = document.getElementById('abrir');
+      abrir.textContent = 'Cambiar mi contraseña';
+      abrir.setAttribute('href', web);
+      document.getElementById('filaAlternativo').hidden = true;
+      document.getElementById('textoOtraVia').textContent = '¿Tienes Nowys instalada en este móvil?';
+      document.getElementById('otraVia').textContent = 'Ábrela aquí';
+      document.getElementById('otraVia').setAttribute('href', directo);
+    }
     mostrar('listo');
 
     // A propósito NO se intenta abrir la app sola al cargar: un salto a otra aplicación que no
