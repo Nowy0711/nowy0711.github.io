@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Añádeme en Nowys</title>
+<meta property="og:title" content="Añádeme como amigo en Nowys">
+<meta property="og:description" content="Toca para abrir Nowys y mandarme la solicitud de amistad.">
+<meta property="og:image" content="https://ecocristal.es/nowys/icon.png">
+<!--
+  Enlace de amigo (#77 del backlog de Nowys). La app comparte ecocristal.es/nowys/amigo.html?u=usuario
+  porque WhatsApp y casi todas las apps de mensajes no dejan tocar un enlace gymtrackapp:// a secas.
+
+  Aquí un botón abre gymtrackapp://amigo?u=usuario, y la app enseña a esa persona con un botón para
+  mandarle la solicitud. Igual que en reset.html, el salto lo da un toque y no la carga de la
+  página: los navegadores bloquean abrir otra app sin que el usuario toque nada.
+
+  El intent NO lleva `package`: la versión de Play (com.nowys.app) y el APK (com.gymtrack.app)
+  comparten esquema, y así abre la que haya. Si no hay ninguna, Chrome va a la página de descarga.
+-->
+<style>
+  :root {
+    --bg: #12140e;
+    --surface: #1a1d14;
+    --text: #f1f3e6;
+    --text-dim: #a2a68f;
+    --border: #2c301e;
+    --accent: #d4ff3d;
+    --accent-text: #12140e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { width: 100%; max-width: 420px; }
+  .icono { width: 72px; height: 72px; border-radius: 18px; display: block; margin: 0 0 16px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; overflow-wrap: anywhere; }
+  p { color: var(--text-dim); margin: 0 0 16px; }
+  .boton {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+  .aviso {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+  .aviso a, .secundario a { color: var(--accent); }
+  .secundario { margin: 14px 0 0; font-size: 14px; text-align: center; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icono" src="icon.png" alt="">
+
+  <div id="listo" hidden>
+    <h1 id="titulo">Añádeme en Nowys</h1>
+    <p>Toca el botón para abrir Nowys y mandarme la solicitud de amistad.</p>
+    <a class="boton" id="abrir" href="#">Abrir en Nowys</a>
+    <p class="secundario">¿No se ha abierto? <a id="alternativo" href="#">Prueba por aquí</a>.</p>
+    <div class="aviso">
+      ¿Aún no tienes Nowys? <a href="./">Descárgala aquí</a>, crea tu cuenta y vuelve a tocar
+      este enlace.
+    </div>
+  </div>
+
+  <div id="vacio" hidden>
+    <h1>Enlace incompleto</h1>
+    <p>A este enlace le falta el nombre de usuario. Pide que te lo vuelvan a mandar.</p>
+    <div class="aviso">También puedes buscar a tu amigo en Nowys, en Hoy → Amigos → Buscar.</div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var u = (new URLSearchParams(window.location.search).get('u') || '').trim();
+    // Se pinta con textContent y viaja con encodeURIComponent: cualquier nombre es seguro.
+    if (u.length < 2 || u.length > 60) {
+      document.getElementById('vacio').hidden = false;
+      return;
+    }
+
+    document.getElementById('titulo').textContent = 'Añade a @' + u + ' en Nowys';
+
+    var datos = 'u=' + encodeURIComponent(u);
+    var descarga = 'https://ecocristal.es/nowys/';
+    var directo = 'gymtrackapp://amigo?' + datos;
+    var intent =
+      'intent://amigo?' + datos + '#Intent;scheme=gymtrackapp;S.browser_fallback_url=' +
+      encodeURIComponent(descarga) + ';end';
+
+    var esAndroid = /Android/i.test(navigator.userAgent);
+    document.getElementById('abrir').setAttribute('href', esAndroid ? intent : directo);
+    document.getElementById('alternativo').setAttribute('href', esAndroid ? directo : intent);
+    document.getElementById('listo').hidden = false;
+  })();
+</script>
+</body>
+</html>
