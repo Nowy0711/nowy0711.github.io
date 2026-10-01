@@ -76,7 +76,7 @@
 
   <div id="listo" hidden>
     <h1 id="titulo">Añádeme en Nowys</h1>
-    <p>Toca el botón para abrir Nowys y mandarme la solicitud de amistad.</p>
+    <p id="explica">Toca el botón para abrir Nowys y mandarme la solicitud de amistad.</p>
     <a class="boton" id="abrir" href="#">Abrir en Nowys</a>
     <p class="secundario">¿No se ha abierto? <a id="alternativo" href="#">Prueba por aquí</a>.</p>
     <div class="aviso">
@@ -104,6 +104,14 @@
     document.getElementById('titulo').textContent = 'Añade a @' + u + ' en Nowys';
 
     var datos = 'u=' + encodeURIComponent(u);
+    // Código secreto (migración 0086 de la app): con él, abrir el enlace os hace amigos al momento.
+    var c = (new URLSearchParams(window.location.search).get('c') || '').trim();
+    if (/^[0-9a-f]{6,32}$/i.test(c)) {
+      datos += '&c=' + encodeURIComponent(c);
+      document.getElementById('titulo').textContent = 'Hazte amigo de @' + u + ' en Nowys';
+      document.getElementById('explica').textContent =
+        'Toca el botón para abrir Nowys: seréis amigos al momento, sin solicitudes.';
+    }
     var descarga = 'https://ecocristal.es/nowys/';
     var directo = 'gymtrackapp://amigo?' + datos;
     var intent =
