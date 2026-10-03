@@ -91,7 +91,7 @@
     .card-foot a:hover { color: var(--vd); }
 
     /* ── GRID FIJO 2x2 PARA GUÍAS PRÁCTICAS (4 items simétricos) ── */
-    #guias-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+    #guias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; }
     @media (max-width: 640px) { #guias-grid { grid-template-columns: 1fr; } }
 
     /* ── FOOTER ACTUALIZADO ── */
@@ -215,6 +215,18 @@
         <h2 class="section-title">Guías prácticas<br><em>paso a paso</em></h2>
       </div>
       <div id="guias-grid">
+
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/compra-final-lado.webp" width="480" height="640" alt="Terrario cerrado con Fittonias en un tarro con tapa de bambú" loading="lazy" decoding="async">
+            <span class="card-tag">Nuevo</span>
+          </div>
+          <div class="card-body">
+            <h3>Cuánto cuesta hacer un terrario cerrado (el mío, menos de 10 €)</h3>
+            <p>Mi lista de la compra real: tarro de 3 €, una Fittonia que dividí en cuatro y materiales a granel. Con precios y fotos de cada paso.</p>
+            <div class="card-foot"><a href="cuanto-cuesta-hacer-un-terrario.html">Leer artículo →</a></div>
+          </div>
+        </article>
 
         <article class="card reveal">
           <div class="card-thumb">
