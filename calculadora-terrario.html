@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics en modo consentimiento: en Europa no guarda cookies hasta que el visitante acepta en el banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-6BMQ28CLQR');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BMQ28CLQR"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Mete las medidas de tu tarro o frasco y calcula cuánta piedra de drenaje, sustrato (fibra de coco, arena de río) y plantas necesitas para tu terrario cerrado."/>
+  <title>Calculadora de terrario cerrado: cuánta tierra, drenaje y plantas | EcoCristal</title>
+  <link rel="canonical" href="https://ecocristal.es/calculadora-terrario.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root {
+      --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59;
+      --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4;
+      --bc: #f7f5f0; --cr: #ede9e0;
+      --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --r: 6px; --rl: 12px;
+      --s1: 0 2px 12px rgba(30,58,47,.08);
+      --s2: 0 6px 32px rgba(30,58,47,.13);
+      --s3: 0 16px 56px rgba(30,58,47,.18);
+      --t: .35s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA GENERAL ── */
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--vs); margin-bottom: .75rem; }
+    .section-title { font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--vd); line-height: 1.15; }
+    .section-title em { font-style: italic; color: var(--vs); }
+
+    /* ── HERO ── */
+    .hero { padding: 9rem 2rem 4rem; text-align: center; border-bottom: 1px solid var(--vmu); background: linear-gradient(180deg, var(--vn), var(--bc)); }
+    .hero p.lead { font-size: 1.1rem; color: var(--tm); max-width: 650px; margin: 1.5rem auto 0; line-height: 1.8; }
+
+    /* ── COMPONENTES ── */
+    .btn-p { background: var(--vd); color: #fff; padding: .875rem 2rem; border-radius: var(--r); font-size: .875rem; font-weight: 500; letter-spacing: .04em; transition: background var(--t), transform var(--t), box-shadow var(--t); display: inline-flex; align-items: center; gap: .5rem; border: none; cursor: pointer; font-family: var(--fb); }
+    .btn-p:hover { background: var(--vm); transform: translateY(-2px); box-shadow: var(--s2); }
+
+    section.block { padding: 4rem 0; }
+    section.block + section.block { border-top: 1px solid var(--cr); }
+
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
+    .step-card { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .step-card:nth-child(4) { grid-column: 2; }
+    @media (max-width: 760px) {
+      .step-grid { grid-template-columns: 1fr; }
+      .step-card:nth-child(4) { grid-column: 1; }
+    }
+    @media (min-width: 761px) and (max-width: 980px) {
+      .step-grid { grid-template-columns: repeat(2, 1fr); }
+      .step-card:nth-child(4) { grid-column: 1 / -1; max-width: calc(50% - 0.875rem); margin: 0 auto; }
+    }
+    .step-card .num { font-family: var(--fd); font-size: 2rem; color: var(--vc); line-height: 1; margin-bottom: .75rem; }
+    .step-card h3 { font-family: var(--fd); font-size: 1.15rem; font-weight: 400; color: var(--vd); margin-bottom: .5rem; }
+    .step-card p { font-size: .88rem; color: var(--ts); line-height: 1.65; }
+
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem 1.75rem; border-radius: 0 var(--r) var(--r) 0; margin-top: 2rem; font-size: 1rem; color: var(--tm); line-height: 1.75; }
+
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .gallery figure { margin: 0; background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); overflow: hidden; box-shadow: var(--s1); }
+    .gallery img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .gallery figcaption { padding: .75rem 1rem; font-size: .85rem; color: var(--ts); }
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .tier { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.5rem; text-align: center; box-shadow: var(--s1); }
+    .tier h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vd); }
+    .tier .size { font-size: .85rem; color: var(--ts); margin-bottom: .75rem; }
+    .tier .from { font-size: .8rem; color: var(--ts); text-transform: uppercase; letter-spacing: .06em; }
+    .tier .amount { font-family: var(--fd); font-size: 2.4rem; color: var(--vd); line-height: 1.1; }
+    @media (max-width: 760px) { .gallery, .tiers { grid-template-columns: 1fr; } .gallery { gap: 1.5rem; } }
+    .price-box { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); margin-top: 2rem; }
+    .price-box h3 { font-family: var(--fd); font-size: 1.3rem; color: var(--vd); margin-bottom: .75rem; font-weight: 400; }
+    .price-box p { color: var(--tm); font-size: .95rem; line-height: 1.75; margin-bottom: .75rem; }
+    .price-box p:last-child { margin-bottom: 0; }
+
+    .tiktok-box { display: flex; align-items: center; gap: 1.5rem; background: var(--vd); border-radius: var(--rl); padding: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .tiktok-box .tiktok-text { flex: 1; min-width: 240px; }
+    .tiktok-box h3 { font-family: var(--fd); font-size: 1.4rem; color: #fff; margin-bottom: .5rem; font-weight: 400; }
+    .tiktok-box p { color: var(--vmu); font-size: .9rem; line-height: 1.6; }
+    .btn-tiktok { background: var(--vc); color: var(--vd); padding: .75rem 1.5rem; border-radius: var(--r); font-size: .85rem; font-weight: 500; white-space: nowrap; transition: background var(--t), transform var(--t); }
+    .btn-tiktok:hover { background: var(--vmu); transform: translateY(-2px); }
+
+    /* ── FORMULARIO ── */
+    .form-box { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 2.5rem; box-shadow: var(--s2); margin-top: 2.5rem; }
+    .form-row { margin-bottom: 1.25rem; }
+    .form-row label { display: block; font-size: .8rem; font-weight: 500; color: var(--vd); margin-bottom: .4rem; letter-spacing: .02em; }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; padding: .75rem 1rem; border-radius: var(--r); border: 1.5px solid var(--vmu);
+      background: var(--bc); font-family: var(--fb); font-size: .9rem; color: var(--to); outline: none;
+      transition: border-color var(--t);
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--vs); }
+    .form-row textarea { resize: vertical; min-height: 110px; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 560px) { .form-grid-2 { grid-template-columns: 1fr; } }
+    .form-legal { font-size: .75rem; color: var(--ts); margin-top: 1rem; line-height: 1.6; }
+
+    /* ── ANUNCIO ── */
+    .ad-block { display: flex; justify-content: center; align-items: center; margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 2rem; }
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+
+    /* ── CALCULADORA ── */
+    .calc { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; }
+    .calc-form, .calc-out { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s2); }
+    .calc-out { position: sticky; top: 90px; }
+    .seg { display: flex; flex-direction: column; gap: .5rem; }
+    .seg label { display: flex; align-items: center; gap: .6rem; font-size: .95rem; font-weight: 400; color: var(--tm); cursor: pointer; margin: 0; }
+    .seg input { width: auto; accent-color: var(--vs); }
+    .form-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+    .ajustes { margin-top: .5rem; border-top: 1px solid var(--cr); padding-top: 1rem; }
+    .ajustes summary { cursor: pointer; color: var(--vs); font-size: .9rem; font-weight: 500; }
+    .hint { font-size: .8rem; color: var(--ts); line-height: 1.6; }
+    .vol { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--cr); padding-bottom: 1rem; margin-bottom: 1rem; }
+    .vol-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ts); }
+    .vol-num { font-family: var(--fd); font-size: 2.2rem; color: var(--vd); }
+    .calc-out h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vd); margin: .5rem 0 .75rem; }
+    .lista { list-style: none; padding: 0; margin: 0; }
+    .lista li { display: flex; align-items: center; gap: .6rem; padding: .55rem 0; border-bottom: 1px dashed var(--cr); font-size: .95rem; color: var(--tm); }
+    .lista li span:not(.dot) { flex: 1; }
+    .lista li b { font-weight: 500; color: var(--vd); white-space: nowrap; text-align: right; }
+    .lista small { color: var(--ts); }
+    .lista li.sub { padding-left: 1.6rem; font-size: .88rem; border-bottom: none; padding-top: .2rem; padding-bottom: .2rem; }
+    .lista li.sub b { font-weight: 400; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+    .d1 { background: #e9e6df; border: 1px solid #c9c4b8; } .d2 { background: #fff; border: 1px solid #c9c4b8; } .d3 { background: #4a3b2c; } .d4 { background: var(--vs); }
+    .espacio { margin-top: 1rem; font-size: .9rem; color: var(--tm); line-height: 1.6; }
+    .vasos { font-size: .75rem; color: var(--ts); margin-top: .5rem; }
+    .aviso { background: #fff6e5; border-left: 4px solid #d99a2b; padding: .75rem 1rem; border-radius: 0 var(--r) var(--r) 0; font-size: .88rem; color: #6b4a12; margin-bottom: 1rem; line-height: 1.6; }
+    @media (max-width: 860px) { .calc { grid-template-columns: 1fr; } .calc-out { position: static; } }
+    @media (max-width: 480px) { .form-grid-3 { grid-template-columns: 1fr 1fr 1fr; gap: .5rem; } .calc-form, .calc-out { padding: 1.25rem; } }
+  </style>
+
+  <meta property="og:title" content="Calculadora de terrario cerrado: cuánta tierra, drenaje y plantas | EcoCristal" />
+  <meta property="og:description" content="Mete las medidas de tu tarro o frasco y calcula cuánta piedra de drenaje, sustrato (fibra de coco, arena de río) y plantas necesitas para tu terrario cerrado." />
+  <meta property="og:image" content="https://ecocristal.es/img/compra-final-lado.jpg" />
+  <meta property="og:url" content="https://ecocristal.es/calculadora-terrario.html" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de terrario cerrado",
+    "url": "https://ecocristal.es/calculadora-terrario.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Cualquiera (navegador web)",
+    "inLanguage": "es",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "author": { "@type": "Person", "name": "Noel Rodero", "url": "https://ecocristal.es/sobre-mi.html" },
+    "description": "Mete las medidas de tu tarro o frasco y calcula cuánta piedra de drenaje, sustrato (fibra de coco, arena de río) y plantas necesitas para tu terrario cerrado."
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html" style="color: var(--vd); font-weight: 500;">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Herramienta gratuita</p>
+      <h1 class="section-title">Calculadora de <em>terrario cerrado</em></h1>
+      <p class="lead">
+        Mide tu tarro o frasco de cristal, mete las medidas y te digo cuánta piedra de drenaje, cuánta tierra y cuántas plantas necesitas. Con las mismas capas y la misma mezcla que uso en mis propios terrarios.
+      </p>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc-form" id="calc" onsubmit="return false;">
+          <div class="form-row">
+            <label>Forma del recipiente</label>
+            <div class="seg" role="radiogroup">
+              <label><input type="radio" name="forma" value="redondo" checked> Redondo (tarro, frasco, jarrón)</label>
+              <label><input type="radio" name="forma" value="rect"> Rectangular (pecera, caja)</label>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-row" data-forma="redondo">
+              <label for="diam">Diámetro de la base (cm)</label>
+              <input type="number" id="diam" min="4" max="80" step="0.5" value="13" inputmode="decimal">
+            </div>
+            <div class="form-row" data-forma="rect" hidden>
+              <label for="largo">Largo de la base (cm)</label>
+              <input type="number" id="largo" min="4" max="120" step="0.5" value="20" inputmode="decimal">
+            </div>
+            <div class="form-row" data-forma="rect" hidden>
+              <label for="ancho">Ancho de la base (cm)</label>
+              <input type="number" id="ancho" min="4" max="80" step="0.5" value="12" inputmode="decimal">
+            </div>
+            <div class="form-row">
+              <label for="alto">Altura total del recipiente (cm)</label>
+              <input type="number" id="alto" min="5" max="150" step="0.5" value="25" inputmode="decimal">
+            </div>
+          </div>
+
+          <details class="ajustes">
+            <summary>Ajustar el grosor de las capas</summary>
+            <div class="form-grid-3">
+              <div class="form-row">
+                <label for="c-dren">Drenaje (cm)</label>
+                <input type="number" id="c-dren" min="1" max="10" step="0.5" value="3" inputmode="decimal">
+              </div>
+              <div class="form-row">
+                <label for="c-sep">Separación (cm)</label>
+                <input type="number" id="c-sep" min="0" max="5" step="0.5" value="1" inputmode="decimal">
+              </div>
+              <div class="form-row">
+                <label for="c-sust">Tierra (cm)</label>
+                <input type="number" id="c-sust" min="2" max="20" step="0.5" value="6" inputmode="decimal">
+              </div>
+            </div>
+            <p class="hint">Por defecto uso 3 cm de drenaje, 1 cm de separación y 6 cm de tierra. En mis guías recomiendo entre 2 y 4 cm de drenaje y entre 5 y 7 cm de tierra.</p>
+          </details>
+        </form>
+
+        <div class="calc-out" id="out" aria-live="polite">
+          <div class="vol">
+            <span class="vol-label">Capacidad del recipiente</span>
+            <span class="vol-num" id="o-cap">–</span>
+          </div>
+          <div id="o-aviso" class="aviso" hidden></div>
+          <h3>Lo que necesitas</h3>
+          <ul class="lista">
+            <li><span class="dot d1"></span><span>Drenaje <small>(marmolina o grava)</small></span><b id="o-dren">–</b></li>
+            <li><span class="dot d2"></span><span>Separación <small>(perlita, o un trozo de malla)</small></span><b id="o-sep">–</b></li>
+            <li class="sub-title"><span class="dot d3"></span><span>Tierra <small>(mi mezcla 50-30-20)</small></span><b id="o-sust">–</b></li>
+            <li class="sub"><span>50% sustrato universal</span><b id="o-uni">–</b></li>
+            <li class="sub"><span>30% fibra de coco humedecida</span><b id="o-coco">–</b></li>
+            <li class="sub"><span>20% arena de río</span><b id="o-arena">–</b></li>
+            <li><span class="dot d4"></span><span>Fittonias pequeñas <small>(orientativo)</small></span><b id="o-plantas">–</b></li>
+          </ul>
+          <p class="espacio" id="o-espacio"></p>
+          <p class="vasos">1 vaso = 250 ml, para que lo midas fácil en casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2 class="section-title">De dónde salen <em>estos números</em></h2>
+      <div class="price-box">
+        <h3>Las capas</h3>
+        <p>La calculadora multiplica el área de la base de tu recipiente por el grosor de cada capa. Las capas son las mismas que explico en <a href="como-montar-primer-terrario.html">cómo montar tu primer terrario cerrado</a>: piedras abajo para el agua que sobra, una separación para que la tierra no se cuele entre las piedras y la tierra encima.</p>
+        <h3>La mezcla</h3>
+        <p>La tierra está calculada con mi receta 50-30-20 (sustrato universal, fibra de coco y arena de río), que tienes explicada en <a href="como-hacer-sustrato.html">cómo hacer un sustrato que dure años</a>. Si te quedas sin sustrato universal, la fibra de coco con arena de río también funciona: lo hice así en <a href="cuanto-cuesta-hacer-un-terrario.html">mi terrario de menos de 10 €</a>.</p>
+        <h3>Las plantas</h3>
+        <p>El número de plantas es solo una referencia: en mi tarro de 3-5 litros caben 4 Fittonias pequeñas, que es lo que salió de dividir una sola maceta. Depende mucho del tamaño de las plantas, así que tómalo como punto de partida.</p>
+      </div>
+      <div class="highlight">
+        <strong>Un truco para medir:</strong> el diámetro mídelo por dentro y en la base, que es donde van las capas. Si tu tarro se estrecha o se ensancha hacia arriba, no pasa nada: lo que importa para las capas es el fondo.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" style="text-align:center;">
+      <p class="eyebrow">¿Sin tiempo o sin ganas?</p>
+      <h2 class="section-title">Te lo <em>monto yo</em></h2>
+      <p style="color:var(--tm);max-width:560px;margin:1rem auto 2rem;line-height:1.8;">Hago terrarios cerrados por encargo en la Comunidad de Madrid, desde 25 €.</p>
+      <a href="encargos.html" class="btn-p">Ver cómo pedir el tuyo →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+<script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var num = function (id) { var v = parseFloat(String($(id).value).replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; };
+    var fmtL = function (l) {
+      if (l <= 0) return '–';
+      var vasos = Math.max(0.5, Math.round(l * 4 * 2) / 2);
+      var txt = l < 1 ? Math.round(l * 1000) + ' ml' : (Math.round(l * 10) / 10).toString().replace('.', ',') + ' L';
+      return txt + ' · ' + String(vasos).replace('.', ',') + (vasos === 1 ? ' vaso' : ' vasos');
+    };
+    function forma() { return document.querySelector('input[name="forma"]:checked').value; }
+    function calc() {
+      var f = forma();
+      document.querySelectorAll('[data-forma]').forEach(function (el) { el.hidden = el.getAttribute('data-forma') !== f; });
+      var area = f === 'redondo' ? Math.PI * Math.pow(num('diam') / 2, 2) : num('largo') * num('ancho'); // cm²
+      var alto = num('alto'), dren = num('c-dren'), sep = parseFloat($('c-sep').value) || 0, sust = num('c-sust');
+      var L = function (cm) { return area * cm / 1000; };
+      var cap = L(alto), tierra = L(sust);
+      $('o-cap').textContent = cap > 0 ? (Math.round(cap * 10) / 10).toString().replace('.', ',') + ' L' : '–';
+      $('o-dren').textContent = fmtL(L(dren));
+      $('o-sep').textContent = sep > 0 ? fmtL(L(sep)) : 'sin capa';
+      $('o-sust').textContent = fmtL(tierra);
+      $('o-uni').textContent = fmtL(tierra * 0.5);
+      $('o-coco').textContent = fmtL(tierra * 0.3);
+      $('o-arena').textContent = fmtL(tierra * 0.2);
+      var plantas = Math.max(1, Math.round(area / 35));
+      $('o-plantas').textContent = area > 0 ? (plantas === 1 ? '1 planta' : 'unas ' + plantas) : '–';
+      var libre = alto - dren - sep - sust;
+      $('o-espacio').textContent = alto > 0 ? 'Te quedan unos ' + Math.max(0, Math.round(libre)) + ' cm por encima de la tierra para las plantas.' : '';
+      var avisos = [];
+      if (cap > 0 && cap < 3) avisos.push('Es un recipiente pequeño: yo recomiendo a partir de 3 litros para poder trabajar dentro con comodidad.');
+      if (alto > 0 && libre < 10) avisos.push('Queda poco espacio para las plantas. Elige plantas muy bajitas, reduce las capas o busca un recipiente más alto.');
+      var a = $('o-aviso'); a.hidden = !avisos.length; a.innerHTML = avisos.join('<br>');
+    }
+    document.getElementById('calc').addEventListener('input', calc);
+    document.getElementById('calc').addEventListener('change', calc);
+    calc();
+  })();
+</script>
+
+</body>
+</html>
