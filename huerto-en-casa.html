@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics en modo consentimiento: en Europa no guarda cookies hasta que el visitante acepta en el banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-6BMQ28CLQR');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BMQ28CLQR"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Mis experimentos de huerto en casa: lechugas desde semilla, melón con el método de la servilleta y el diario del huerto agroecológico de la universidad."/>
+  <title>Huerto en casa: cultivar lechugas y melón en el salón | EcoCristal</title>
+  <link rel="canonical" href="https://ecocristal.es/huerto-en-casa.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root {
+      --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59;
+      --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4;
+      --bc: #f7f5f0; --cr: #ede9e0;
+      --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --r: 6px; --rl: 12px;
+      --s1: 0 2px 12px rgba(30,58,47,.08);
+      --s2: 0 6px 32px rgba(30,58,47,.13);
+      --s3: 0 16px 56px rgba(30,58,47,.18);
+      --t: .35s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA GENERAL ── */
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--vs); margin-bottom: .75rem; }
+    .section-title { font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--vd); line-height: 1.15; }
+    .section-title em { font-style: italic; color: var(--vs); }
+
+    /* ── HERO ── */
+    .hero { padding: 9rem 2rem 4rem; text-align: center; border-bottom: 1px solid var(--vmu); background: linear-gradient(180deg, var(--vn), var(--bc)); }
+    .hero p.lead { font-size: 1.1rem; color: var(--tm); max-width: 650px; margin: 1.5rem auto 0; line-height: 1.8; }
+
+    /* ── COMPONENTES ── */
+    .btn-p { background: var(--vd); color: #fff; padding: .875rem 2rem; border-radius: var(--r); font-size: .875rem; font-weight: 500; letter-spacing: .04em; transition: background var(--t), transform var(--t), box-shadow var(--t); display: inline-flex; align-items: center; gap: .5rem; border: none; cursor: pointer; font-family: var(--fb); }
+    .btn-p:hover { background: var(--vm); transform: translateY(-2px); box-shadow: var(--s2); }
+
+    section.block { padding: 4rem 0; }
+    section.block + section.block { border-top: 1px solid var(--cr); }
+
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
+    .step-card { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .step-card:nth-child(4) { grid-column: 2; }
+    @media (max-width: 760px) {
+      .step-grid { grid-template-columns: 1fr; }
+      .step-card:nth-child(4) { grid-column: 1; }
+    }
+    @media (min-width: 761px) and (max-width: 980px) {
+      .step-grid { grid-template-columns: repeat(2, 1fr); }
+      .step-card:nth-child(4) { grid-column: 1 / -1; max-width: calc(50% - 0.875rem); margin: 0 auto; }
+    }
+    .step-card .num { font-family: var(--fd); font-size: 2rem; color: var(--vc); line-height: 1; margin-bottom: .75rem; }
+    .step-card h3 { font-family: var(--fd); font-size: 1.15rem; font-weight: 400; color: var(--vd); margin-bottom: .5rem; }
+    .step-card p { font-size: .88rem; color: var(--ts); line-height: 1.65; }
+
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem 1.75rem; border-radius: 0 var(--r) var(--r) 0; margin-top: 2rem; font-size: 1rem; color: var(--tm); line-height: 1.75; }
+
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .gallery figure { margin: 0; background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); overflow: hidden; box-shadow: var(--s1); }
+    .gallery img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .gallery figcaption { padding: .75rem 1rem; font-size: .85rem; color: var(--ts); }
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .tier { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.5rem; text-align: center; box-shadow: var(--s1); }
+    .tier h3 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vd); }
+    .tier .size { font-size: .85rem; color: var(--ts); margin-bottom: .75rem; }
+    .tier .from { font-size: .8rem; color: var(--ts); text-transform: uppercase; letter-spacing: .06em; }
+    .tier .amount { font-family: var(--fd); font-size: 2.4rem; color: var(--vd); line-height: 1.1; }
+    @media (max-width: 760px) { .gallery, .tiers { grid-template-columns: 1fr; } .gallery { gap: 1.5rem; } }
+    .price-box { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 2rem; box-shadow: var(--s1); margin-top: 2rem; }
+    .price-box h3 { font-family: var(--fd); font-size: 1.3rem; color: var(--vd); margin-bottom: .75rem; font-weight: 400; }
+    .price-box p { color: var(--tm); font-size: .95rem; line-height: 1.75; margin-bottom: .75rem; }
+    .price-box p:last-child { margin-bottom: 0; }
+
+    .tiktok-box { display: flex; align-items: center; gap: 1.5rem; background: var(--vd); border-radius: var(--rl); padding: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .tiktok-box .tiktok-text { flex: 1; min-width: 240px; }
+    .tiktok-box h3 { font-family: var(--fd); font-size: 1.4rem; color: #fff; margin-bottom: .5rem; font-weight: 400; }
+    .tiktok-box p { color: var(--vmu); font-size: .9rem; line-height: 1.6; }
+    .btn-tiktok { background: var(--vc); color: var(--vd); padding: .75rem 1.5rem; border-radius: var(--r); font-size: .85rem; font-weight: 500; white-space: nowrap; transition: background var(--t), transform var(--t); }
+    .btn-tiktok:hover { background: var(--vmu); transform: translateY(-2px); }
+
+    /* ── FORMULARIO ── */
+    .form-box { background: #fff; border: 1px solid var(--cr); border-radius: var(--rl); padding: 2.5rem; box-shadow: var(--s2); margin-top: 2.5rem; }
+    .form-row { margin-bottom: 1.25rem; }
+    .form-row label { display: block; font-size: .8rem; font-weight: 500; color: var(--vd); margin-bottom: .4rem; letter-spacing: .02em; }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; padding: .75rem 1rem; border-radius: var(--r); border: 1.5px solid var(--vmu);
+      background: var(--bc); font-family: var(--fb); font-size: .9rem; color: var(--to); outline: none;
+      transition: border-color var(--t);
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--vs); }
+    .form-row textarea { resize: vertical; min-height: 110px; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 560px) { .form-grid-2 { grid-template-columns: 1fr; } }
+    .form-legal { font-size: .75rem; color: var(--ts); margin-top: 1rem; line-height: 1.6; }
+
+    /* ── ANUNCIO ── */
+    .ad-block { display: flex; justify-content: center; align-items: center; margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 2rem; }
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+
+    /* ── CARDS DE ARTÍCULO ── */
+    .card { background: var(--bc); border-radius: var(--rl); overflow: hidden; border: 1px solid var(--cr); box-shadow: var(--s1); transition: transform var(--t), box-shadow var(--t); display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--s2); }
+    .card-thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--vmu), var(--vc)); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .card-tag { position: absolute; top: 1rem; left: 1rem; background: var(--vd); color: #fff; font-size: .65rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 100px; z-index: 2; }
+    .card-tag::after { display: none !important; }
+    .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-body h3 { font-family: var(--fd); font-size: 1.2rem; font-weight: 400; color: var(--vd); line-height: 1.3; margin-bottom: .65rem; }
+    .card-body p { font-size: .85rem; color: var(--ts); line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+    .card-foot { display: flex; align-items: center; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid var(--cr); font-size: .75rem; }
+    .card-foot a { color: var(--vs); font-weight: 500; transition: color var(--t); }
+    .card-foot a:hover { color: var(--vd); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-top: 2rem; }
+    .reveal { opacity: 1; }
+    .otras { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+    .otras a { background: #fff; border: 1px solid var(--vmu); border-radius: 100px; padding: .55rem 1.2rem; color: var(--vd); font-size: .9rem; }
+    .otras a:hover { border-color: var(--vs); }
+  </style>
+
+  <meta property="og:title" content="Huerto en casa: cultivar lechugas y melón en el salón | EcoCristal" />
+  <meta property="og:description" content="Mis experimentos de huerto en casa: lechugas desde semilla, melón con el método de la servilleta y el diario del huerto agroecológico de la universidad." />
+  <meta property="og:image" content="https://ecocristal.es/img/compra-final-lado.jpg" />
+  <meta property="og:url" content="https://ecocristal.es/huerto-en-casa.html" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ecocristal.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Huerto en casa", "item": "https://ecocristal.es/huerto-en-casa.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html" style="color: var(--vd); font-weight: 500;">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Sección</p>
+      <h1 class="section-title">Huerto en <em>casa</em></h1>
+      <p class="lead">No todo son terrarios: también cultivo en casa. Aquí están mis experimentos de huerto en el salón y el diario del huerto agroecológico que montamos en la asignatura de la universidad.</p>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="cards-grid">
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/lechugasemillero2.webp" width="557" height="567" alt="Lechugas frescas creciendo en un semillero al sol" loading="lazy" decoding="async">
+            <span class="card-tag">Huerto en casa</span>
+          </div>
+          <div class="card-body">
+            <h3>Mi primer huerto en el salón: cultivando lechugas</h3>
+            <p>Guía paso a paso para germinar semillas en casa. Mi experiencia, lo que ha funcionado genial y los errores de novato que no volveré a cometer.</p>
+            <div class="card-foot"><a href="cultivando-lechugas.html">Leer artículo →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/semilla-plantada.webp" width="480" height="640" alt="Semilla de melón germinada lista para plantar en tierra" loading="lazy" decoding="async">
+            <span class="card-tag">Huerto en casa</span>
+          </div>
+          <div class="card-body">
+            <h3>Cómo cultivar una planta de melón en tu casa desde 0</h3>
+            <p>Mi experimento de verano: cómo germinar semillas de melón piel de sapo con el método de la servilleta húmeda, paso a paso y con fotos reales.</p>
+            <div class="card-foot"><a href="cultivando-melon.html">Leer artículo →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Proyecto de la universidad</p>
+      <h2 class="section-title">Diario de <em>Agroecología</em></h2>
+      <p style="color:var(--tm);max-width:700px;margin-top:1rem;line-height:1.8;">Seis entradas del huerto agroecológico que montamos en clase: preparación del suelo, riego por goteo, compost y todo lo que salió bien (y mal).</p>
+      <div class="cards-grid">
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/bancal-terminado.webp" width="480" height="640" alt="Bancal de tierra alisado y preparado en el huerto" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #1</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #1: Preparación del suelo y la doble cava</h3>
+            <p>Cómo empezamos a diseñar el huerto desde cero aplicando principios de sostenibilidad. Primeros pasos de preparación y trabajo en el terreno.</p>
+            <div class="card-foot"><a href="diario-agroecologia-1.html">Leer entrada →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/escarabajo-huerto.webp" width="480" height="640" alt="Escarabajo encontrado en el huerto" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #2</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #2: Semilleros y lluvia</h3>
+            <p>Lidiando con la lluvia, la planificación estratégica, las primeras siembras y el descubrimiento de la biodiversidad en nuestro bancal.</p>
+            <div class="card-foot"><a href="diario-agroecologia-2.html">Leer entrada →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/tubos-instalados.webp" width="480" height="640" alt="Tubos de riego instalados en el bancal" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #3</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #3: Riego, Tagetes y el atropello</h3>
+            <p>Instalación del sistema de riego por goteo, planificación de cultivos con Adolfo y el lore de los Tagetes.</p>
+            <div class="card-foot"><a href="diario-agroecologia-3.html">Leer entrada →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/manos-semilleros.webp" width="640" height="360" alt="Chavales sujetando semilleros" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #4</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #4: Talleres escolares y plantación</h3>
+            <p>Educación ambiental con niños de primaria, lidiar con las ausencias en el equipo y la cruda reality de que te roben las lechugas.</p>
+            <div class="card-foot"><a href="diario-agroecologia-4.html">Leer entrada →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/tractor-compost.webp" width="480" height="640" alt="Tractor procesando la pila de compost" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #5</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #5: Compostaje y Viñedos</h3>
+            <p>Excursión al iMiDRA para aprender sobre el compostaje, la colección ampelológica de España y reflexiones sobre nuestras zanahorias.</p>
+            <div class="card-foot"><a href="diario-agroecologia-5.html">Leer entrada →</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-thumb">
+            <img src="img/thumbs/bancal-completo.webp" width="480" height="640" alt="Vista del bancal completo con plantas" loading="lazy" decoding="async">
+            <span class="card-tag">Diario #6</span>
+          </div>
+          <div class="card-body">
+            <h3>Agroecología #6: El final de la asignatura</h3>
+            <p>Recapitulando semanas perdidas, tormentas intensas, compras en el vivero y el estado de nuestras plantas cuajadas.</p>
+            <div class="card-foot"><a href="diario-agroecologia-6.html">Leer entrada →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="eyebrow">Sigue explorando</p>
+      <h2 class="section-title">Otras <em>secciones</em></h2>
+      <div class="otras"><a href="montar-terrarios.html">Montar tu terrario →</a><a href="plantas-y-bichos.html">Plantas y bichos →</a><a href="encargos.html">Terrarios por encargo →</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+
+</body>
+</html>
