@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics en modo consentimiento: en Europa no guarda cookies hasta que el visitante acepta en el banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-6BMQ28CLQR');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BMQ28CLQR"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="description" content="Cómo hacer un terrario en botella o en tarro paso a paso: capas, plantas que aguantan el cerrado, primer riego y cuidados para que dure meses."/>
+  <title>Terrario en botella o en tarro: guía paso a paso</title>
+  <link rel="canonical" href="https://ecocristal.es/terrario-en-botella.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER NUEVO ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA ORIGINAL (CENTRADITA Y BLANCA) ── */
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1440px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
+    .post-wrap { 
+      display: grid; 
+      grid-template-columns: 250px 1fr 280px; 
+      gap: 4rem; 
+      padding: 4rem 2rem 6rem; 
+      max-width: 1440px; 
+      margin: 0 auto; 
+      align-items: start; 
+    }
+    
+    .post { grid-column: 2; grid-row: 1; min-width: 0; }
+    .sidebar-left { grid-column: 1; grid-row: 1; }
+    .sidebar-right { grid-column: 3; grid-row: 1; max-height: calc(100vh - 140px); overflow-y: auto; padding-right: 0.5rem; }
+
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
+    .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 700px; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+    
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.9rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a:hover { color: var(--vd); }
+    .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
+
+    /* ── FOOTER NUEVO (LEGAL) ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;}
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── RESPONSIVE PARA TABLET/MÓVIL ── */
+    @media (max-width: 1024px) { 
+      .post-wrap { display: flex; flex-direction: column; gap: 3rem; } 
+      .sidebar { position: static; width: 100%; } 
+    }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+    /* ── ANUNCIOS DENTRO DEL ARTÍCULO ── */
+    .ad-inarticle { margin: 2rem 0; text-align: center; }
+    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+    @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+  </style>
+  <meta property="og:title" content="Terrario en botella o en tarro: guía paso a paso | EcoCristal" />
+  <meta property="og:description" content="Cómo hacer un terrario en botella o en tarro paso a paso: capas, plantas que aguantan el cerrado, primer riego y cuidados para que dure meses." />
+  <meta property="og:image" content="https://ecocristal.es/img/tarro-cilindrico.webp" />
+  <meta property="og:url" content="https://ecocristal.es/terrario-en-botella.html" />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Terrario en botella o en tarro: guía paso a paso",
+    "image": "https://ecocristal.es/img/tarro-cilindrico.webp",
+    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
+    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24",
+    "description": "Cómo hacer un terrario en botella o en tarro paso a paso: capas, plantas que aguantan el cerrado, primer riego y cuidados para que dure meses."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ecocristal.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Montar tu terrario", "item": "https://ecocristal.es/montar-terrarios.html" },
+      { "@type": "ListItem", "position": 3, "name": "Terrario en botella o en tarro", "item": "https://ecocristal.es/terrario-en-botella.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><a href="montar-terrarios.html">Montar tu terrario</a><span>/</span><strong>Terrario en botella</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Terrario en botella o en tarro <em>(paso a paso)</em></h1>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: 0.95rem; color: var(--ts); margin-top: 1.5rem; font-family: var(--fb); flex-wrap: wrap;">
+  <strong style="color: var(--vd); font-weight: 500;">Por Nowy</strong>
+  <span style="opacity: 0.5;">|</span>
+  <span>Octubre 2026</span>
+  <span style="opacity: 0.5;">|</span>
+  <span>Lectura: 6 min</span>
+</div>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+
+    <article class="post">
+      <p>Un <strong>terrario en botella</strong> (o en tarro) es un pequeño ecosistema dentro de un recipiente de cristal cerrado. Su gracia es que, bien montado, casi no necesita riego: el agua que se evapora vuelve a caer sobre la tierra y las plantas. En esta guía te explico qué materiales usar, cómo montarlo por capas y qué cuidados le dan más vida.</p>
+
+      <img src="img/tarro-cilindrico.webp" width="750" height="1000" alt="Tarro de cristal con tapa de madera, recipiente sencillo para un terrario en botella" fetchpriority="high" decoding="async" />
+      <p class="img-caption">Un tarro de cristal con tapa de madera: un recipiente sencillo para este tipo de terrario.</p>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>1. Qué necesitas</h3>
+      <ul>
+        <li><strong>Un recipiente de cristal con tapa</strong>: un tarro de cocina, una botella de boca ancha o una urna. Debe dejar pasar la luz y cerrar bien.</li>
+        <li><strong>Grava o arcilla expandida</strong> para el drenaje.</li>
+        <li><strong>Carbón activo</strong> (opcional): ayuda a controlar olores y a frenar el moho.</li>
+        <li><strong>Sustrato</strong> preparado, mejor con perlita o fibra de coco. Te explico cómo hacerlo en <a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a>.</li>
+        <li><strong>Musgo y una o dos plantas pequeñas</strong> que toleren la humedad.</li>
+        <li><strong>Herramientas</strong>: un palo o unas pinzas largas, un pulverizador y una cucharilla.</li>
+      </ul>
+
+      <h3>2. Elige bien el recipiente</h3>
+      <p>Antes de comprar nada, mide la boca. Con una abertura de unos 5 cm puedes meter la mano y colocar plantas pequeñas. Con menos, necesitarás pinzas y paciencia. Además, la altura da espacio para las raíces y para que las plantas crezcan sin tocar la tapa. Si quieres ver qué tipos de cristal funcionan mejor, mira <a href="urnas-de-cristal.html">La urna perfecta: cómo elegir el cristal para tu terrario</a>.</p>
+
+      <h3>3. Paso a paso: montaje por capas</h3>
+      <p>El orden de las capas importa, porque cada una tiene una función. Sigue estos pasos:</p>
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85;">
+        <li style="margin-bottom: .5rem;"><strong>Limpia el recipiente</strong> por dentro con agua y sin detergente fuerte. Sécalo bien: los restos de jabón pueden dañar a las plantas.</li>
+        <li style="margin-bottom: .5rem;"><strong>Capa de drenaje</strong>: de 2 a 3 cm de grava o arcilla expandida. Sirve para que el agua no se acumule en contacto con las raíces.</li>
+        <li style="margin-bottom: .5rem;"><strong>Carbón activo</strong> (si lo usas): una capa fina de 1 cm sobre la grava.</li>
+        <li style="margin-bottom: .5rem;"><strong>Sustrato</strong>: de 5 a 7 cm, según el tamaño del tarro. Presiónalo suavemente, sin apelmazarlo.</li>
+        <li style="margin-bottom: .5rem;"><strong>Plantas</strong>: haz huecos con el palo, saca cada planta de su maceta sin romper el cepellón y colócala. Empieza por las más grandes.</li>
+        <li style="margin-bottom: .5rem;"><strong>Musgo</strong>: cúbrelo sobre la tierra alrededor de las plantas. Ayuda a que la superficie no se seque tan deprisa.</li>
+        <li><strong>Primer riego</strong>: pulveriza un poco de agua hasta que el sustrato esté húmedo, pero sin encharcarlo. Después, cierra la tapa.</li>
+      </ol>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>4. Qué plantas aguantan el cerrado</h3>
+      <p>En un recipiente cerrado funcionan mejor las plantas que viven en ambientes húmedos y con luz indirecta. Las opciones más habituales son la <strong>fittonia</strong> (mira <a href="fittonia-cuidados.html">Fittonia: cuidados y riego</a>), los <strong>musgos</strong> y los <strong>helechos pequeños</strong>, como el culantrillo. Las suculentas y los cactus no encajan: necesitan aire seco y en un cerrado acaban pudriéndose.</p>
+      <p>Para más ideas, consulta <a href="plantas-para-terrario.html">Qué plantas poner en un terrario</a>. Elige una o dos como máximo: en un espacio pequeño, cada planta compite con las demás por la luz y el agua.</p>
+
+      <h3>5. Cuidados del día a día</h3>
+      <ul>
+        <li><strong>Luz</strong>: indirecta y brillante. El sol directo calienta el interior como un invernadero y puede quemar las hojas.</li>
+        <li><strong>Riego</strong>: casi no hace falta. Si el agua se condensa en el cristal y vuelve a caer, el ciclo funciona. Si la tierra se ve seca durante varios días y no hay condensación, pulveriza un poco.</li>
+        <li><strong>Empañado</strong>: es normal en un cerrado. Si el cristal se empaña mucho y no se aclara, destapa unas horas. Más detalles en <a href="terrario-empanado.html">Terrario empañado</a>.</li>
+        <li><strong>Revisión semanal</strong>: retira las hojas secas o amarillas, y mira si aparece moho blanco o mal olor.</li>
+      </ul>
+
+      <h3>6. Errores típicos</h3>
+      <ul>
+        <li><strong>Exceso de agua</strong>: encharca el fondo, favorece el moho y huele mal. Si pasa, destapa y deja secar. Más en <a href="moho-en-terrario.html">Moho en el terrario</a>.</li>
+        <li><strong>Sol directo</strong> sobre el cristal: las hojas se queman y la temperatura sube dentro.</li>
+        <li><strong>Plantas que no encajan</strong>, como suculentas o cactus.</li>
+        <li><strong>Tierra de jardín</strong>: suele traer hongos e insectos y se compacta. Usa siempre un sustrato preparado.</li>
+        <li><strong>Tapa cerrada para siempre</strong>: una vez a la semana, destapa unos minutos para renovar el aire.</li>
+      </ul>
+
+      <h3>Preguntas rápidas</h3>
+      <p><strong>¿Cada cuánto se riega un terrario en botella?</strong> Casi nunca. Riega solo cuando la tierra se vea seca y no haya condensación en el cristal durante varios días.</p>
+      <p><strong>¿Cuánto puede durar?</strong> Con un buen montaje y luz indirecta puede mantenerse meses. No hay garantía: depende del recipiente, de la luz de la habitación y de las plantas que elijas.</p>
+      <p><strong>¿Hace falta carbón activo?</strong> No es imprescindible, pero ayuda con los olores y con el moho, sobre todo en tarros pequeños.</p>
+      <p><strong>¿Puedo usar agua del grifo?</strong> Es mejor usar agua sin cal, como la de lluvia, embotellada o hervida y enfriada, porque la cal se acumula en el cristal y en la tierra.</p>
+      <p><strong>¿Qué hago si aparecen bichos?</strong> Pequeños colémbolos o mosquitas suelen indicar exceso de humedad. Revisa el riego y mira <a href="escuadron-limpieza.html">Colémbolos y bichos bola</a>.</p>
+
+      <p style="font-size:.9rem;color:var(--ts);margin-top:2rem;">Son consejos generales. Cada casa tiene su luz y su temperatura, así que observa tu terrario durante las primeras semanas y ajusta el riego según lo que veas.</p>
+
+      <p class="relacionados" style="font-size:.95rem;color:var(--ts);margin-top:2rem;"><strong>Te puede interesar:</strong> <a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a> · <a href="cuidados-terrario-cerrado.html">Cuidados del terrario cerrado</a> · <a href="terrario-abierto.html">Cómo cuidar un terrario abierto</a></p>
+
+      <div style="margin:3rem 0 0;padding:1.75rem;background:var(--vd);border-radius:var(--rl);color:#fff;display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+        <img src="img/thumbs/Terrario-indice.webp" width="480" height="640" alt="Terrario cerrado hecho a mano" loading="lazy" decoding="async" style="width:84px;height:112px;object-fit:cover;border-radius:var(--r);margin:0;box-shadow:none;">
+        <div style="flex:1;min-width:200px;">
+          <p style="color:#fff;font-family:var(--fd);font-size:1.4rem;line-height:1.3;margin:0 0 .35rem;">¿Prefieres que te lo monte yo?</p>
+          <p style="color:var(--vmu);font-size:.95rem;line-height:1.6;margin:0 0 1rem;">Hago terrarios cerrados por encargo en la Comunidad de Madrid, desde 25 €.</p>
+          <a href="encargos.html" style="display:inline-block;background:var(--vc);color:var(--vd);padding:.6rem 1.2rem;border-radius:var(--r);font-weight:500;text-decoration:none;">Ver cómo pedir el tuyo →</a>
+        </div>
+      </div>
+    </article>
+    <aside class="sidebar sidebar-left">
+      <div class="sb-block">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="montar-terrarios.html" style="color: var(--vd); font-weight: 500;">Montar tu terrario</a></li>
+          <li><a href="plantas-y-bichos.html">Plantas y bichos</a></li>
+          <li><a href="huerto-en-casa.html">Huerto en casa</a></li>
+          <li><a href="encargos.html">Terrarios por encargo</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block" style="text-align:center; padding:1rem;">
+        <div style="max-width:200px; margin:0 auto;">
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:200px;height:200px"
+               data-ad-client="ca-pub-8621886093597255"
+               data-ad-slot="9330653548"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+    </aside>
+    <aside class="sidebar sidebar-right">
+      <div class="sb-block">
+        <h4>Más para montar tu terrario</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir el cristal</a></li>
+          <li><a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a></li>
+          <li><a href="plantas-para-terrario.html">Qué plantas poner en un terrario</a></li>
+          <li><a href="cuidados-terrario-cerrado.html">Cuidados del terrario cerrado</a></li>
+          <li><a href="terrario-empanado.html">Terrario empañado</a></li>
+          <li><a href="moho-en-terrario.html">Moho en el terrario</a></li>
+          <li><a href="terrario-abierto.html">Cómo cuidar un terrario abierto</a></li>
+          <li><a href="terrario-en-botella.html" style="color: var(--vd); font-weight: 500;">Terrario en botella o en tarro</a></li>
+          <li><a href="montar-terrarios.html">Ver toda la sección</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <div style="grid-column: 1 / -1; text-align: center; padding: 0 2rem 4rem; max-width: 1440px; margin: 0 auto;">
+    <div style="max-width:728px; margin:0 auto;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8621886093597255"
+           data-ad-slot="3020275922"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Todos los derechos reservados. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
