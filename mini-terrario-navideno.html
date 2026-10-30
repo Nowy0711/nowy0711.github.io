@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics en modo consentimiento: en Europa no guarda cookies hasta que el visitante acepta en el banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-6BMQ28CLQR');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BMQ28CLQR"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="description" content="Cómo hacer un mini terrario navideño en un tarro: materiales, montaje paso a paso, plantas con colores de Navidad, adornos que aguantan la humedad y cómo regalarlo."/>
+  <title>Mini terrario navideño: idea de regalo paso a paso</title>
+  <link rel="canonical" href="https://ecocristal.es/mini-terrario-navideno.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER NUEVO ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA ORIGINAL (CENTRADITA Y BLANCA) ── */
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1440px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
+    .post-wrap { 
+      display: grid; 
+      grid-template-columns: 250px 1fr 280px; 
+      gap: 4rem; 
+      padding: 4rem 2rem 6rem; 
+      max-width: 1440px; 
+      margin: 0 auto; 
+      align-items: start; 
+    }
+    
+    .post { grid-column: 2; grid-row: 1; min-width: 0; }
+    .sidebar-left { grid-column: 1; grid-row: 1; }
+    .sidebar-right { grid-column: 3; grid-row: 1; max-height: calc(100vh - 140px); overflow-y: auto; padding-right: 0.5rem; }
+
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
+    .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 700px; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+    
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.9rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a:hover { color: var(--vd); }
+    .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
+
+    /* ── FOOTER NUEVO (LEGAL) ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;}
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── RESPONSIVE PARA TABLET/MÓVIL ── */
+    @media (max-width: 1024px) { 
+      .post-wrap { display: flex; flex-direction: column; gap: 3rem; } 
+      .sidebar { position: static; width: 100%; } 
+    }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+    /* ── ANUNCIOS DENTRO DEL ARTÍCULO ── */
+    .ad-inarticle { margin: 2rem 0; text-align: center; }
+    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+    @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+  </style>
+  <meta property="og:title" content="Mini terrario navideño: idea de regalo paso a paso | EcoCristal" />
+  <meta property="og:description" content="Cómo hacer un mini terrario navideño en un tarro: materiales, montaje paso a paso, plantas con colores de Navidad, adornos que aguantan la humedad y cómo regalarlo." />
+  <meta property="og:image" content="https://ecocristal.es/img/compra-final-lado.webp" />
+  <meta property="og:url" content="https://ecocristal.es/mini-terrario-navideno.html" />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mini terrario navideño: idea de regalo paso a paso",
+    "image": "https://ecocristal.es/img/compra-final-lado.webp",
+    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
+    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "datePublished": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "description": "Cómo hacer un mini terrario navideño en un tarro: materiales, montaje paso a paso, plantas con colores de Navidad, adornos que aguantan la humedad y cómo regalarlo."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ecocristal.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Montar tu terrario", "item": "https://ecocristal.es/montar-terrarios.html" },
+      { "@type": "ListItem", "position": 3, "name": "Mini terrario navideño", "item": "https://ecocristal.es/mini-terrario-navideno.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><a href="montar-terrarios.html">Montar tu terrario</a><span>/</span><strong>Mini terrario navideño</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Mini terrario navideño <em>(idea de regalo paso a paso)</em></h1>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: 0.95rem; color: var(--ts); margin-top: 1.5rem; font-family: var(--fb); flex-wrap: wrap;">
+  <strong style="color: var(--vd); font-weight: 500;">Por Nowy</strong>
+  <span style="opacity: 0.5;">|</span>
+  <span>Octubre 2026</span>
+  <span style="opacity: 0.5;">|</span>
+  <span>Lectura: 6 min</span>
+</div>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+
+    <article class="post">
+      <p>Un <strong>mini terrario navideño</strong> es un tarro de cristal pequeño con musgo, una planta de interior y algún detalle de Navidad dentro. Es un regalo vivo, barato y fácil de hacer en una tarde. En esta guía tienes los materiales, el montaje paso a paso, qué decoración usar (y cuál evitar para que no salga moho) y cómo entregarlo para que llegue bien.</p>
+
+      <img src="img/compra-final-lado.webp" width="750" height="1000" alt="Tarro de cristal con una fittonia de hojas blancas, tierra oscura y una base de grava blanca" fetchpriority="high" decoding="async" />
+      <p class="img-caption">Un tarro pequeño con fittonia y grava blanca en el fondo: la base perfecta para darle un toque de nieve.</p>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>1. Qué necesitas</h3>
+      <ul>
+        <li><strong>Un tarro de cristal con tapa</strong> de entre 0,5 y 2 litros. Para regalar, mejor uno con boca ancha (unos 7-8 cm): es más fácil de montar y de limpiar. Un tarro de cocina con tapa de corcho o de madera queda muy navideño.</li>
+        <li><strong>Grava blanca o arcilla expandida</strong> para el drenaje. La grava blanca (marmolina) hace de «nieve» en el fondo.</li>
+        <li><strong>Sustrato</strong> ligero, con perlita o fibra de coco. Tienes la receta en <a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a>.</li>
+        <li><strong>Musgo</strong> para cubrir la tierra.</li>
+        <li><strong>Una sola planta pequeña</strong>, como una fittonia de hoja roja o blanca.</li>
+        <li><strong>Uno o dos adornos</strong> que aguanten la humedad (más abajo verás cuáles).</li>
+        <li><strong>Herramientas</strong>: una cucharilla, unas pinzas largas o un palillo chino y un pulverizador.</li>
+      </ul>
+
+      <h3>2. Elige una planta con colores de Navidad</h3>
+      <p>La <strong>fittonia</strong> es la reina de los terrarios pequeños: le gusta la humedad, crece despacio y tiene variedades con nervios <strong>rojos o rosas</strong> y otras con nervios <strong>blancos</strong>. Rojo y verde, o blanco y verde, ya son colores navideños sin añadir nada más. Tienes sus cuidados en <a href="fittonia-cuidados.html">Fittonia: cuidados y riego</a>.</p>
+      <p>Otras opciones que aguantan un tarro cerrado son los helechos pequeños y el musgo solo. Lo que <strong>no conviene</strong> meter son abetos, pinos o ramas de árbol de Navidad: son plantas de exterior, necesitan frío y aire, y dentro de un tarro húmedo se secan o se pudren. Tampoco suculentas ni cactus, que se pudren con la humedad del cerrado. Más ideas en <a href="plantas-para-terrario.html">Qué plantas poner en un terrario</a>.</p>
+
+      <img src="img/Terrario3.webp" width="900" height="1200" alt="Terrario en un jarrón alto de cristal con una fittonia de hojas rojizas" loading="lazy" decoding="async" />
+      <p class="img-caption">Una fittonia de tonos rojizos ya aporta el color navideño por sí sola.</p>
+
+      <h3>3. Paso a paso: montaje del mini terrario</h3>
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85;">
+        <li style="margin-bottom: .5rem;"><strong>Limpia el tarro</strong> con agua caliente y sécalo bien por dentro. Sin restos de jabón.</li>
+        <li style="margin-bottom: .5rem;"><strong>Drenaje</strong>: 2 cm de grava blanca o arcilla expandida en el fondo.</li>
+        <li style="margin-bottom: .5rem;"><strong>Sustrato</strong>: entre 3 y 5 cm, según el tamaño del tarro. En un tarro pequeño, la tierra y el drenaje no deberían pasar de un tercio de la altura, para que la planta tenga sitio.</li>
+        <li style="margin-bottom: .5rem;"><strong>Planta</strong>: haz un hueco con la cucharilla, quita parte de la tierra vieja del cepellón con cuidado y colócala. Si la fittonia es grande, puedes dividirla y usar solo un trozo (lo explico en <a href="dividir-fittonia.html">Cómo dividir una fittonia</a>).</li>
+        <li style="margin-bottom: .5rem;"><strong>Musgo</strong> alrededor de la planta, presionando un poco para que toque la tierra.</li>
+        <li style="margin-bottom: .5rem;"><strong>Adornos</strong>: coloca uno o dos con las pinzas, apoyados sobre el musgo o sobre una piedra.</li>
+        <li style="margin-bottom: .5rem;"><strong>Primer riego</strong>: unas pocas pulverizaciones, hasta que la tierra esté húmeda pero sin agua en el fondo.</li>
+        <li><strong>Limpia el cristal</strong> por dentro con un papel enrollado en las pinzas y cierra la tapa.</li>
+      </ol>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>4. Decoración: qué usar y qué evitar</h3>
+      <p>Dentro de un tarro cerrado hay mucha humedad durante semanas, así que la decoración tiene que aguantarla sin pudrirse ni oxidarse.</p>
+      <ul>
+        <li><strong>Sí</strong>: figuritas de cerámica, de vidrio o de plástico duro (un muñeco de nieve, un reno, una casita), piedras blancas o una piña pequeña <em>fuera</em> del tarro, atada a la tapa.</li>
+        <li><strong>Sí</strong>: grava blanca o arena blanca como «nieve», en una zona pequeña junto a la planta.</li>
+        <li><strong>No</strong>: nieve artificial en polvo o en espray, purpurina y espumillón. Se pegan al cristal, se mezclan con la tierra y no se pueden sacar.</li>
+        <li><strong>No</strong>: piñas, ramas, canela o frutos secos dentro del tarro. Son materia orgánica que con la humedad puede llenarse de moho (mira <a href="moho-en-terrario.html">Moho en el terrario</a>).</li>
+        <li><strong>No</strong>: adornos de metal pintado, que se oxidan y manchan, ni de cartón o papel.</li>
+      </ul>
+      <div class="highlight">Truco: la decoración más bonita suele ir <strong>por fuera</strong>. Una cinta roja o de cuadros en el cuello del tarro, una etiqueta de papel kraft con el nombre y una ramita en la tapa quedan muy bien y no afectan a la planta.</div>
+
+      <h3>5. Hazlo con tiempo antes de regalarlo</h3>
+      <p>Lo ideal es montarlo <strong>al menos dos semanas antes</strong> de regalarlo. Así ves si se empaña demasiado, si la planta se adapta y si sale algo de moho en los adornos, y puedes corregirlo a tiempo. Si el cristal amanece empañado del todo y no se aclara durante el día, destapa unas horas: lo explico en <a href="terrario-empanado.html">Terrario empañado</a>.</p>
+      <p>Durante esos días, colócalo con <strong>luz indirecta</strong>, nunca al sol directo ni encima de un radiador: el cristal hace efecto invernadero y la planta se puede cocer.</p>
+
+      <h3>6. Cómo entregarlo para que llegue bien</h3>
+      <ul>
+        <li><strong>Transporte</strong>: en una caja con papel o tela alrededor para que no se mueva, y siempre en vertical.</li>
+        <li><strong>Frío</strong>: en diciembre, no lo dejes en el coche por la noche ni en un rellano helado. La fittonia sufre por debajo de unos 13 °C.</li>
+        <li><strong>Tarjeta de cuidados</strong>: «Luz sin sol directo, tapa cerrada, regar solo si no hay gotas en el cristal durante varios días». Con eso basta.</li>
+      </ul>
+      <p>Tienes más detalles sobre cajas, frío y tarjetas en <a href="regalar-un-terrario.html">Regalar un terrario por Navidad</a>.</p>
+
+      <img src="img/encargo-corcho.webp" width="900" height="1200" alt="Terrario en un tarro de cristal con tapa de corcho, con plantas de hoja verde y grava blanca" loading="lazy" decoding="async" />
+      <p class="img-caption">Un tarro con tapa de corcho: con una cinta en el cuello ya está listo para regalar.</p>
+
+      <h3>Preguntas rápidas</h3>
+      <p><strong>¿Cuánto cuesta hacer un mini terrario navideño?</strong> Con un tarro de cocina, una fittonia pequeña y algo de grava y sustrato, el coste suele ser bajo. Tienes un desglose en <a href="cuanto-cuesta-hacer-un-terrario.html">Cuánto cuesta hacer un terrario</a>.</p>
+      <p><strong>¿Puedo poner un abeto pequeño dentro?</strong> No es buena idea: los abetos y pinos son plantas de exterior y no aguantan un tarro cerrado y húmedo.</p>
+      <p><strong>¿Se puede dejar abierto?</strong> Sí, pero entonces se seca antes y hay que regarlo más a menudo. Mira <a href="terrario-abierto.html">Cómo cuidar un terrario abierto</a>.</p>
+      <p><strong>¿Cuándo hay que regarlo?</strong> Casi nunca. Solo si durante varios días no aparecen gotas en el cristal y la tierra se ve clara y seca.</p>
+      <p><strong>¿Pueden hacerlo los niños?</strong> Sí, con ayuda de un adulto con el cristal y las herramientas. Es una manualidad sencilla para una tarde de diciembre.</p>
+
+      <p style="font-size:.9rem;color:var(--ts);margin-top:2rem;">Son consejos generales. Cada casa tiene su luz y su temperatura, así que observa el terrario durante las primeras semanas y ajusta el riego según lo que veas.</p>
+
+      <p class="relacionados" style="font-size:.95rem;color:var(--ts);margin-top:2rem;"><strong>Te puede interesar:</strong> <a href="regalar-un-terrario.html">Regalar un terrario por Navidad</a> · <a href="terrario-en-botella.html">Terrario en botella o en tarro</a> · <a href="urnas-de-cristal.html">Cómo elegir el recipiente</a> · <a href="fittonia-cuidados.html">Fittonia: cuidados y riego</a></p>
+
+      <div style="margin:3rem 0 0;padding:1.75rem;background:var(--vd);border-radius:var(--rl);color:#fff;display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+        <img src="img/thumbs/Terrario-indice.webp" width="480" height="640" alt="Terrario cerrado hecho a mano" loading="lazy" decoding="async" style="width:84px;height:112px;object-fit:cover;border-radius:var(--r);margin:0;box-shadow:none;">
+        <div style="flex:1;min-width:200px;">
+          <p style="color:#fff;font-family:var(--fd);font-size:1.4rem;line-height:1.3;margin:0 0 .35rem;">¿Prefieres que te lo monte yo?</p>
+          <p style="color:var(--vmu);font-size:.95rem;line-height:1.6;margin:0 0 1rem;">Hago terrarios cerrados por encargo en la Comunidad de Madrid, desde 25 €.</p>
+          <a href="encargos.html" style="display:inline-block;background:var(--vc);color:var(--vd);padding:.6rem 1.2rem;border-radius:var(--r);font-weight:500;text-decoration:none;">Ver cómo pedir el tuyo →</a>
+        </div>
+      </div>
+    </article>
+    <aside class="sidebar sidebar-left">
+      <div class="sb-block">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="montar-terrarios.html" style="color: var(--vd); font-weight: 500;">Montar tu terrario</a></li>
+          <li><a href="plantas-y-bichos.html">Plantas y bichos</a></li>
+          <li><a href="huerto-en-casa.html">Huerto en casa</a></li>
+          <li><a href="encargos.html">Terrarios por encargo</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block" style="text-align:center; padding:1rem;">
+        <div style="max-width:200px; margin:0 auto;">
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:200px;height:200px"
+               data-ad-client="ca-pub-8621886093597255"
+               data-ad-slot="9330653548"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+    </aside>
+    <aside class="sidebar sidebar-right">
+      <div class="sb-block">
+        <h4>Más para montar tu terrario</h4>
+        <ul>
+          <li><a href="como-montar-primer-terrario.html">Cómo montar tu primer terrario cerrado</a></li>
+          <li><a href="urnas-de-cristal.html">La urna perfecta: cómo elegir el cristal</a></li>
+          <li><a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a></li>
+          <li><a href="plantas-para-terrario.html">Qué plantas poner en un terrario</a></li>
+          <li><a href="cuidados-terrario-cerrado.html">Cuidados del terrario cerrado</a></li>
+          <li><a href="terrario-empanado.html">Terrario empañado</a></li>
+          <li><a href="moho-en-terrario.html">Moho en el terrario</a></li>
+          <li><a href="terrario-abierto.html">Cómo cuidar un terrario abierto</a></li>
+          <li><a href="terrario-en-botella.html">Terrario en botella o en tarro</a></li>
+          <li><a href="regalar-un-terrario.html">Regalar un terrario por Navidad</a></li>
+          <li><a href="mini-terrario-navideno.html" style="color: var(--vd); font-weight: 500;">Mini terrario navideño</a></li>
+          <li><a href="montar-terrarios.html">Ver toda la sección</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <div style="grid-column: 1 / -1; text-align: center; padding: 0 2rem 4rem; max-width: 1440px; margin: 0 auto;">
+    <div style="max-width:728px; margin:0 auto;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8621886093597255"
+           data-ad-slot="3020275922"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Todos los derechos reservados. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
