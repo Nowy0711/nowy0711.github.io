@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics en modo consentimiento: en Europa no guarda cookies hasta que el visitante acepta en el banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-6BMQ28CLQR');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BMQ28CLQR"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621886093597255"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="description" content="Cómo germinar semillas de tomate en servilleta húmeda: qué semillas usar, temperatura, cuántos días tarda, cuándo pasarlas a tierra y los errores más comunes."/>
+  <title>Germinar semillas de tomate en servilleta: método paso a paso</title>
+  <link rel="canonical" href="https://ecocristal.es/germinar-semillas-tomate.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <style>
+    /* ── TOKENS Y RESET ── */
+    :root { --vd: #1e3a2f; --vm: #2d5a3d; --vs: #4a7c59; --vc: #8fb89a; --vmu: #c8d9c0; --vn: #e8f0e4; --bc: #f7f5f0; --cr: #ede9e0; --to: #1a2418; --tm: #3d4f3a; --ts: #6b7f67; --fd: 'Cormorant Garamond', Georgia, serif; --fb: 'DM Sans', system-ui, sans-serif; --r: 6px; --rl: 12px; --s1: 0 2px 12px rgba(30,58,47,.08); --s2: 0 6px 32px rgba(30,58,47,.13); --t: .35s cubic-bezier(.4,0,.2,1); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); font-weight: 300; background: var(--bc); color: var(--to); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+
+    /* ── HEADER NUEVO ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(247,245,240,.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 0 2rem; }
+    .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); display: flex; align-items: center; gap: .5rem; }
+    .logo-dot { width: 8px; height: 8px; background: var(--vs); border-radius: 50%; display: inline-block; }
+    nav ul { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    nav a { font-size: .875rem; font-weight: 400; color: var(--tm); letter-spacing: .03em; transition: color var(--t); position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--vs); transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+    nav a:hover { color: var(--vd); }
+    .nav-cta { background: var(--vd) !important; color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r); font-size: .8rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: background var(--t), transform var(--t); }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vm) !important; transform: translateY(-1px); }
+
+    /* ── ESTRUCTURA ORIGINAL (CENTRADITA Y BLANCA) ── */
+    .bread { max-width: 1440px; margin: 0 auto; padding: 7rem 2rem 1rem; font-size: .78rem; color: var(--ts); display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .bread a { color: var(--vs); } .bread a:hover { color: var(--vd); } .bread span { opacity: .4; }
+    
+    .page-hero { padding: 1rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--vmu); }
+    .wrap { max-width: 1440px; margin: 0 auto; }
+    .page-hero h1 { font-family: var(--fd); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: var(--vd); line-height: 1.15; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .page-hero h1 em { font-style: italic; color: var(--vs); }
+    
+    /* ── DISEÑO DE 3 COLUMNAS MÁS ANCHO ── */
+    .post-wrap { 
+      display: grid; 
+      grid-template-columns: 250px 1fr 280px; 
+      gap: 4rem; 
+      padding: 4rem 2rem 6rem; 
+      max-width: 1440px; 
+      margin: 0 auto; 
+      align-items: start; 
+    }
+    
+    .post { grid-column: 2; grid-row: 1; min-width: 0; }
+    .sidebar-left { grid-column: 1; grid-row: 1; }
+    .sidebar-right { grid-column: 3; grid-row: 1; max-height: calc(100vh - 140px); overflow-y: auto; padding-right: 0.5rem; }
+
+    .post h2 { font-family: var(--fd); font-size: 1.8rem; font-weight: 400; color: var(--vd); margin: 2.5rem 0 1rem; }
+    .post h3 { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; color: var(--vd); margin: 2.5rem 0 .75rem; border-bottom: 2px solid var(--vn); padding-bottom: 0.5rem; }
+    .post p { color: var(--tm); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .post ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85; }
+    .post img { border-radius: var(--rl); margin: 2rem auto; box-shadow: var(--s2); width: 100%; max-width: 700px; height: auto; object-fit: cover; }
+    .img-caption { text-align: center; font-size: 0.85rem; color: var(--ts); margin-top: -1.5rem; margin-bottom: 2rem; font-style: italic; }
+    
+    .highlight { background: var(--vn); border-left: 4px solid var(--vs); padding: 1.5rem; border-radius: 0 var(--r) var(--r) 0; margin: 2rem 0; font-size: 1.05rem; color: var(--tm); line-height: 1.7; }
+
+    /* ── SIDEBAR DEFINITIVA ── */
+    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.75rem; }
+    .sb-block { background: #fff; border: 1px solid var(--vmu); border-radius: var(--rl); padding: 1.75rem; box-shadow: var(--s1); }
+    .sb-block h4 { font-family: var(--fd); font-size: 1.3rem; font-weight: 400; color: var(--vs); margin-bottom: 1.25rem; text-align: left; position: relative; padding-bottom: 0.75rem; }
+    .sb-block h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1.5px; background: linear-gradient(90deg, var(--vd), var(--vmu), transparent 90%); }
+    .sb-block ul { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; list-style: none; margin: 0; }
+    .sb-block li a { font-size: 0.9rem; color: var(--tm); display: flex; gap: 0.75rem; line-height: 1.5; transition: color var(--t); }
+    .sb-block li a:hover { color: var(--vd); }
+    .sb-block li a::before { content: '→'; color: var(--vs); font-weight: bold; }
+
+    /* ── FOOTER NUEVO (LEGAL) ── */
+    footer { background: var(--to); padding: 3rem 2rem 2rem; margin-top: 4rem; color: #e8f0e4; text-align: center; font-size: 0.85rem;}
+    .ft-in { max-width: 1440px; margin: 0 auto; color: rgba(255,255,255,.3); font-size: .75rem; text-align: center;}
+    .ft-in a { color: inherit; text-decoration: underline; }
+
+    /* ── RESPONSIVE PARA TABLET/MÓVIL ── */
+    @media (max-width: 1024px) { 
+      .post-wrap { display: flex; flex-direction: column; gap: 3rem; } 
+      .sidebar { position: static; width: 100%; } 
+    }
+
+    /* ── MENÚ MÓVIL ── */
+    .mobile-toggle { display: none; background: transparent; border: none; color: var(--vd); cursor: pointer; padding: 0.5rem; }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-menu { position: absolute; top: 68px; left: 0; right: 0; background: rgba(247,245,240,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vmu); padding: 2rem; display: none; flex-direction: column; box-shadow: var(--s2); }
+      .nav-menu.is-open { display: flex; }
+      .nav-menu ul { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .nav-cta { display: inline-block; text-align: center; }
+    }
+    /* ── ANUNCIOS DENTRO DEL ARTÍCULO ── */
+    .ad-inarticle { margin: 2rem 0; text-align: center; }
+    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+    @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+  </style>
+  <meta property="og:title" content="Germinar semillas de tomate en servilleta: método paso a paso | EcoCristal" />
+  <meta property="og:description" content="Cómo germinar semillas de tomate en servilleta húmeda: qué semillas usar, temperatura, cuántos días tarda, cuándo pasarlas a tierra y los errores más comunes." />
+  <meta property="og:image" content="https://ecocristal.es/img/semilla-servilleta.webp" />
+  <meta property="og:url" content="https://ecocristal.es/germinar-semillas-tomate.html" />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Germinar semillas de tomate en servilleta: método paso a paso",
+    "image": "https://ecocristal.es/img/semilla-servilleta.webp",
+    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
+    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "description": "Cómo germinar semillas de tomate en servilleta húmeda: qué semillas usar, temperatura, cuántos días tarda, cuándo pasarlas a tierra y los errores más comunes."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ecocristal.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Huerto en casa", "item": "https://ecocristal.es/huerto-en-casa.html" },
+      { "@type": "ListItem", "position": 3, "name": "Germinar semillas de tomate", "item": "https://ecocristal.es/germinar-semillas-tomate.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
+    
+    <button class="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+    </button>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul style="display: flex; gap: 2rem; align-items: center;">
+        <li><a href="index.html#analisis">Artículos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="encargos.html">Encargos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <nav class="bread">
+    <a href="index.html">Inicio</a><span>/</span><a href="huerto-en-casa.html">Huerto en casa</a><span>/</span><strong>Germinar semillas de tomate</strong>
+  </nav>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Germinar semillas de tomate en servilleta <em>(método paso a paso)</em></h1>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: 0.95rem; color: var(--ts); margin-top: 1.5rem; font-family: var(--fb); flex-wrap: wrap;">
+  <strong style="color: var(--vd); font-weight: 500;">Por Nowy</strong>
+  <span style="opacity: 0.5;">|</span>
+  <span>Noviembre 2026</span>
+  <span style="opacity: 0.5;">|</span>
+  <span>Lectura: 7 min</span>
+</div>
+    </div>
+  </div>
+
+  <div class="post-wrap">
+
+    <article class="post">
+      <p>El <strong>método de la servilleta húmeda</strong> es la forma más sencilla de ver si tus semillas de tomate están vivas y de tenerlas germinadas en pocos días sin gastar tierra ni semilleros. Solo necesitas papel de cocina, agua y un recipiente con tapa. En esta guía tienes qué semillas usar, cómo prepararlas, la temperatura que necesitan, cuántos días suelen tardar, cuándo pasarlas a tierra y los errores que más plantones estropean.</p>
+
+      <img src="img/semilla-servilleta.webp" width="1000" height="750" alt="Semilla germinada con la raíz blanca asomando sobre una servilleta de papel húmeda" fetchpriority="high" decoding="async" />
+      <p class="img-caption">Así se ve una semilla germinada en la servilleta: la raicilla blanca sale por la punta. En la foto es de melón; con el tomate el proceso es el mismo, pero la semilla es más pequeña y plana.</p>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>1. Qué necesitas</h3>
+      <ul>
+        <li><strong>Semillas de tomate</strong>: de sobre o sacadas de un tomate (más abajo verás la diferencia).</li>
+        <li><strong>Papel de cocina o servilletas</strong> de papel, mejor sin perfume ni dibujos.</li>
+        <li><strong>Un recipiente con tapa</strong>: un táper, un plato con otro plato encima o una bolsa de cierre zip. Sirve para que la humedad no se escape.</li>
+        <li><strong>Agua</strong> del grifo reposada o de lluvia, y un pulverizador si tienes.</li>
+        <li><strong>Un rotulador</strong> para apuntar la variedad y la fecha. Las semillas de tomate son todas iguales y se confunden enseguida.</li>
+        <li>Para después: <strong>semilleros o vasitos</strong> con agujeros y un sustrato ligero (tienes cómo prepararlo en <a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a>).</li>
+      </ul>
+
+      <h3>2. Qué semillas usar: de sobre o de un tomate</h3>
+      <p>Las <strong>semillas de sobre</strong> son la opción más segura: vienen limpias, secas y con la variedad indicada. Mira la fecha del sobre; las semillas de tomate bien guardadas, en un sitio seco y fresco, suelen conservar la capacidad de germinar varios años, aunque cada año que pasa germinan menos.</p>
+      <p>También puedes sacar <strong>semillas de un tomate</strong> que te haya gustado. Funciona, pero ten en cuenta dos cosas:</p>
+      <ul>
+        <li>Si el tomate es un <strong>híbrido</strong> (en los sobres aparece como «F1»), las plantas hijas no salen iguales a la madre: pueden dar tomates distintos. Con variedades tradicionales (las que se guardan de año en año) sí suelen salir parecidas.</li>
+        <li>Cada semilla viene envuelta en una <strong>capa de gel</strong> que frena la germinación mientras está dentro del fruto. Hay que quitarla antes de ponerlas en la servilleta.</li>
+      </ul>
+
+      <h3>3. Cómo preparar las semillas sacadas de un tomate</h3>
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85;">
+        <li style="margin-bottom: .5rem;">Elige un tomate <strong>bien maduro</strong>. Córtalo por la mitad y saca las semillas con su gel con una cucharilla.</li>
+        <li style="margin-bottom: .5rem;">Ponlas en un vaso con un poco de agua y déjalas <strong>2 o 3 días</strong> tapadas con un papel, removiendo una vez al día. Se forma una capa blanquecina por encima: es normal, es una fermentación suave que deshace el gel.</li>
+        <li style="margin-bottom: .5rem;">Llena el vaso de agua y remueve. Las semillas buenas <strong>se van al fondo</strong>; las que flotan suelen estar vacías y se pueden tirar.</li>
+        <li style="margin-bottom: .5rem;">Pásalas por un colador fino y <strong>acláralas bien</strong> con agua del grifo.</li>
+        <li>Si vas a germinarlas ya, ponlas directamente en la servilleta. Si quieres guardarlas, extiéndelas sobre un plato (no sobre papel, se pegan) y déjalas secar unos días antes de meterlas en un sobre.</li>
+      </ol>
+      <div class="highlight">Si no quieres esperar, puedes lavarlas a mano frotándolas en un colador hasta que no quede gel. Germinan igual; la fermentación solo es más cómoda y limpia mejor.</div>
+
+      <div class="ad-inarticle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8621886093597255"
+             data-ad-slot="3020275922"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <h3>4. El método de la servilleta, paso a paso</h3>
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85;">
+        <li style="margin-bottom: .5rem;"><strong>Moja el papel</strong> y escúrrelo: tiene que quedar húmedo, sin que gotee. Un papel encharcado ahoga las semillas y favorece el moho.</li>
+        <li style="margin-bottom: .5rem;"><strong>Reparte las semillas</strong> sobre una mitad del papel, separadas al menos 1 o 2 cm entre sí, para que las raíces no se enreden.</li>
+        <li style="margin-bottom: .5rem;"><strong>Dobla</strong> la otra mitad del papel por encima para taparlas.</li>
+        <li style="margin-bottom: .5rem;"><strong>Mételo en el recipiente</strong> o en la bolsa zip y ciérralo, dejando algo de aire dentro. Apunta la variedad y la fecha.</li>
+        <li style="margin-bottom: .5rem;"><strong>Busca un sitio templado</strong>: entre 20 y 30 °C es el rango en el que el tomate germina mejor. No necesita luz para germinar, así que un armario o una estantería de un cuarto cálido valen. Evita poner el recipiente directamente encima de un radiador: el calor excesivo también las estropea.</li>
+        <li><strong>Revisa una vez al día</strong>: abre un momento para que se renueve el aire, mira si el papel sigue húmedo y pulveriza un poco si se está secando.</li>
+      </ol>
+      <p>Es el mismo método que se usa con otras semillas de huerta, como el melón; si quieres verlo con fotos de cada paso, lo tienes en <a href="cultivando-melon.html">Cómo germinar semillas de melón</a>.</p>
+
+      <h3>5. Cuántos días tarda en germinar</h3>
+      <p>Con una temperatura de unos 20-25 °C, lo normal es que las semillas de tomate empiecen a abrirse en torno a <strong>5 a 10 días</strong>. Con más calor puede ir algo más rápido, y en una casa fría puede tardar dos semanas o más. Las semillas viejas también van más lentas.</p>
+      <p>Si pasadas <strong>tres semanas</strong> no ha germinado ninguna, revisa la temperatura y la humedad. Si estaban bien, lo más probable es que las semillas ya no sean viables.</p>
+
+      <h3>6. Cuándo y cómo pasarlas a tierra</h3>
+      <p>El mejor momento para sembrar la semilla germinada es cuando la <strong>raicilla mide entre medio y un centímetro</strong>. Si esperas mucho más, la raíz se pega al papel y se rompe al sacarla.</p>
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--tm); font-size: 1.05rem; line-height: 1.85;">
+        <li style="margin-bottom: .5rem;">Llena el semillero o el vasito con sustrato ligero y <strong>humedécelo</strong> antes de sembrar.</li>
+        <li style="margin-bottom: .5rem;">Haz un hoyito de <strong>medio centímetro</strong> con un palillo.</li>
+        <li style="margin-bottom: .5rem;">Coge la semilla <strong>por la cáscara</strong>, nunca por la raíz, con unas pinzas o con la punta de un palillo. Si la raíz se ha pegado al papel, corta el trocito de papel y siémbralo con ella.</li>
+        <li style="margin-bottom: .5rem;">Pon la <strong>raíz hacia abajo</strong> y tápala con una capa fina de sustrato, sin apretar.</li>
+        <li>Riega con pulverizador o desde abajo (poniendo el vasito en un plato con agua unos minutos) para no desenterrarla.</li>
+      </ol>
+
+      <img src="img/semilla-plantada.webp" width="900" height="1200" alt="Semilla germinada colocada en un hoyo pequeño en tierra con perlita, con la raíz blanca hacia abajo" loading="lazy" decoding="async" />
+      <p class="img-caption">Semilla germinada lista para taparla: la raíz va hacia abajo y se cubre con una capa fina de tierra.</p>
+
+      <h3>7. Los primeros días del plantón</h3>
+      <ul>
+        <li><strong>Luz</strong>: en cuanto asoma el tallo, el tomate necesita <strong>mucha luz</strong>. Con poca luz los tallos se estiran, se vuelven finos y se doblan (se dice que «se ahílan»). Pon el semillero junto a la ventana más luminosa o bajo una lámpara de cultivo.</li>
+        <li><strong>Riego</strong>: tierra húmeda pero no empapada. El exceso de agua en semilleros favorece hongos que tumban los plantones por la base.</li>
+        <li><strong>Temperatura</strong>: le sienta bien un ambiente templado; el frío por la noche lo frena mucho.</li>
+        <li><strong>Trasplante</strong>: cuando tenga varias hojas verdaderas (las que tienen forma de hoja de tomate, no las dos primeras redondeadas), pásalo a una maceta mayor. El tomate admite enterrar parte del tallo al trasplantar: echa raíces nuevas en la parte enterrada.</li>
+      </ul>
+      <p>Si en la tierra del semillero aparece una pelusa blanca, mira <a href="moho-blanco-en-macetas.html">Moho blanco en la tierra de las macetas</a>; y si ves mosquitas pequeñas volando alrededor, <a href="mosquitas-del-sustrato.html">Mosquitas del sustrato</a>.</p>
+
+      <h3>8. Cuándo sembrar tomate en España</h3>
+      <p>El tomate es una planta de verano: no aguanta las heladas y necesita calor para dar fruto. En la mayor parte de España se siembra en semillero, a cubierto, <strong>entre enero y marzo</strong>, para trasplantarlo al exterior en primavera, cuando ya no hay riesgo de heladas (abril o mayo, según la zona).</p>
+      <p>En otoño puedes usar la servilleta para <strong>probar si tus semillas siguen vivas</strong> antes de la temporada, o para un tomate de interior. Pero ten en cuenta que en invierno, dentro de casa, la luz suele quedarse corta: sin una lámpara de cultivo es difícil que la planta crezca fuerte y dé fruto.</p>
+
+      <h3>9. Errores frecuentes</h3>
+      <ul>
+        <li><strong>Papel encharcado</strong>: las semillas se pudren o se llenan de moho. Húmedo sí, chorreando no.</li>
+        <li><strong>Recipiente sin abrir en días</strong>: falta de aire y moho. Ábrelo un momento cada día.</li>
+        <li><strong>Sitio frío</strong>: en una habitación fresca puede tardar mucho o no germinar. Busca el rincón más cálido de la casa.</li>
+        <li><strong>Esperar demasiado para sembrar</strong>: la raíz se enreda en el papel y se rompe.</li>
+        <li><strong>Coger la semilla por la raíz</strong>: la punta de la raíz es muy delicada; si se daña, el plantón se retrasa o muere.</li>
+        <li><strong>Poca luz al nacer</strong>: plantones largos y débiles que luego se doblan.</li>
+      </ul>
+
+      <h3>Preguntas rápidas</h3>
+      <p><strong>¿Las semillas de un tomate del súper germinan?</strong> Muchas veces sí, si el tomate estaba maduro y se quita el gel. Pero si es un híbrido, los tomates de la nueva planta pueden ser distintos.</p>
+      <p><strong>¿Hay que dejar las semillas en remojo antes?</strong> No es imprescindible con el tomate. Si son semillas viejas, unas horas en agua templada antes de ponerlas en la servilleta pueden ayudar a que se hidraten.</p>
+      <p><strong>¿Necesitan luz para germinar?</strong> No. Germinan igual a oscuras; la luz la necesitan en cuanto sale el tallo.</p>
+      <p><strong>¿Puedo sembrar directamente en tierra sin servilleta?</strong> Sí. La servilleta solo sirve para ver cuáles germinan y no gastar semilleros con semillas que no van a nacer.</p>
+      <p><strong>Ha salido moho en la servilleta, ¿qué hago?</strong> Pasa las semillas que estén bien a un papel nuevo y limpio, con menos agua, y abre el recipiente más a menudo. Las que estén blandas o negras, tíralas.</p>
+
+      <p style="font-size:.9rem;color:var(--ts);margin-top:2rem;">Son pautas generales: los días de germinación dependen de la variedad, la edad de la semilla y la temperatura de tu casa. Apunta las fechas y observa cómo van.</p>
+
+      <p class="relacionados" style="font-size:.95rem;color:var(--ts);margin-top:2rem;"><strong>Te puede interesar:</strong> <a href="cultivando-melon.html">Cómo germinar semillas de melón</a> · <a href="cultivando-lechugas.html">Cultivar lechugas en casa</a> · <a href="como-hacer-sustrato.html">Cómo hacer el sustrato</a> · <a href="moho-blanco-en-macetas.html">Moho blanco en las macetas</a></p>
+
+      <div style="margin:3rem 0 0;padding:1.75rem;background:var(--vd);border-radius:var(--rl);color:#fff;display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+        <img src="img/thumbs/Terrario-indice.webp" width="480" height="640" alt="Terrario cerrado hecho a mano" loading="lazy" decoding="async" style="width:84px;height:112px;object-fit:cover;border-radius:var(--r);margin:0;box-shadow:none;">
+        <div style="flex:1;min-width:200px;">
+          <p style="color:#fff;font-family:var(--fd);font-size:1.4rem;line-height:1.3;margin:0 0 .35rem;">¿Prefieres que te lo monte yo?</p>
+          <p style="color:var(--vmu);font-size:.95rem;line-height:1.6;margin:0 0 1rem;">Hago terrarios cerrados por encargo en la Comunidad de Madrid, desde 25 €.</p>
+          <a href="encargos.html" style="display:inline-block;background:var(--vc);color:var(--vd);padding:.6rem 1.2rem;border-radius:var(--r);font-weight:500;text-decoration:none;">Ver cómo pedir el tuyo →</a>
+        </div>
+      </div>
+    </article>
+    <aside class="sidebar sidebar-left">
+      <div class="sb-block">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="montar-terrarios.html">Montar tu terrario</a></li>
+          <li><a href="plantas-y-bichos.html">Plantas y bichos</a></li>
+          <li><a href="huerto-en-casa.html" style="color: var(--vd); font-weight: 500;">Huerto en casa</a></li>
+          <li><a href="encargos.html">Terrarios por encargo</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-block" style="text-align:center; padding:1rem;">
+        <div style="max-width:200px; margin:0 auto;">
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:200px;height:200px"
+               data-ad-client="ca-pub-8621886093597255"
+               data-ad-slot="9330653548"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+    </aside>
+    <aside class="sidebar sidebar-right">
+      <div class="sb-block">
+        <h4>Más en Huerto en casa</h4>
+        <ul>
+          <li><a href="cultivando-lechugas.html">Cultivar lechugas en casa</a></li>
+          <li><a href="cultivando-melon.html">Cultivar melón desde semilla</a></li>
+          <li><a href="germinar-semillas-tomate.html" style="color: var(--vd); font-weight: 500;">Germinar semillas de tomate</a></li>
+          <li><a href="capuchina-hongo-canela.html">Hongo en la maceta: canela</a></li>
+          <li><a href="huerto-en-casa.html">Ver toda la sección</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  <div style="grid-column: 1 / -1; text-align: center; padding: 0 2rem 4rem; max-width: 1440px; margin: 0 auto;">
+    <div style="max-width:728px; margin:0 auto;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8621886093597255"
+           data-ad-slot="3020275922"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="ft-in">
+    <p style="margin-bottom: 1rem; opacity: 0.7;">En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste extra para ti y me ayuda a mantener la web.</p>
+    <span>© 2026 EcoCristal. Todos los derechos reservados. Compartiendo afición por la naturaleza en casa. | <a href="aviso-legal.html" style="color: inherit; text-decoration: underline;">Aviso Legal</a> | <a href="politica-privacidad.html" style="color: inherit; text-decoration: underline;">Política de Privacidad</a> | <a href="politica-cookies.html" style="color: inherit; text-decoration: underline;">Política de Cookies</a> | <a href="contacto.html" style="color: inherit; text-decoration: underline;">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
