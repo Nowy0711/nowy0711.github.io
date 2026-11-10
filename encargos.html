@@ -167,7 +167,7 @@
 <header>
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>EcoCristal</a>
-    <button class="mobile-toggle" aria-label="Abrir menú">
+    <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
       <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
     </button>
     <nav class="nav-menu" aria-label="Navegación principal">
@@ -354,7 +354,7 @@
     const menu = document.querySelector('.nav-menu');
     if(btn && menu) {
       btn.addEventListener('click', function() {
-        menu.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', menu.classList.toggle('is-open') ? 'true' : 'false');
       });
     }
 
