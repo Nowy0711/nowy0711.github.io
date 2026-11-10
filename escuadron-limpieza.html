@@ -29,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -119,6 +120,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
 
   <meta property="og:title" content="Colémbolos y bichos bola: por qué desaparecen en el terrario y para qué sirven" />
@@ -126,17 +129,34 @@
   <meta property="og:image" content="https://ecocristal.es/img/bichobola.jpg" />
   <meta property="og:url" content="https://ecocristal.es/escuadron-limpieza.html" />
   <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Colémbolos y bichos bola en el terrario: para qué sirven y por qué desaparecen",
-    "author": { "@type": "Person", "name": "EcoCristal" },
-    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "author": {
+      "@type": "Person",
+      "name": "Nowy",
+      "url": "https://ecocristal.es/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoCristal",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ecocristal.es/img/favicon.png"
+      }
+    },
     "datePublished": "2026-05-06",
-    "dateModified": "2026-10-21",
-    "description": "¿Por qué desaparecen los colémbolos del terrario? Casi siempre es falta de humedad. Cómo recuperarlos, qué son y para qué sirven con los bichos bola."
+    "dateModified": "2026-11-10",
+    "description": "¿Por qué desaparecen los colémbolos del terrario? Casi siempre es falta de humedad. Cómo recuperarlos, qué son y para qué sirven con los bichos bola.",
+    "image": "https://ecocristal.es/img/bichobola.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ecocristal.es/escuadron-limpieza.html"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -152,6 +172,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -172,7 +193,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="plantas-y-bichos.html">Plantas y bichos</a><span>/</span><strong>Escuadrón de limpieza</strong>
@@ -211,7 +232,7 @@
 
       <p><strong>Los colémbolos:</strong> Son muy pequeñitos (miden 1 o 2 milímetros) y de color blanquecino. Se encargan del "micro-reciclaje". Les gusta mucho el moho y los hongos, así que, si por algún motivo hay demasiada humedad en el terrario, los colémbolos van a ayudarnos a protegerlo y cuidarlo.</p>
       
-      <img src="img/colembolos.webp" width="1000" height="768" alt="Detalle macro de un colémbolo blanquecino sobre la tierra" loading="lazy" decoding="async" />
+      <img src="img/colembolos.webp" width="1000" height="768" alt="Detalle macro de un colémbolo blanquecino sobre la tierra" fetchpriority="high" decoding="async" />
       <p class="img-caption">Foto: AJC1, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener license">CC BY-SA 2.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Folsomia_candida_(16407612393).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</p>
 
       <p><strong>Los bichos bola:</strong> Son bastante más grandes. Se comen la materia orgánica grande: hojas secas, madera en descomposición o restos de vegetales.</p>
@@ -235,7 +256,7 @@
 
       <p>Para los bichos bola, yo suelo conseguirlos directamente en el parque. Suelen salir cuando hay humedad, así que mi recomendación es salir a buscar pronto por la mañana, justo al amanecer. Levanta piedras, mira debajo de macetas, en esquinas húmedas o debajo de troncos de madera medio podridos.</p>
 
-      <p>Los colémbolos es imposible encontrarlos en la calle porque son microscópicos y no se les ve. En este caso, lo más sencillo y seguro es comprar una pequeña tarrina de cultivo inicial, vuelcas un poco de la tarrina en el terrario y ya está.</p>
+      <p>Los colémbolos miden solo 1 o 2 milímetros, así que recogerlos en la calle es muy poco práctico. En este caso, lo más sencillo y seguro es comprar una pequeña tarrina de cultivo inicial, vuelcas un poco de la tarrina en el terrario y ya está.</p>
 
       <img src="img/Bichos-bola.webp" width="900" height="1200" alt="Terrario cerrado con plantas y un trozo de manzana para los isópodos" loading="lazy" decoding="async" />
 
@@ -252,7 +273,7 @@
       <h3>4. Problemas habituales y cómo solucionarlos</h3>
       <p>El problema más común con los bichos bola: la superpoblación. Se reproducen bastante rápido si el terrario tiene buena temperatura y humedad constante. Cuando hay demasiados, empiezan a escasear las hojas secas y lo siguiente que atacan son las plantas vivas. La solución es sencilla: echa hojarasca seca de la calle cada dos semanas, o trozos de piel de manzana o de patata. Con eso los tienes entretenidos y no tocan lo que no deben. Si aun así ves que hay demasiados, no pasa nada por sacar unos cuantos y soltarlos en el parque.</p>
 
-      <p>Con los colémbolos el problema suele ser el contrario: desaparecen. Si de repente dejas de verlos (aunque sean difíciles de ver de por sí), normalmente es porque el terrario está demasiado seco. Los colémbolos necesitan humedad para sobrevivir. Si llevas días sin pulverizar y la tierra está seca, es probable que hayan muerto. La solución es volver a añadir una pequeña cantidad de cultivo nuevo.</p>
+      <p>Con los colémbolos el problema suele ser el contrario: desaparecen. Las causas y cómo recuperarlos están en el apartado siguiente.</p>
 
       <p>¿Y si aparece moho aunque tenga colémbolos? Pasa, sobre todo al principio, cuando el ecosistema todavía no está estabilizado. No es señal de catástrofe. Los colémbolos van a ir a por él, pero si el brote de moho es muy grande puedes ayudarles: abre el terrario un par de horas para que ventile, retira físicamente el moho con un palillo o pinza, y reduce el riego durante unos días. En una semana debería estar controlado.</p>
 
@@ -285,9 +306,6 @@
       <p><strong>¿Pueden vivir los colémbolos en un terrario abierto?</strong><br>
       Sí, pero lo tienen más difícil: en uno abierto la tierra se seca mucho antes y, como necesitan humedad, hay que vigilar más el riego. Te cuento cómo en <a href="terrario-abierto.html">Cómo cuidar un terrario abierto</a>.</p>
 
-      <p><strong>¿Por qué desaparecen los colémbolos de mi terrario?</strong><br>
-      Casi siempre porque el terrario está demasiado seco: necesitan humedad para sobrevivir. Si llevas días sin pulverizar y la tierra está seca, es probable que hayan muerto. La solución es volver a añadir una pequeña cantidad de cultivo nuevo y mantener la humedad.</p>
-
       <p><strong>¿Es obligatorio tenerlos para que el terrario funcione?</strong><br>
       No es obligatorio, pero sí muy recomendable si quieres que dure años sin que tengas que intervenir. Sin ellos, cualquier hoja caída o raíz muerta se pudre directamente en la tierra y acaba atrayendo moscas de sustrato o generando moho. Se puede vivir sin ellos, pero el mantenimiento es bastante más frecuente.</p>
 
@@ -295,10 +313,10 @@
       Si el terrario tiene tapa, no. Si es abierto, los más pequeños pueden intentarlo, aunque rara vez lo hacen si hay suficiente comida dentro. Lo que sí puede ocurrir es que encuentres alguno fuera cerca del terrario, pero no pasan de ahí. No son una plaga ni van a invadir el salón.</p>
 
       <p><strong>¿Cuántos bichos bola echo en un tarro pequeño?</strong><br>
-      Con 3 o 4 bichos bola tienes de sobra para empezar en un terrario de tamaño mediano. Ya se encargarán ellos de reproducirse si las condiciones son buenas. Meter 15 desde el principio es el error más habitual y acaba en superpoblación en pocas semanas.</p>
+      Con 2 o 3 bichos bola en un tarro pequeño, o 3 o 4 en uno mediano, tienes de sobra para empezar. Ya se encargarán ellos de reproducirse si las condiciones son buenas. Meter 15 desde el principio es el error más habitual y acaba en superpoblación en pocas semanas.</p>
 
       <p><strong>¿Los colémbolos son perjudiciales para las plantas?</strong><br>
-      No, en absoluto. Solo se alimentan de moho, hongos y materia orgánica en descomposición. Nunca tocan tejido vegetal vivo. Si alguna vez ves uno sobre una hoja, simplemente está de paso.</p>
+      En un terrario, no. Se alimentan sobre todo de moho, hongos y materia orgánica en descomposición, y rara vez dañan una planta sana. Solo cuando hay muchísimos pueden molestar a plántulas o esquejes muy tiernos. Si alguna vez ves uno sobre una hoja, lo normal es que esté de paso.</p>
 
     
       <p class="relacionados" style="font-size:.95rem;color:var(--ts);margin-top:2rem;"><strong>Te puede interesar:</strong> <a href="mosquitas-del-sustrato.html">Mosquitas del sustrato en macetas</a> · <a href="bichos-bola-en-casa.html">Bichos bola en casa: de dónde salen y cómo evitarlos</a> · <a href="colembolos-en-macetas.html">Colémbolos en macetas: cómo eliminarlos</a></p>

@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -117,6 +118,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
 
   <meta property="og:title" content="Cómo hacer un sustrato que dure años | EcoCristal" />
@@ -124,6 +127,35 @@
   <meta property="og:image" content="https://ecocristal.es/img/capas-sustrato.jpeg" />
   <meta property="og:url" content="https://ecocristal.es/como-hacer-sustrato.html" />
   <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo hacer un sustrato que dure años",
+    "image": "https://ecocristal.es/img/capas-sustrato.jpeg",
+    "author": {
+      "@type": "Person",
+      "name": "Nowy",
+      "url": "https://ecocristal.es/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoCristal",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ecocristal.es/img/favicon.png"
+      }
+    },
+    "datePublished": "2026-05-03",
+    "dateModified": "2026-11-10",
+    "description": "Aprende a preparar el sustrato perfecto para tu terrario cerrado. Mi mezcla casera 50-30-20 para un drenaje ideal y que te dure años sin pudrirse.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ecocristal.es/como-hacer-sustrato.html"
+    }
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,6 +169,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -157,7 +190,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="montar-terrarios.html">Montar tu terrario</a><span>/</span><strong>El sustrato perfecto</strong>
@@ -200,13 +233,13 @@
 
       <div class="highlight">
         <ul style="margin: 0; padding-left: 1.5rem;">
-          <li style="margin-bottom: 0.5rem;"><strong>50% de <a href="https://amzn.to/4t7Ydtr" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">sustrato universal</a>:</strong> Aprovechando que es la base que contiene los nutrientes iniciales para nuestras plantas.</li>
-          <li style="margin-bottom: 0.5rem;"><strong>30% de <a href="https://amzn.to/4cMKcfN" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">fibra de coco</a> humedecida:</strong> Le da una esponjosidad al sustrato buenísima y muy necesaria para que al mezclarlo pueda airearse correctamente.</li>
-          <li><strong>20% de <a href="https://amzn.to/4cOgFlY" target="_blank" rel="nofollow sponsored" style="color: var(--vs); text-decoration: underline; font-weight: 500;">arena de río</a>:</strong> Hace que la mezcla no sea un bloque sólido y le otorga una capacidad de drenaje muy beneficiosa. Así no almacena agua de más que pueda dar lugar a pudriciones.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>50% de <a href="https://amzn.to/4t7Ydtr" target="_blank" rel="nofollow sponsored noopener" style="color: var(--vs); text-decoration: underline; font-weight: 500;">sustrato universal</a>:</strong> Aprovechando que es la base que contiene los nutrientes iniciales para nuestras plantas.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>30% de <a href="https://amzn.to/4cMKcfN" target="_blank" rel="nofollow sponsored noopener" style="color: var(--vs); text-decoration: underline; font-weight: 500;">fibra de coco</a> humedecida:</strong> Le da una esponjosidad al sustrato buenísima y muy necesaria para que al mezclarlo pueda airearse correctamente.</li>
+          <li><strong>20% de <a href="https://amzn.to/4cOgFlY" target="_blank" rel="nofollow sponsored noopener" style="color: var(--vs); text-decoration: underline; font-weight: 500;">arena de río</a>:</strong> Hace que la mezcla no sea un bloque sólido y le otorga una capacidad de drenaje muy beneficiosa. Así no almacena agua de más que pueda dar lugar a pudriciones.</li>
         </ul>
       </div>
 
-      <img src="img/capas-sustrato.webp" width="900" height="1200" alt="Vista lateral del sustrato de un terrario mostrando la mezcla de tierra" loading="lazy" decoding="async" />
+      <img src="img/capas-sustrato.webp" width="900" height="1200" alt="Vista lateral del sustrato de un terrario mostrando la mezcla de tierra" fetchpriority="high" decoding="async" />
       <p class="img-caption">El resultado final de la mezcla en el terrario. Fíjate en cómo no se ve compactada ni apelmazada.</p>
 
       <h3>2. La humedad y el "escuadrón de limpieza"</h3>
@@ -224,18 +257,14 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
-      <h3>3. Adaptando la mezcla</h3>
-      <p>Por otra parte, si en el futuro decides montar un terrario que recrea un desierto, su gran parte será solo arena, apenas tendrá humedad y la configuración durará muchísimo más tiempo intacta.</p>
-
-      <p>Como he dicho antes, todo depende del tipo de terrario y del cuidado y observación que le pongamos durante las primeras semanas. Pero si empiezas con una buena mezcla base, tendrás el 80% del trabajo hecho.</p>
-      
-      <h3>4. Adaptar la mezcla según la planta</h3>
+      <h3>3. Adaptar la mezcla según la planta</h3>
       <p>La receta 50-30-20 es mi base general, pero dependiendo de lo que vayas a plantar hay que ajustarla un poco.</p>
       <p>Si vas a meter helechos o musgo, puedes subir la proporción de fibra de coco hasta un 40% y bajar la arena al 10%. Estas plantas viven de la humedad constante y cuanta más capacidad de retención tenga la tierra, mejor se van a encontrar.</p>
       <p>Si en cambio quieres hacer un terrario más seco, por ejemplo con suculentas o cactus (que también se pueden hacer en cristal, aunque abiertos), dale la vuelta a la proporción: 40% de arena, 40% de sustrato universal y solo un 20% de fibra de coco. El objetivo aquí es que el agua escurra rápido y no se quede retenida en ningún punto.</p>
       <p>Para las Fittonias, que son las más habituales en terrarios cerrados, la receta estándar 50-30-20 funciona perfectamente y no necesitas tocar nada.</p>
+      <p>Al final todo depende del tipo de terrario y del cuidado y la observación que le pongamos durante las primeras semanas. Pero si empiezas con una buena mezcla base, tendrás el 80% del trabajo hecho.</p>
 
-      <h3>5. Los errores más comunes al preparar el sustrato</h3>
+      <h3>4. Los errores más comunes al preparar el sustrato</h3>
       <ul>
         <li><strong>Usar solo sustrato universal de bolsa:</strong> Es el error número uno y lo cometí yo en mi primer terrario. El sustrato de bolsa solo es demasiado denso y compacto. Con la humedad de un terrario cerrado, en pocas semanas se apelmaza hasta quedar como un ladrillo. Las raíces no pueden abrirse paso y la planta se ahoga aunque esté viva.</li>
         <li><strong>Pasarse con el agua al preparar la mezcla:</strong> La tierra tiene que quedar húmeda, no empapada. La prueba que hago yo: cojo un puñado de la mezcla en la mano y lo aprieto. Si gotea agua, está demasiado húmeda. Si al abrir la mano se mantiene la forma del puñado pero sin chorrear, está perfecta.</li>
@@ -243,7 +272,7 @@
         <li><strong>Compactar la tierra al meterla:</strong> Sé que da la sensación de que así ocupa menos y cabe más, pero es contraproducente. Métela poco a poco sin apretar, déjala caer sola y si acaso iguala la superficie con los dedos muy suavemente. La tierra necesita tener huecos de aire para que las raíces puedan moverse y para que el agua drene bien.</li>
       </ul>
 
-      <h3>6. ¿Cuándo hay que cambiar el sustrato?</h3>
+      <h3>5. ¿Cuándo hay que cambiar el sustrato?</h3>
       <p>Esto es algo que me han preguntado varias veces y la respuesta honesta es: si el ecosistema funciona bien, prácticamente nunca. Un terrario cerrado con colémbolos y bichos bola tiene su propio ciclo de nutrientes y el sustrato se va regenerando solo con el tiempo.</p>
       <p>Las únicas razones por las que tocaría cambiar la tierra son que haya una infestación de plagas muy establecida que no se pueda controlar de otra manera, o que la planta principal haya muerto y quieras montar el terrario desde cero. En ese caso sí, aprovechas y cambias todo.</p>
       

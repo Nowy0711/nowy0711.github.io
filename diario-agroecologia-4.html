@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -118,6 +119,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
   <script type="application/ld+json">
   {
@@ -132,6 +135,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -150,7 +154,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="huerto-en-casa.html">Huerto en casa</a><span>/</span><strong>Agroecología #4</strong>
   </nav>
@@ -199,7 +203,7 @@
       <h3>Día 8: El taller escolar y la traición de la lechuga</h3>
       <p>El octavo día se nos hizo muy largo, no solo por la sesión de agroecología, sino porque también teníamos APS (Aprendizaje y Servicio). Tuvimos que madrugar bastante para estar en el colegio Hemingway a las 8:40. Entramos a 5 clases distintas (de segundo y tercero de primaria) para dar una presentación sobre alimentación sostenible, un Kahoot y un mini-taller donde los chavales se preparaban un semillero para llevarse a casa.</p>
 
-      <img src="img/manos-semilleros.webp" width="1000" height="563" alt="Manos sosteniendo pequeños semilleros con tierra" loading="lazy" decoding="async" />
+      <img src="img/manos-semilleros.webp" width="1000" height="563" alt="Manos sosteniendo pequeños semilleros con tierra" fetchpriority="high" decoding="async" />
       <p class="img-caption">Imagen 1: Semilleros resultantes del mini-taller de huerto con los chavales.</p>
 
       <p>Lo pasamos muy bien. Los chavales estaban muy colaborativos, sobre todo en el taller. Mientras yo les explicaba lo que había que hacer, Nowy e Iván preparaban los semilleros (por alguna razón los chavales llamaban a Nowy "payico"). La experiencia estuvo muy bien y, además, nos dieron de almorzar, cosa que el muerto de hambre de Nowy aprovechó para zamparse todo lo que había.</p>

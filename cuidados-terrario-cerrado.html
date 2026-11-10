@@ -19,7 +19,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
-  <meta name="description" content="Cómo cuido mis terrarios cerrados: cada cuánto los riego (y el truco de olerlos), dónde ponerlos, cuándo abrirlos, limpieza del cristal y qué pasa si riegas de más."/>
+  <meta name="description" content="Cómo cuido mis terrarios cerrados: cada cuánto los riego (y el truco de olerlos), dónde ponerlos, cuándo abrirlos y qué pasa si riegas de más."/>
   <title>Cuidados de un terrario cerrado: riego, luz y apertura</title>
   <link rel="canonical" href="https://ecocristal.es/cuidados-terrario-cerrado.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -117,6 +118,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
 
   <meta property="og:title" content="Cuidados de un terrario cerrado: riego, luz y cuándo abrirlo | EcoCristal" />
@@ -124,16 +127,33 @@
   <meta property="og:image" content="https://ecocristal.es/img/cuidados-og.jpg" />
   <meta property="og:url" content="https://ecocristal.es/cuidados-terrario-cerrado.html" />
   <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Cuidados de un terrario cerrado: riego, luz y cuándo abrirlo",
     "image": "https://ecocristal.es/img/cuidados-og.jpg",
-    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
-    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "author": {
+      "@type": "Person",
+      "name": "Nowy",
+      "url": "https://ecocristal.es/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoCristal",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ecocristal.es/img/favicon.png"
+      }
+    },
     "datePublished": "2026-10-06",
-    "description": "Cómo cuido mis terrarios cerrados: cada cuánto los riego (y el truco de olerlos), dónde ponerlos, cuándo abrirlos, limpieza del cristal y qué pasa si riegas de más."
+    "description": "Cómo cuido mis terrarios cerrados: cada cuánto los riego (y el truco de olerlos), dónde ponerlos, cuándo abrirlos y qué pasa si riegas de más.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ecocristal.es/cuidados-terrario-cerrado.html"
+    },
+    "dateModified": "2026-11-10"
   }
   </script>
   <script type="application/ld+json">
@@ -149,6 +169,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -169,7 +190,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="montar-terrarios.html">Montar tu terrario</a><span>/</span><strong>Cuidados del terrario</strong>
@@ -229,7 +250,7 @@
           <li><strong>Cuando hay mucho vaho:</strong> si el cristal está tan empañado que no se ve el interior, lo destapo para que salga algo de humedad.</li>
         </ul>
       </div>
-      <p>Que el cristal se empañe un poco es normal y es buena señal: es el ciclo del agua funcionando. Lo explico mejor en <a href="como-montar-primer-terrario.html">cómo montar tu primer terrario cerrado</a>.</p>
+      <p>Que el cristal se empañe un poco es normal y es buena señal: es el ciclo del agua funcionando. Lo explico mejor en <a href="terrario-empanado.html">terrario empañado: por qué pasa y qué hacer</a>.</p>
 
       <img src="img/encargo-corcho.webp" width="900" height="1200" alt="Terrario cerrado en tarro de cristal con tapón de corcho, Fittonia blanca y helecho" loading="lazy" decoding="async" />
       <p class="img-caption">Abajo se ve la capa de drenaje (las piedras blancas). Si se te va la mano regando, el agua sobrante se queda ahí y no en la tierra.</p>

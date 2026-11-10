@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -117,23 +118,42 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
 
   <meta property="og:title" content="Plantas de interior con poca luz: las más resistentes | EcoCristal" />
   <meta property="og:description" content="Qué plantas de interior aguantan mejor la poca luz (sansevieria, zamioculca, pothos y más), cómo regarlas en casa y qué errores evitar." />
-  <meta property="og:image" content="https://ecocristal.es/img/pothos.png" />
+  <meta property="og:image" content="https://ecocristal.es/img/pothos.webp" />
   <meta property="og:url" content="https://ecocristal.es/plantas-poca-luz.html" />
   <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Plantas de interior con poca luz: las más resistentes",
-    "image": "https://ecocristal.es/img/pothos.png",
-    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
-    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "image": "https://ecocristal.es/img/pothos.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Nowy",
+      "url": "https://ecocristal.es/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoCristal",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ecocristal.es/img/favicon.png"
+      }
+    },
     "datePublished": "2026-11-06",
-    "description": "Qué plantas de interior aguantan mejor la poca luz (sansevieria, zamioculca, pothos y más), cómo regarlas en casa y qué errores evitar."
+    "description": "Qué plantas de interior aguantan mejor la poca luz (sansevieria, zamioculca, pothos y más), cómo regarlas en casa y qué errores evitar.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ecocristal.es/plantas-poca-luz.html"
+    },
+    "dateModified": "2026-11-09"
   }
   </script>
   <script type="application/ld+json">
@@ -149,6 +169,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -169,7 +190,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="plantas-y-bichos.html">Plantas y bichos</a><span>/</span><strong>Plantas con poca luz</strong>
@@ -193,7 +214,7 @@
     <article class="post">
       <p>Muchas plantas de interior se compran pensando en el sitio donde quedan bonitas, no en la luz que tienen. Si tu casa tiene pocas ventanas o la habitación da al norte, hay plantas que aguantan mucho mejor que otras. Aquí tienes las más resistentes y cómo cuidarlas sin pasarte con el riego.</p>
 
-      <img src="img/pothos.webp" width="546" height="600" alt="Planta de pothos con hojas verdes colgando" loading="lazy" decoding="async" />
+      <img src="img/pothos.webp" width="546" height="600" alt="Planta de pothos con hojas verdes colgando" fetchpriority="high" decoding="async" />
       <p class="img-caption">El pothos es una de las plantas más tolerantes a la poca luz.</p>
 
       <div class="ad-inarticle">

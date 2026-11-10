@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -119,6 +120,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
   <script type="application/ld+json">
   {
@@ -133,6 +136,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -151,7 +155,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="huerto-en-casa.html">Huerto en casa</a><span>/</span><strong>Agroecología #5</strong>
   </nav>
@@ -195,7 +199,7 @@
       <h3>Duodécimo día</h3>
       <p>El martes siguiente fuimos de 12 a 2+. Este día solo nos falló Iván, que tenía prácticas de TIG. Además del rutinario riego, este fue el día en el que finalmente plantamos las lechugas y acelgas que Juan Carlos había sembrado semanas atrás. Como somos buenas personas, las compartimos con el bancal 5, pero solo les dimos las que peor estaban, porque tan buenos no somos. Como no somos muy listos, plantamos las acelgas cada 10 centímetros en lugar de los requeridos 40, por lo que nos tendremos que cargar una de cada dos, pero lo estamos aplazando no tenemos la sangre fría para hacerle algo tan cruel a nuestros hijos. También nos dedicamos a quitar la grama y la maleza que nos estorbaba, con cuidado de no llevarnos algún brote útil sin querer, aunque seguramente alguno se cargaría alguna espinaca (no voy a decir por quién, pero probablemente rime con "oel", mida metro setenta y tres, y sea del Atleti).</p>
 
-      <img src="img/lechugas-regadas.webp" width="1000" height="562" alt="Lechugas plantadas bajo los arcos de riego" loading="lazy" decoding="async" />
+      <img src="img/lechugas-regadas.webp" width="1000" height="562" alt="Lechugas plantadas bajo los arcos de riego" fetchpriority="high" decoding="async" />
       <p class="img-caption">Imagen 1: Lechugas plantadas y regadas. En las dos filas de encima irían las acelgas.</p>
 
       <p>Después de ayudar a Aguirre a poner su red de protección (dice que su grupo le había abandonado), nos dedicamos a poner la nuestra. Al principio no llegaba por los lados porque los arcos eran muy altos, pero después de luchar un rato la acabamos poniendo lo suficientemente bien. También decidimos quitar los rabanitos que plantamos donde las cebollas, e identificamos definitivamente la capuchina que habíamos plantado. En retrospectiva, es sorprendente que tardemos como 2 horas y media en hacer solo eso, pero nos entretenemos bastante preguntándole cosas a los jardineros y a los demás grupos, por lo que yo no diría que es tiempo desperdiciado, aunque perdamos el tren de las 12:13.</p>

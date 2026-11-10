@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 
   <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
 
   <style>
     /* ── TOKENS Y RESET ── */
@@ -117,6 +118,8 @@
     .ad-inarticle { margin: 2rem 0; text-align: center; }
     ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
     @media (max-width: 1024px) { .sidebar-right { max-height: none; overflow: visible; padding-right: 0; } }
+      .skip { position: absolute; top: -100px; left: 1rem; background: var(--vd); color: #fff; padding: .5rem 1rem; border-radius: var(--r); z-index: 9999; }
+    .skip:focus { top: 1rem; }
   </style>
 
   <meta property="og:title" content="Terrario con suculentas: abierto, materiales y cuidados | EcoCristal" />
@@ -124,17 +127,33 @@
   <meta property="og:image" content="https://ecocristal.es/img/tarro-abierto.webp" />
   <meta property="og:url" content="https://ecocristal.es/terrario-con-suculentas.html" />
   <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Terrario con suculentas: abierto, materiales y cuidados",
     "image": "https://ecocristal.es/img/tarro-abierto.webp",
-    "author": { "@type": "Person", "name": "Nowy", "url": "https://ecocristal.es/sobre-mi.html" },
-    "publisher": { "@type": "Organization", "name": "EcoCristal" },
+    "author": {
+      "@type": "Person",
+      "name": "Nowy",
+      "url": "https://ecocristal.es/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EcoCristal",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ecocristal.es/img/favicon.png"
+      }
+    },
     "datePublished": "2026-11-09",
-    "dateModified": "2026-11-09",
-    "description": "Cómo hacer un terrario con suculentas: por qué debe ser abierto, qué materiales usar, cuánto regarlas y qué errores evitar para que no se pudran."
+    "dateModified": "2026-11-10",
+    "description": "Cómo hacer un terrario con suculentas: por qué debe ser abierto, qué materiales usar, cuánto regarlas y qué errores evitar para que no se pudran.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ecocristal.es/terrario-con-suculentas.html"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -150,6 +169,7 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="nav-inner">
@@ -170,7 +190,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <nav class="bread">
     <a href="index.html">Inicio</a><span>/</span><a href="plantas-y-bichos.html">Plantas y bichos</a><span>/</span><strong>Terrario con suculentas</strong>
@@ -194,7 +214,7 @@
     <article class="post">
       <p>Las suculentas son de las plantas más populares para hacer un terrario, pero casi todos los que empiezan cometen el mismo error: meterlas en un recipiente cerrado con tapa. Una suculenta vive de aire seco, luz fuerte y poca agua. Un terrario cerrado hace justo lo contrario. Aquí tienes cómo montar un terrario con suculentas que sí funcione: abierto, con el sustrato adecuado y un riego espaciado.</p>
 
-      <img src="img/tarro-abierto.webp" width="900" height="1200" alt="Terrario abierto en un jarrón de cristal alto, con la planta saliendo por arriba" loading="lazy" decoding="async" />
+      <img src="img/tarro-abierto.webp" width="900" height="1200" alt="Terrario abierto en un jarrón de cristal alto, con la planta saliendo por arriba" fetchpriority="high" decoding="async" />
       <p class="img-caption">Un recipiente abierto deja salir la humedad: es el tipo de terrario que necesitan las suculentas.</p>
 
       <div class="ad-inarticle">
@@ -216,12 +236,12 @@
       <ul>
         <li><strong>Boca ancha o sin tapa:</strong> el aire circula y la tierra se seca entre riegos.</li>
         <li><strong>Cristal transparente:</strong> así ves cuándo hace falta regar y si la planta recibe suficiente luz.</li>
-        <li><strong>Un agujero de drenaje si es posible:</strong> es lo más seguro para evitar el agua acumulada. Si no lo tiene, tendrás que controlar el riego con más cuidado.</li>
+        <li><strong>Una buena capa de drenaje:</strong> los recipientes de cristal no llevan agujero, así que el agua sobrante se queda dentro. Pon grava en el fondo y controla el riego con más cuidado que en una maceta.</li>
       </ul>
       <p>Un tarro de cristal con boca ancha funciona muy bien. Un jarrón alto también, aunque el sustrato se seca más lento en la base.</p>
 
       <h3>3. El sustrato: que drene y no retenga agua</h3>
-      <p>Este es el punto más importante. El sustrato para suculentas debe drenar muy bien. Una mezcla habitual es la de tierra para cactus o suculentas mezclada con arena gruesa o perlita, y una capa de grava o arlita en el fondo, si el recipiente no tiene agujero. Si quieres hacerlo tú, la mezcla de <a href="como-hacer-sustrato.html">cómo hacer sustrato</a> sirve de punto de partida, pero para suculentas conviene subir la proporción de material mineral.</p>
+      <p>Este es el punto más importante. El sustrato para suculentas debe drenar muy bien. Una mezcla habitual es la de tierra para cactus o suculentas mezclada con arena gruesa o perlita, y una capa de grava o arlita en el fondo. Si quieres hacerlo tú, la mezcla de <a href="como-hacer-sustrato.html">cómo hacer sustrato</a> sirve de punto de partida, pero para suculentas conviene subir la proporción de material mineral.</p>
       <p>Lo que no debes usar es tierra de jardín o turba compacta, porque se encharca y las raíces se asfixian.</p>
 
       <h3>4. Luz: la planta que más luz necesita</h3>
@@ -240,7 +260,7 @@
 
       <h3>5. Cómo y cuándo regar</h3>
       <p>La regla es sencilla: <strong>riega cuando el sustrato esté seco del todo</strong>. Mete el dedo unos 3 o 4 centímetros; si notas humedad, espera. En primavera y verano, eso puede suponer un riego cada una o dos semanas. En otoño e invierno, muchas veces basta con regar una vez al mes, o incluso menos si la temperatura de la habitación es baja.</p>
-      <p>Cuando riegues, hazlo a la base de la planta, sin mojar la roseta de hojas, y no dejes agua acumulada en el fondo del recipiente. Si tu recipiente no tiene agujero, usa menos agua de la que pondrías en una maceta con drenaje.</p>
+      <p>Cuando riegues, hazlo a la base de la planta, sin mojar la roseta de hojas, y no dejes agua acumulada en el fondo del recipiente. Como el cristal no tiene agujero, usa menos agua de la que pondrías en una maceta con drenaje.</p>
 
       <h3>6. Qué errores evitar</h3>
       <ul>
@@ -266,7 +286,7 @@
         <ul style="margin: 0; padding-left: 1.5rem;">
           <li style="margin-bottom: 0.5rem;">Usa un recipiente abierto o sin tapa, con buena entrada de aire.</li>
           <li style="margin-bottom: 0.5rem;">Sustrato que drene muy bien, con mezcla mineral.</li>
-          <li style="margin-bottom: 0.5rem;">Mucha luz directa suave y riego solo cuando la tierra esté completamente seca.</li>
+          <li style="margin-bottom: 0.5rem;">Mucha luz, evitando el sol fuerte de mediodía en verano, y riego solo cuando la tierra esté completamente seca.</li>
           <li>Nada de musgo ni de plantas tropicales en el mismo recipiente.</li>
         </ul>
       </div>
