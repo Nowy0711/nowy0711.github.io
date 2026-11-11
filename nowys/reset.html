@@ -173,6 +173,25 @@
       document.getElementById('otraVia').textContent = 'Ábrela aquí';
       document.getElementById('otraVia').setAttribute('href', directo);
     }
+    // Enlace de CONFIRMACIÓN DE CORREO (alta nueva, `type=signup`): no es un cambio de contraseña.
+    // Trae la sesión igual que los otros, así que el mismo botón deja a la persona dentro de la
+    // app; aquí solo cambian los textos para que no hablen de contraseñas.
+    if (params.get('type') === 'signup') {
+      document.title = 'Correo confirmado · Nowys';
+      document.querySelector('#listo h1').textContent = 'Correo confirmado';
+      document.getElementById('explica').textContent =
+        'Tu cuenta ya está activa. Toca el botón para entrar en Nowys.';
+      document.getElementById('abrir').textContent = esAndroid ? 'Abrir Nowys' : 'Entrar en Nowys';
+      document.getElementById('textoOtraVia').textContent = esAndroid
+        ? '¿No tienes la app en este móvil?'
+        : '¿Tienes Nowys instalada en este móvil?';
+      document.getElementById('otraVia').textContent = esAndroid
+        ? 'Entra desde el navegador'
+        : 'Ábrela aquí';
+      document.getElementById('avisoFinal').textContent =
+        'Si el botón no hace nada, abre Nowys e inicia sesión con tu correo y tu contraseña: la cuenta ya está confirmada.';
+    }
+
     mostrar('listo');
 
     // A propósito NO se intenta abrir la app sola al cargar: un salto a otra aplicación que no
